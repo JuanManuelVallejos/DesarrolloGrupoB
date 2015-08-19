@@ -16,6 +16,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 @SpringBootApplication
 public class App {
 
+	
     @Bean
     @Scope(value = "prototype", proxyMode = ScopedProxyMode.TARGET_CLASS)
     DatastoreService datastoreService() {
