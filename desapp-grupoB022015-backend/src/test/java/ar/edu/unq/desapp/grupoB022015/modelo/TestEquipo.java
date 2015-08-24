@@ -65,7 +65,7 @@ public class TestEquipo extends TestCase{
 		assertEquals(equipo.todosLosJugadores().size(), 11);
 	}
 	
-	@Test(expected = NoSePuedeHaberMasDeOnceJugadoresException.class) 
+	@Test
 	public void test_agregarMasDe11Jugadores_throwNoSePuedeHaberMasDeOnceJugadoresException(){
 		Equipo equipo = EquipoBuilder.algunEquipo().build();
 		agregarPlantelInicial(equipo);
