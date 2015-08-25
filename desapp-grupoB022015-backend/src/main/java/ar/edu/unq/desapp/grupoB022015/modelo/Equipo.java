@@ -3,20 +3,23 @@ package ar.edu.unq.desapp.grupoB022015.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import ar.edu.unq.desapp.grupoB022015.modelo.exceptions.NoPuedeHaberMasDeUnArqueroException;
 import ar.edu.unq.desapp.grupoB022015.modelo.exceptions.NoSePuedeHaberMasDeOnceJugadoresException;
 
 public class Equipo {
 
-	private List<Jugador> plantel = new ArrayList<Jugador>();
+	private List<Jugador> plantel;
 	
-	private boolean hayOnceJugadores() {
-		return plantel.size() == 11;
+	
+	
+	//------------------ Interfaz publica ------------------\\
+	
+	public Equipo(){
+		plantel = new ArrayList<Jugador>();
 	}
 	
-	public void agregarJugador(Jugador unJugador) throws NoSePuedeHaberMasDeOnceJugadoresException{
-		if(hayOnceJugadores())
-			throw new NoSePuedeHaberMasDeOnceJugadoresException();
-		plantel.add(unJugador);
+	public void agregarJugador(Jugador unJugador) throws NoSePuedeHaberMasDeOnceJugadoresException,
+														 NoPuedeHaberMasDeUnArqueroException{
 	}
 
 	public List<Jugador> todosLosJugadores() {
