@@ -4,6 +4,14 @@ import java.util.List;
 
 public class Team {
 	
-	private List<Player> squad;
+	private List<Integer> IDplayers;
 
+	public void addPlayer(int IDPlayer){
+		IDplayers.add(IDPlayer);
+	}
+	
+	public boolean existsPlayer(int IDPlayer){
+		return IDplayers.contains(IDPlayer);
+	}
+	
 }
