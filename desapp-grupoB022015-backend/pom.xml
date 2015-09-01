@@ -9,6 +9,8 @@
 
     <name>Spring Boot GAE Blank Project (from https://github.com/making/spring-boot-gae-blank)</name>
 
-	
+	 <build>
+		<finalName>desapp-grupoB022015-backend</finalName>
+	 </build>
 
 </project>
