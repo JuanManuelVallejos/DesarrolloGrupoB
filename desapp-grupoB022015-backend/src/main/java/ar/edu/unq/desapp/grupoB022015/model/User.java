@@ -11,6 +11,5 @@ public class User implements Comparable<User>{//Comparable<User>{
 	public int compareTo(User otherUser) {
 		return this.getPoints() - otherUser.getPoints();
 	}
-		
 	
 }

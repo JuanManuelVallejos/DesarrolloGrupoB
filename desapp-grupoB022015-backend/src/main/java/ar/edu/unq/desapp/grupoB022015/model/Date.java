@@ -16,5 +16,4 @@ public class Date {
 		this.matchs = matchs;
 	}
 	
-	
 }
