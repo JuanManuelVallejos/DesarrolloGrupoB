@@ -1,7 +1,6 @@
-package main.java.ar.edu.unq.desapp.grupoB022015.model;
+package ar.edu.unq.desapp.grupoB022015.model;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 public class League {
