@@ -1,2 +1,2 @@
 language: java
-script: cd desapp-grupoB022015-backend && mvn test
+script: cd desapp-grupoB022015-backend/ && mvn test
