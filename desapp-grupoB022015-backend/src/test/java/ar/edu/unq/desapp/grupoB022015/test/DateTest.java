@@ -12,39 +12,58 @@ import org.mockito.Mockito;
 
 import ar.edu.unq.desapp.grupoB022015.model.Date;
 import ar.edu.unq.desapp.grupoB022015.model.Match;
+import ar.edu.unq.desapp.grupoB022015.model.User;
 
 public class DateTest {
 
 
-	private List<Match> aListMocked = new ArrayList<Match>();
+	private List<Match> matchs = new ArrayList<Match>();
 	private DateTime dateStart =  new DateTime("2015-03-01");
 	private DateTime dateEnd = new DateTime("2015-03-07");
-
+	
 	@Before
     public void init() {
-		Match aMatchMocked = Mockito.mock(Match.class);
-		aListMocked.add(aMatchMocked);
+		User u1 = new User(1);
+		User u2 = new User(2);
+		User u3 = new User(3);
+		User u4 = new User(4);
+		
+		Match match1 = new Match(u1,u2);
+		Match match2 = new Match(u3,u4);
+		
+		matchs.add(match1);
+		matchs.add(match2);
     }
 	
 	@Test
 	public void testDateMinePositive() {
-		
 		DateTime dateTest = new DateTime("2015-03-05");
-		
-		Date date = new Date(aListMocked,dateStart,dateEnd);
+		Date date = new Date(matchs,dateStart,dateEnd);
 
 		assertTrue(date.dateMine(dateTest));
 	}
 	
 	@Test
 	public void testDateMineNegative() {
-		
 		DateTime dateTest = new DateTime("2015-03-08");
-		
-		Date date = new Date(aListMocked,dateStart,dateEnd);
+		Date date = new Date(matchs,dateStart,dateEnd);
 
 		assertFalse(date.dateMine(dateTest));
+	}
+	
+	@Test
+	public void testMyOpposite(){
+		Date date = new Date(matchs,dateStart,dateEnd);
+		Date dateWithmatchsOpposites = date.myOpposite(dateStart, dateEnd);
+		List<Match> matchsOpposites = dateWithmatchsOpposites.getMatchs();
+		
+		assertEquals(matchs.get(0).getLocal  () , matchsOpposites.get(0).getVisitor() );
+		assertEquals(matchs.get(0).getVisitor() , matchsOpposites.get(0).getLocal()   );
+		
+		assertEquals(matchs.get(1).getLocal  () , matchsOpposites.get(1).getVisitor() );
+		assertEquals(matchs.get(1).getVisitor() , matchsOpposites.get(1).getLocal()   );
 		
 	}
+	
 	
 }
