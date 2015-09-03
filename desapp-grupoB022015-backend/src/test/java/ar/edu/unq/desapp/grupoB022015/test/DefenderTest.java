@@ -17,7 +17,7 @@ public class DefenderTest {
 	
 	@Test
 	public void test() {
-		assert(defender.calculatePoints() == 2);
+		assert(defender.calculatePoints() == 3);
 	}
 
 }
