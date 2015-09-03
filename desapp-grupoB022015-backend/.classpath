@@ -33,5 +33,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/musimundo/Downloads/joda-time-2.4-dist.zip"/>
+	<classpathentry kind="lib" path="C:/Users/musimundo/Downloads/mockito-all-1.9.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

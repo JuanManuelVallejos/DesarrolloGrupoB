@@ -3,6 +3,8 @@ package ar.edu.unq.desapp.grupoB022015.model;
 import java.util.Collections;
 import java.util.List;
 
+import org.joda.time.DateTime;
+
 public class League {
 
 	private int currentDate = 1;
@@ -10,16 +12,12 @@ public class League {
 	private List<Integer> IDusers;
 	private List<User> ranking;
 	
-	public int getCurrentDate(){
-		return currentDate;
-	}
-
-	/**
-	 * Updates the number of date
-	 * @param date is the current number date
-	 */
-	public void refreshCurrentDate(int date){
-		currentDate = date;
+	public Date getCurrentDate(){
+		for ( Date currentDate: dates)
+			if(currentDate.dateMine(new DateTime()))
+				return currentDate;
+		
+		return null;
 	}
 	
 	/**
