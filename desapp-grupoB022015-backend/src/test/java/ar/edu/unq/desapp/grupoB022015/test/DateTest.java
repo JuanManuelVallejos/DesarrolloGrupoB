@@ -1,5 +1,7 @@
 package ar.edu.unq.desapp.grupoB022015.test;
 
+import static org.junit.Assert.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,23 +27,23 @@ public class DateTest {
     }
 	
 	@Test
-	public void dateMinePositivetest() {
+	public void testDateMinePositive() {
 		
 		DateTime dateTest = new DateTime("2015-03-05");
 		
 		Date date = new Date(aListMocked,dateStart,dateEnd);
-		
-		assert(date.dateMine(dateTest));
+
+		assertTrue(date.dateMine(dateTest));
 	}
 	
 	@Test
-	public void dateMineNegativetest() {
+	public void testDateMineNegative() {
 		
 		DateTime dateTest = new DateTime("2015-03-08");
 		
 		Date date = new Date(aListMocked,dateStart,dateEnd);
-		
-		assert(!date.dateMine(dateTest));
+
+		assertFalse(date.dateMine(dateTest));
 		
 	}
 	
