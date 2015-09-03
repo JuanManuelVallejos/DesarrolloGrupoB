@@ -15,15 +15,13 @@ public class DateTest {
 
 
 	private List<Match> aListMocked = new ArrayList<Match>();
-	private DateTime dateStart;
-	private DateTime dateEnd;
+	private DateTime dateStart =  new DateTime("2015-03-01");
+	private DateTime dateEnd = new DateTime("2015-03-07");
 
 	@Before
     public void init() {
 		Match aMatchMocked = Mockito.mock(Match.class);
 		aListMocked.add(aMatchMocked);
-		DateTime dateStart = new DateTime("2015-03-01"); 
-		DateTime dateEnd = new DateTime("2015-03-07");
     }
 	
 	@Test

@@ -34,7 +34,7 @@ public class Date {
 
 	public boolean dateMine(DateTime aDate){
 		Interval interval = new Interval(getStartDate(), getEndDate());				
-		return false;//interval.contains(aDate);
+		return interval.contains(aDate);
 	}
 	
 }
