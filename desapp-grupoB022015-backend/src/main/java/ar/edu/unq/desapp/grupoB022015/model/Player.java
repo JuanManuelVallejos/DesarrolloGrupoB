@@ -1,17 +1,15 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
-public abstract class Player {
+public class Player {
 
 	private int ID;
     private String name;
-	private String position;
+	private Position position;
 	private String team;
     
 	public int pointsInAMatch(Match aMatch){
 		return 0;
 	}
-	
-	public abstract int calculatePoints();
 
 	public String getName() {
 		return name;
@@ -21,11 +19,11 @@ public abstract class Player {
 		this.name = name;
 	}
 
-	public String getPosition() {
+	public Position getPosition() {
 		return position;
 	}
 
-	public void setPosition(String position) {
+	public void setPosition(Position position) {
 		this.position = position;
 	}
 
@@ -43,5 +41,10 @@ public abstract class Player {
 
 	public void setID(int iD) {
 		ID = iD;
-	} 
+	}
+	
+	public int getPointForNGoals(int amountGoals){
+		return amountGoals*getPosition().pointsForGoal();
+	}
+	
 }

@@ -1,5 +1,6 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.joda.time.DateTime;
@@ -35,6 +36,14 @@ public class Date {
 	public boolean dateMine(DateTime aDate){
 		Interval interval = new Interval(getStartDate(), getEndDate());				
 		return interval.contains(aDate);
+	}
+
+	public Date myOpposite(DateTime newStart, DateTime newEnd) {
+		List<Match> oppositeMatchs = new ArrayList<Match>();
+		for(Match currentMatch: matchs){
+			oppositeMatchs.add(new Match(currentMatch.getVisitor(),currentMatch.getLocal()));
+		}
+		return new Date(oppositeMatchs,newStart,newEnd);
 	}
 	
 }
