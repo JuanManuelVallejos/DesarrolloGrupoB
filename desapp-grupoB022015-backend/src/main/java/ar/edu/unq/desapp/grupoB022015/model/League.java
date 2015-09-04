@@ -2,6 +2,7 @@ package ar.edu.unq.desapp.grupoB022015.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 import org.joda.time.DateTime;
@@ -35,8 +36,6 @@ public class League {
 	}
 	
 	/*
-	 * CHANGE ALL THIS ALGORITM
-	 * 
 	public void createFixtureRoundTrip(DateTime start, int durationOfDateinDays){
 		createFixtureOnlyTrip(start,durationOfDateinDays);
 		int limitLoop = fixture.size();
@@ -48,7 +47,9 @@ public class League {
 			endNewDate = endNewDate.plusDays(durationOfDateinDays);
 		}
 	}
+*/	
 	
+	//ERROR: This not work yet
 	public void createFixtureOnlyTrip(DateTime start, int durationOfDateinDays){
 		int totalSize = ranking.size();
 		
@@ -59,14 +60,30 @@ public class League {
 		DateTime currentDate = start;
 		DateTime finalDate = start.plusDays(durationOfDateinDays);
 
-		for(int numDate = 0; numDate < totalSize; numDate++){
+		for(int numDate = 0; numDate < totalSize-1; numDate++){
 			fixture.add(createDateWith(currentDate, finalDate, usersLocals,usersVisitors));
-			usersVisitors = firstEnd(usersVisitors);
+			//usersVisitors.add(usersLocals.remove(usersLocals.size()-1));
+			//usersLocals.add(1,usersVisitors.remove(0));
 			currentDate = finalDate;
 			finalDate = finalDate.plusDays(durationOfDateinDays);
 		}
 	}
-	*/
+	
+	
+	//For a test, not used yet
+	public User removeUserFrom(List<User> users, int index){
+		 Iterator<User> way = users.iterator();
+		 int current = 0;
+		 while (way.hasNext()){
+			 User u = way.next();
+			 if(current < index){
+				 way.remove();
+				 return u;
+			 }
+		 }
+		 return null;
+	}
+	
 	public List<User> firstEnd(List<User> users){
 		User firstU = users.get(0);
 		List<User> copyU = users;

@@ -55,14 +55,16 @@ public class LeagueTest {
 		assertEquals(users.get(2),u4);
 		assertEquals(users.get(3),u1);
 	}
-	/*RED TESTS
+	
 	@Test
 	public void testCreateFixtureOnlyTrip_CorrectSize(){
 		league.createFixtureOnlyTrip(new DateTime(), 1);
 		
+		System.out.println(league.getFixture().size());
+		
 		assertEquals(league.getFixture().size(), 3);
 	}
-	
+	/*
 	@Test
 	public void testCreateFixtureRoundTrip_CorrectSize(){
 		league.createFixtureRoundTrip(new DateTime(), 1);
