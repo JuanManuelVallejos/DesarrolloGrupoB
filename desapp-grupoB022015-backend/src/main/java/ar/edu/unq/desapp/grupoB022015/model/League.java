@@ -22,6 +22,10 @@ public class League {
 		return this.name;
 	}
 	
+	public List<Date> getFixture(){
+		return this.fixture;
+	}
+	
 	public Date getCurrentDate(){
 		for ( Date currentDate: fixture)
 			if(currentDate.dateMine(new DateTime()))
@@ -30,7 +34,9 @@ public class League {
 		return null;
 	}
 	
-	
+	/*
+	 * CHANGE ALL THIS ALGORITM
+	 * 
 	public void createFixtureRoundTrip(DateTime start, int durationOfDateinDays){
 		createFixtureOnlyTrip(start,durationOfDateinDays);
 		int limitLoop = fixture.size();
@@ -44,18 +50,23 @@ public class League {
 	}
 	
 	public void createFixtureOnlyTrip(DateTime start, int durationOfDateinDays){
-		List<User> usersOponents = ranking;
+		int totalSize = ranking.size();
+		
+		List<User> usersLocals = ranking.subList(0, totalSize/2);
+		List<User> usersVisitors = ranking.subList(totalSize/2, totalSize);
+		Collections.reverse(usersVisitors);
+		
 		DateTime currentDate = start;
 		DateTime finalDate = start.plusDays(durationOfDateinDays);
 
-		for(int numDate = 0; numDate < ranking.size()-1; numDate++){
-			usersOponents = firstEnd(usersOponents);
-			fixture.add(createDateWith(currentDate, finalDate,ranking,usersOponents));
+		for(int numDate = 0; numDate < totalSize; numDate++){
+			fixture.add(createDateWith(currentDate, finalDate, usersLocals,usersVisitors));
+			usersVisitors = firstEnd(usersVisitors);
 			currentDate = finalDate;
 			finalDate = finalDate.plusDays(durationOfDateinDays);
 		}
 	}
-	
+	*/
 	public List<User> firstEnd(List<User> users){
 		User firstU = users.get(0);
 		List<User> copyU = users;
@@ -78,6 +89,10 @@ public class League {
 	 */
 	public Date getDate(int numDate){
 		return fixture.get(numDate-1);
+	}
+	
+	public void addUser(User aUser){
+		ranking.add(aUser);
 	}
 	
 	public void updateRanking(){

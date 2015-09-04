@@ -23,10 +23,10 @@ public class DateTest {
 	
 	@Before
     public void init() {
-		User u1 = new User(1);
-		User u2 = new User(2);
-		User u3 = new User(3);
-		User u4 = new User(4);
+		User u1 = Mockito.mock(User.class);
+		User u2 = Mockito.mock(User.class);
+		User u3 = Mockito.mock(User.class);
+		User u4 = Mockito.mock(User.class);
 		
 		Match match1 = new Match(u1,u2);
 		Match match2 = new Match(u3,u4);
