@@ -2,7 +2,6 @@ package ar.edu.unq.desapp.grupoB022015.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 import org.joda.time.DateTime;
@@ -35,7 +34,7 @@ public class League {
 		return null;
 	}
 	
-	/*
+	
 	public void createFixtureRoundTrip(DateTime start, int durationOfDateinDays){
 		createFixtureOnlyTrip(start,durationOfDateinDays);
 		int limitLoop = fixture.size();
@@ -47,14 +46,30 @@ public class League {
 			endNewDate = endNewDate.plusDays(durationOfDateinDays);
 		}
 	}
-*/	
 	
-	//ERROR: This not work yet
+
+	public List<List<User>> splitListUser(List<User> list){
+		List<List<User>> listToRet = new ArrayList<List<User>>();
+		
+		List<User> firstHalf = new ArrayList<User>();
+		@SuppressWarnings("unchecked")
+		List<User> secondHalf = (List<User>) ((ArrayList<User>)list).clone();
+		
+		int sizeList = list.size(); 
+		for(int i = 0; i<sizeList/2;i++){
+			firstHalf.add(secondHalf.get(0));
+			secondHalf.remove(0);
+		}
+		listToRet.add(firstHalf);
+		listToRet.add(secondHalf);
+		return listToRet;
+	}
+	
 	public void createFixtureOnlyTrip(DateTime start, int durationOfDateinDays){
 		int totalSize = ranking.size();
-		
-		List<User> usersLocals = ranking.subList(0, totalSize/2);
-		List<User> usersVisitors = ranking.subList(totalSize/2, totalSize);
+		List<List<User>> halfs = splitListUser(ranking);
+		List<User> usersLocals = halfs.get(0);
+		List<User> usersVisitors = halfs.get(1);
 		Collections.reverse(usersVisitors);
 		
 		DateTime currentDate = start;
@@ -62,35 +77,14 @@ public class League {
 
 		for(int numDate = 0; numDate < totalSize-1; numDate++){
 			fixture.add(createDateWith(currentDate, finalDate, usersLocals,usersVisitors));
-			//usersVisitors.add(usersLocals.remove(usersLocals.size()-1));
-			//usersLocals.add(1,usersVisitors.remove(0));
+
+			usersVisitors.add(usersLocals.remove(usersLocals.size()-1));
+			usersLocals.add(1,usersVisitors.remove(0));			
 			currentDate = finalDate;
 			finalDate = finalDate.plusDays(durationOfDateinDays);
 		}
 	}
 	
-	
-	//For a test, not used yet
-	public User removeUserFrom(List<User> users, int index){
-		 Iterator<User> way = users.iterator();
-		 int current = 0;
-		 while (way.hasNext()){
-			 User u = way.next();
-			 if(current < index){
-				 way.remove();
-				 return u;
-			 }
-		 }
-		 return null;
-	}
-	
-	public List<User> firstEnd(List<User> users){
-		User firstU = users.get(0);
-		List<User> copyU = users;
-		copyU.remove(0);
-		copyU.add(firstU);
-		return copyU;
-	}
 	
 	public Date createDateWith(DateTime startD, DateTime endD, List<User> usersA,List<User> usersB){
 		List<Match> matchsOfDate = new ArrayList<Match>();
@@ -110,6 +104,10 @@ public class League {
 	
 	public void addUser(User aUser){
 		ranking.add(aUser);
+	}
+	
+	public List<User> getRanking(){
+		return ranking;
 	}
 	
 	public void updateRanking(){
