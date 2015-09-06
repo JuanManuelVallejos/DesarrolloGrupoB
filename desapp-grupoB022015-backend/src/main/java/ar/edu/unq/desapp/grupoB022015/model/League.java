@@ -26,6 +26,7 @@ public class League {
 		return this.fixture;
 	}
 	
+	//WARNING: need to add Exception 
 	public Date getCurrentDate(){
 		for ( Date currentDate: fixture)
 			if(currentDate.dateMine(new DateTime()))
