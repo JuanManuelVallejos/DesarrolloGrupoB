@@ -8,12 +8,24 @@ public class User implements Comparable<User>{
 	private int ID;
 	private int points;
 	private Team team;
+	private SuperGol superGol;
 	private List<League> leagues;
 	
 	public User(int ID_U){
 		this.ID = ID_U;
 		this.points = 0;
 		this.leagues = new ArrayList<League>();
+	}
+	
+	public User(int ID_U, SuperGol sP){
+		this.ID = ID_U;
+		this.points = 0;
+		this.leagues = new ArrayList<League>();
+		this.superGol = sP;
+	}
+	
+	public SuperGol getSystem(){
+		return this.superGol;
 	}
 	
 	public int getID(){
@@ -39,6 +51,12 @@ public class User implements Comparable<User>{
 		}
 	}
 
+	public void createLeague(String leagueName){
+		League league = new League(leagueName,getSystem());
+		league.addUser(this);
+		getSystem().addLeague(league);
+	}
+	
 	public void createTeam(String teamName){
 		this.team = new Team(this,teamName);
 	}

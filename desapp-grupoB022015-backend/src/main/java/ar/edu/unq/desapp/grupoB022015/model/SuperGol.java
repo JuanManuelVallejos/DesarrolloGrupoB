@@ -8,11 +8,13 @@ public class SuperGol{
 	private List<Player> players;
 	private List<League> leagues;
 	private List<User> users;
+	private TableForDate tableForDate;
 	
 	public SuperGol(){
 		players = new ArrayList<Player>();
 		leagues = new ArrayList<League>();
 		users = new ArrayList<User>();
+		tableForDate = new TableForDate();
 	}
 	
 	public void addLeague(League league){
@@ -39,7 +41,21 @@ public class SuperGol{
 		return this.users;
 	}
 	
+	public TableForDate getTable(){
+		return this.tableForDate;
+	}
+	
 	public void playerScoredNGoals(Player player,int amountGoals){
 		player.addPointsForNGoals(amountGoals);
+		tableForDate.addPointsOfPlayer(player,player.getPointForNGoals(amountGoals));
 	}
+	
+	public int getPointsForTeam(Team team, int numDate){
+		return getTable().getPointOfPlayersOfDate(team.getPlayers(), numDate);
+	}
+	
+	public void completeDate(){
+		this.tableForDate.addDate();
+	}
+	
 }

@@ -45,5 +45,23 @@ public class Date {
 		}
 		return new Date(oppositeMatchs,newStart,newEnd);
 	}
+
+	public void setPoints(TableForDate table) {
+		for(Match match : getMatchs())
+			match.setPoints(table);
+	}
+
+	public Match getMatchForUser(User user){
+		for(Match match : getMatchs()){
+			if(match.existUser(user)){
+				return match;
+			}
+		}
+		return null;
+	}
+	
+	public int getPointsForUser(User user) {
+		return getMatchForUser(user).getPointsForUser(user);
+	}
 	
 }

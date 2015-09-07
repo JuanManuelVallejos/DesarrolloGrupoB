@@ -2,6 +2,7 @@ package ar.edu.unq.desapp.grupoB022015.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 import org.joda.time.DateTime;
@@ -9,13 +10,32 @@ import org.joda.time.DateTime;
 public class League {
 
 	private String name;
+	private SuperGol superGol;
 	private List<Date> fixture;
 	private List<User> ranking;
+	private HashMap<User,Integer> rankingForLeague;
 	
 	public League(String leagueName){
 		this.name = leagueName;
 		this.fixture = new ArrayList<Date>();
 		this.ranking = new ArrayList<User>();
+		this.rankingForLeague = new HashMap<User,Integer>();
+	}
+	
+	public League(String leagueName, SuperGol system) {
+		this.name = leagueName;
+		this.superGol = system;
+		this.fixture = new ArrayList<Date>();
+		this.ranking = new ArrayList<User>();
+		this.rankingForLeague = new HashMap<User,Integer>();
+	}
+	
+	public SuperGol getSystem(){
+		return this.superGol;
+	}
+	
+	public void refreshPoints(){
+		getCurrentDate().setPoints(getSystem().getTable());
 	}
 	
 	public String getName(){
@@ -105,6 +125,7 @@ public class League {
 	
 	public void addUser(User aUser){
 		ranking.add(aUser);
+		rankingForLeague.put(aUser,0);
 	}
 	
 	public List<User> getRanking(){
@@ -115,4 +136,10 @@ public class League {
 		Collections.sort(ranking);
 	}
 	
+	public void updateGeneralRAnking(){
+		for(User user : rankingForLeague.keySet()){
+			int points = getCurrentDate().getPointsForUser(user);
+			rankingForLeague.replace(user, points);
+		}
+	}
 }
