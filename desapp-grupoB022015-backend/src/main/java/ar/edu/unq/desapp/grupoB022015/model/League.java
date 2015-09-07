@@ -142,8 +142,9 @@ public class League {
 	
 	public void updateGeneralRAnking(){
 		for(User user : rankingForLeague.keySet()){
-			int points = getCurrentDate().getPointsForUser(user);
-			rankingForLeague.replace(user, points);
+			int newPoints = getCurrentDate().getPointsForUser(user);
+			int oldPoints = rankingForLeague.get(user);
+			rankingForLeague.replace(user, newPoints+oldPoints);
 		}
 	}
 }
