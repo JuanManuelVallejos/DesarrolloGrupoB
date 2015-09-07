@@ -30,6 +30,10 @@ public class League {
 		this.rankingForLeague = new HashMap<User,Integer>();
 	}
 	
+	public int getPointsForUserInLeagueTable(User user){
+		return this.rankingForLeague.get(user);
+	}
+	
 	public SuperGol getSystem(){
 		return this.superGol;
 	}

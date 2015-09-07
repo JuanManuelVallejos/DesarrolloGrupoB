@@ -51,10 +51,11 @@ public class User implements Comparable<User>{
 		}
 	}
 
-	public void createLeague(String leagueName){
+	public League createLeague(String leagueName){
 		League league = new League(leagueName,getSystem());
 		league.addUser(this);
 		getSystem().addLeague(league);
+		return league;
 	}
 	
 	public void createTeam(String teamName){
