@@ -2,17 +2,13 @@ package ar.edu.unq.desapp.grupoB022015.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
 
-public class Team implements Observer{
+public abstract class Team{
 	
-	private User dt;
 	private String name;
 	private List<Player> players;
 	
-	public Team(User userDt, String teamName){
-		this.dt = userDt;
+	public Team(String teamName){
 		this.name = teamName;
 		this.players = new ArrayList<Player>();
 	}
@@ -24,20 +20,10 @@ public class Team implements Observer{
 	public List<Player> getPlayers(){
 		return this.players;
 	}
-	
-	//WARNING: Need to add logic
-	public void addPlayer(Player player){
-		players.add(player);
-		player.addObserver(this);
-	}
+
+	public abstract void addPlayer(Player player);
 	
 	public boolean existsPlayer(Player player){
 		return players.contains(player);
 	}
-	
-	public void update(Observable o, Object quantity) {
-		// TODO Auto-generated method stub
-		this.dt.addPoints((Integer) quantity);
-	}
-	
 }

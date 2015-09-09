@@ -24,23 +24,23 @@ public class TableForDate {
 		return this.currentDate;
 	}
 	
-	public void addPointsOfPlayer(Player player,Integer points){
+	public void addTablePointsOfPlayer(Player player,Integer points){
 		this.table.get(getCurrentDate()).put(player, points);
 	}
 	
 	public int getLastPointsOfDate(List<Player> players){
-		return getPointOfPlayersOfDate(players, getCurrentDate());
+		return getTablePointOfPlayersOfDate(players, getCurrentDate());
 	}
 	
-	public int getPointOfPlayersOfDate(List<Player> players,int numDate){
+	public int getTablePointOfPlayersOfDate(List<Player> players,int numDate){
 		int points = 0;
 		for(Player player : players){
-			points = getPointOfPlayerOfDate(player,numDate);
+			points = getTablePointOfPlayerOfDate(player,numDate);
 		}
 		return points;
 	}
 
-	public int getPointOfPlayerOfDate(Player player, int numDate) {
+	public int getTablePointOfPlayerOfDate(Player player, int numDate) {
 		Integer value = table.get(numDate).get(player);
 		return (value.equals(null)) ?  0 :  value; 
 	}

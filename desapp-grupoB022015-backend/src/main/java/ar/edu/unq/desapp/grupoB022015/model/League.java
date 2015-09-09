@@ -15,13 +15,7 @@ public class League {
 	private List<User> ranking;
 	private HashMap<User,Integer> rankingForLeague;
 	
-	public League(String leagueName){
-		this.name = leagueName;
-		this.fixture = new ArrayList<Date>();
-		this.ranking = new ArrayList<User>();
-		this.rankingForLeague = new HashMap<User,Integer>();
-	}
-	
+
 	public League(String leagueName, SuperGol system) {
 		this.name = leagueName;
 		this.superGol = system;
@@ -30,7 +24,7 @@ public class League {
 		this.rankingForLeague = new HashMap<User,Integer>();
 	}
 	
-	public int getPointsForUserInLeagueTable(User user){
+	public int getTablePointsForUser(User user){
 		return this.rankingForLeague.get(user);
 	}
 	
@@ -38,7 +32,7 @@ public class League {
 		return this.superGol;
 	}
 	
-	public void refreshPoints(){
+	public void refreshTablePoints(){
 		getCurrentDate().setPoints(getSystem().getTable());
 	}
 	

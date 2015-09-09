@@ -1,18 +1,12 @@
 package ar.edu.unq.desapp.grupoB022015.test;
 
 import static org.junit.Assert.*;
-
-import java.util.List;
-
 import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
-
-import ar.edu.unq.desapp.grupoB022015.model.Date;
 import ar.edu.unq.desapp.grupoB022015.model.Defender;
 import ar.edu.unq.desapp.grupoB022015.model.Forward;
 import ar.edu.unq.desapp.grupoB022015.model.League;
-import ar.edu.unq.desapp.grupoB022015.model.Match;
 import ar.edu.unq.desapp.grupoB022015.model.Midfielder;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
@@ -66,19 +60,11 @@ public class PositionTableLeagueTest {
       player5 = new Player(superGol, 5, "Louis", new Forward());
       player6 = new Player(superGol, 6, "Jimbo", new Forward());
       
-      user1.addPlayerToMyTeam(player1);
-      user1.addPlayerToMyTeam(player2);
-
-      user2.addPlayerToMyTeam(player5);
-      user2.addPlayerToMyTeam(player6);
+      user1.addPlayersToMyTeam(player1,player2);
+      user2.addPlayersToMyTeam(player5,player6);
+      user3.addPlayersToMyTeam(player5,player6);
+      user4.addPlayersToMyTeam(player3,player4);
       
-      user3.addPlayerToMyTeam(player5);
-      user3.addPlayerToMyTeam(player6);
-      
-      user4.addPlayerToMyTeam(player3);
-      user4.addPlayerToMyTeam(player4);
-      
-
     }
 	
 	@Test
@@ -99,24 +85,19 @@ public class PositionTableLeagueTest {
 		//player5: 1  <- u3, u2
 		//player6: 1  <- u3, u2
 		
-		league.refreshPoints();
+		league.refreshTablePoints();
 		league.updateGeneralRAnking();
 		
-
 		league.createFixtureOnlyTrip(new DateTime(), 1);
-			
-		List<Date> fixture = league.getFixture();
-		List<Match> first_matchs = fixture.get(0).getMatchs();
+				
+		// Date 1 =
+		//user1 vs user4
+		//user2 vs user3
 		
-		assertEquals(first_matchs.get(0).getLocal(),user1);
-		assertEquals(first_matchs.get(0).getVisitor(),user4);
-		assertEquals(first_matchs.get(1).getLocal(),user2);
-		assertEquals(first_matchs.get(1).getVisitor(),user3);
-		
-		assertEquals(league.getPointsForUserInLeagueTable(user1),3);
-		assertEquals(league.getPointsForUserInLeagueTable(user2),1);
-		assertEquals(league.getPointsForUserInLeagueTable(user3),1);
-		assertEquals(league.getPointsForUserInLeagueTable(user4),0);
+		assertEquals(league.getTablePointsForUser(user1),3);
+		assertEquals(league.getTablePointsForUser(user2),1);
+		assertEquals(league.getTablePointsForUser(user3),1);
+		assertEquals(league.getTablePointsForUser(user4),0);
 		
 	}
 

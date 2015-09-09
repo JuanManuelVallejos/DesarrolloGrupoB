@@ -14,7 +14,6 @@ public class Date {
 	private DateTime startDate;
 	private DateTime endDate;
 	
-	
 	public Date(List<Match> theMatchs, DateTime aStartDate,DateTime aEndDate){
 		matchs = theMatchs;
 		startDate = aStartDate;

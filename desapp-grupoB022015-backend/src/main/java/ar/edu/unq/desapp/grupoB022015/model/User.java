@@ -6,20 +6,14 @@ import java.util.List;
 public class User implements Comparable<User>{
 
 	private int ID;
-	private int points;
-	private Team team;
+	private int rankingPoints;
+	private FantasyTeam team;
 	private SuperGol superGol;
 	private List<League> leagues;
 	
-	public User(int ID_U){
-		this.ID = ID_U;
-		this.points = 0;
-		this.leagues = new ArrayList<League>();
-	}
-	
 	public User(int ID_U, SuperGol sP){
 		this.ID = ID_U;
-		this.points = 0;
+		this.rankingPoints = 0;
 		this.leagues = new ArrayList<League>();
 		this.superGol = sP;
 	}
@@ -32,16 +26,16 @@ public class User implements Comparable<User>{
 		return this.ID;
 	}
 	
-	public void setPoints(int _points){
-		this.points = _points;
+	public void setRankingPoints(int _points){
+		this.rankingPoints = _points;
 	}
 	
-	public int getPoints(){
-		return this.points;
+	public int getRankingPoints(){
+		return this.rankingPoints;
 	}
 	
-	public void addPoints(int quantity){
-		this.points += quantity;
+	public void addRankingPoints(int quantity){
+		this.rankingPoints += quantity;
 		actualizateLeagues();
 	}
 	
@@ -59,10 +53,10 @@ public class User implements Comparable<User>{
 	}
 	
 	public void createTeam(String teamName){
-		this.team = new Team(this,teamName);
+		this.team = new FantasyTeam(this,teamName);
 	}
 	
-	public Team getTeam(){
+	public FantasyTeam getTeam(){
 		return this.team;
 	}
 	
@@ -71,12 +65,13 @@ public class User implements Comparable<User>{
 		league.addUser(this);
 	}
 	
-	public void addPlayerToMyTeam(Player player){
-		this.team.addPlayer(player);
+	public void addPlayersToMyTeam(Player... players){
+		for(Player player : players)
+			this.team.addPlayer(player);
 	}
 	
 	public int compareTo(User otherUser) {
-		return otherUser.getPoints() - this.getPoints();
+		return otherUser.getRankingPoints() - this.getRankingPoints();
 	}
 	
 }

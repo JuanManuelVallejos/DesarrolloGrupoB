@@ -1,18 +1,16 @@
 package ar.edu.unq.desapp.grupoB022015.test;
 
 import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-
 import ar.edu.unq.desapp.grupoB022015.model.Date;
 import ar.edu.unq.desapp.grupoB022015.model.League;
 import ar.edu.unq.desapp.grupoB022015.model.Match;
+import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
 import ar.edu.unq.desapp.grupoB022015.model.User;
 
 public class LeagueTest {
@@ -25,7 +23,8 @@ public class LeagueTest {
 	
 	@Before
 	public void init(){
-		league = new League("A name for League");
+		SuperGol dummySuperGol = Mockito.mock(SuperGol.class);
+		league = new League("A name for League", dummySuperGol);
 		
 		u1 = Mockito.mock(User.class);
 		u2 = Mockito.mock(User.class);
