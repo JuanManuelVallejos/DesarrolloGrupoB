@@ -2,7 +2,6 @@ package ar.edu.unq.desapp.grupoB022015.test;
 
 import static org.junit.Assert.*;
 import org.joda.time.DateTime;
-import org.junit.Before;
 import org.junit.Test;
 import ar.edu.unq.desapp.grupoB022015.model.Defender;
 import ar.edu.unq.desapp.grupoB022015.model.Forward;
@@ -31,8 +30,8 @@ public class PositionTableLeagueTest {
 	private Player player1;
 	
 
-	@Before
-    public void init() {
+	@Test
+	public void testForTableLeague() {
       superGol = new SuperGol();
       
       user1 = new User(1, superGol);
@@ -65,10 +64,7 @@ public class PositionTableLeagueTest {
       user3.addPlayersToMyTeam(player5,player6);
       user4.addPlayersToMyTeam(player3,player4);
       
-    }
-	
-	@Test
-	public void testForTableLeague() {
+      
 		superGol.playerScoredNGoals(player1,1);
 		superGol.playerScoredNGoals(player2,1);
 		
