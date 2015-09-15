@@ -52,7 +52,7 @@ public class Player extends Observable{
 	}
 	
 	public int getPointForNGoals(int amountGoals){
-		return amountGoals*getPosition().pointsForGoal();
+		return getPosition().pointsForGoal(amountGoals);
 	}
 	
 	public void addPointsForNGoals(int amountGoals){
