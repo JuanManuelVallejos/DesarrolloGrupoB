@@ -18,10 +18,6 @@ public class Player extends Observable{
 		this.points = 0;
 		this.setSystemUpgrade(superGol);
 	}
-	
-	public int pointsInAMatch(Match aMatch){
-		return 0;
-	}
 
 	public String getName() {
 		return name;
