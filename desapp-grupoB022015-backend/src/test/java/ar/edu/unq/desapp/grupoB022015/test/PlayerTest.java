@@ -30,8 +30,8 @@ public class PlayerTest {
 	@Test
 	public void testPointsForNGoalOfGoalKeeper() {
 		player.setPosition(new Goalkeeper());
+		assertEquals(player.getPointForNGoals(0), 2);
 		assertEquals(player.getPointForNGoals(1), 0);
-		assertEquals(player.getPointForNGoals(10), 0);
 	}
 	
 	@Test
