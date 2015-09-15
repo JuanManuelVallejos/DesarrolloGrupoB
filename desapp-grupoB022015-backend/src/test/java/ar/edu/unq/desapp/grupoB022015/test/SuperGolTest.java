@@ -35,6 +35,7 @@ public class SuperGolTest {
 		assertEquals(supergol.getUsers().get(0),user);
 	}
 	
+	
 	@Test
 	public void addPlayerToRealTeam(){
 		supergol.addRealTeam("Independiente");
