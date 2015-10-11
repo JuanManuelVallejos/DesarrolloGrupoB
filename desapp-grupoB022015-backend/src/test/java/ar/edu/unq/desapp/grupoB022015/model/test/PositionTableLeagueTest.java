@@ -1,8 +1,10 @@
 package ar.edu.unq.desapp.grupoB022015.model.test;
 
 import static org.junit.Assert.*;
+
 import org.joda.time.DateTime;
 import org.junit.Test;
+
 import ar.edu.unq.desapp.grupoB022015.model.Defender;
 import ar.edu.unq.desapp.grupoB022015.model.Forward;
 import ar.edu.unq.desapp.grupoB022015.model.League;
@@ -31,7 +33,7 @@ public class PositionTableLeagueTest {
 	
 
 	@Test
-	public void testForTableLeague() {
+	public void testForTableLeague() throws Throwable {
       superGol = new SuperGol();
       
       user1 = new User(1, superGol);
