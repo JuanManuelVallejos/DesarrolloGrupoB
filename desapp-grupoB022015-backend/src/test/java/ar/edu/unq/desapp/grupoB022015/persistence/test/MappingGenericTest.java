@@ -18,7 +18,7 @@ import org.springframework.core.io.ClassPathResource;
 import ar.edu.unq.desapp.grupoB022015.builders.AbstractBuilder;
 
 public class MappingGenericTest {
-
+/*
     private XmlBeanFactory factory;
 
     protected ClassMetadata classMapping;
@@ -83,5 +83,5 @@ public class MappingGenericTest {
     public void setFactory(final XmlBeanFactory factory) {
         this.factory = factory;
     }
-
+*/
 }
