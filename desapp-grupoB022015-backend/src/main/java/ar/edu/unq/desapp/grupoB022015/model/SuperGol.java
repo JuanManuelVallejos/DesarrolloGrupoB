@@ -9,6 +9,7 @@ public class SuperGol{
 	private List<League> leagues;
 	private List<User> users;
 	private TableForDate tableForDate;
+
 	
 	public SuperGol(){
 		realTeams = new ArrayList<RealTeam>();

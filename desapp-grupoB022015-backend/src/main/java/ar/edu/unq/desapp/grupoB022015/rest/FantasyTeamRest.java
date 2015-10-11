@@ -34,8 +34,8 @@ public class FantasyTeamRest {
     @Path("/list")
     @Produces("application/json")
     public List<FantasyTeam> getFantasyTeams() {
-        List<FantasyTeam> players = fantasyTeamService.retriveAll();
-        return players;
+        List<FantasyTeam> fantasyTeams = fantasyTeamService.retriveAll();
+        return fantasyTeams;
     }
 	
 	 @POST

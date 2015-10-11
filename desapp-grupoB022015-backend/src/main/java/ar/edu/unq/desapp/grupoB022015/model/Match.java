@@ -7,6 +7,7 @@ public class Match {
 	private int localPoints;
 	private int visitorPoints;
 	
+	public Match(){}
 	public Match(User localU, User visitorU){
 		this.local = localU;
 		this.visitor = visitorU;

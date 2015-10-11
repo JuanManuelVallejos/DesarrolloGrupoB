@@ -15,7 +15,7 @@ public class League {
 	private List<User> ranking;
 	private HashMap<User,Integer> rankingForLeague;
 	
-
+	public League(){}
 	public League(String leagueName, SuperGol system) {
 		this.name = leagueName;
 		this.superGol = system;

@@ -10,6 +10,8 @@ public class User implements Comparable<User>{
 	private FantasyTeam team;
 	private SuperGol superGol;
 	private List<League> leagues;
+
+	public User(){}
 	
 	public User(int ID_U, SuperGol sP){
 		this.ID = ID_U;
