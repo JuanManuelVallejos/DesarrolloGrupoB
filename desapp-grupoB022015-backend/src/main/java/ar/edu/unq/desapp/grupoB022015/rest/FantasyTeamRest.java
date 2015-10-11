@@ -15,6 +15,7 @@ import ar.edu.unq.desapp.grupoB022015.model.FantasyTeam;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
 import ar.edu.unq.desapp.grupoB022015.model.User;
 import ar.edu.unq.desapp.grupoB022015.services.FantasyTeamService;
+import javax.ws.rs.core.Response;
 
 @Path("/fantasyTeam")
 public class FantasyTeamRest {
@@ -40,9 +41,10 @@ public class FantasyTeamRest {
 	 @POST
 	 @Path("/create")
 	 @Produces("application/json")
-	 public FantasyTeam createDiagnostic(@FormParam("name") String name) {
+	 public Response createDiagnostic(@FormParam("name") String name) {
 		 	FantasyTeam fantasyTeam = new FantasyTeam(new User(1,new SuperGol()),name);
-			return fantasyTeam;
+		 	getFantasyTeamService().save(fantasyTeam);
+			return Response.ok(fantasyTeam).build();
 	 }
 
 }

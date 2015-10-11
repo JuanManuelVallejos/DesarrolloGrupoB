@@ -8,6 +8,8 @@ public abstract class Team extends Entity{
 	private String name;
 	private List<Player> players;
 	
+	public Team(){}
+	
 	public Team(String teamName){
 		this.name = teamName;
 		this.players = new ArrayList<Player>();

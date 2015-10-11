@@ -6,6 +6,8 @@ public class FantasyTeam extends Team{
 	
 	private User dt;
 	
+	public FantasyTeam(){}
+	
 	public FantasyTeam(User userDt, String teamName){
 		super(teamName);
 		this.setDt(userDt);
