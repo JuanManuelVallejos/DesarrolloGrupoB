@@ -1,4 +1,4 @@
-package ar.edu.unq.desapp.grupoB022015.test;
+package ar.edu.unq.desapp.grupoB022015.model.test;
 
 import static org.junit.Assert.*;
 

@@ -1,5 +1,7 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
+import antlr.collections.List;
+
 public class FantasyTeam extends Team{
 	
 	private User dt;
@@ -22,5 +24,6 @@ public class FantasyTeam extends Team{
 	public void addPlayer(Player player) {
 		getPlayers().add(player);
 	}
+	
 	
 }
