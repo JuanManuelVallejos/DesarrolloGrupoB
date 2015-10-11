@@ -1,5 +1,7 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
+import ar.edu.unq.desapp.grupoB022015.model.exceptions.WrongUserException;
+
 public class Match {
 	
 	private User local;
@@ -16,14 +18,12 @@ public class Match {
 	}
 	
 	
-	//WARNING: Add Exception
-	@SuppressWarnings("null")
-	public int getPointsForUser(User user){
+	public int getPointsForUser(User user)throws Throwable{
 		if(local.equals(user))
 			return localPoints;
 		if(visitor.equals(user))
 			return visitorPoints;
-		return (Integer) null;
+		throw new WrongUserException();
 	}
 	
 	public User getLocal() {

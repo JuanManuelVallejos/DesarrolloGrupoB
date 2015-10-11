@@ -61,7 +61,7 @@ public class Date {
 		return null;
 	}
 	
-	public int getPointsForUser(User user) {
+	public int getPointsForUser(User user) throws Throwable{
 		return getMatchForUser(user).getPointsForUser(user);
 	}
 	

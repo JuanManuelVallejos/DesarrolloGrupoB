@@ -67,7 +67,7 @@ public class User implements Comparable<User>{
 		league.addUser(this);
 	}
 	
-	public void addPlayersToMyTeam(Player... players){
+	public void addPlayersToMyTeam(Player... players) throws Throwable{
 		for(Player player : players)
 			this.team.addPlayer(player);
 	}

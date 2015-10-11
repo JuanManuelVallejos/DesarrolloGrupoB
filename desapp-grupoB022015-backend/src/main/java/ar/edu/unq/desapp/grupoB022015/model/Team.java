@@ -31,7 +31,7 @@ public abstract class Team extends Entity{
 		return namePlayers;
 	}
 	
-	public abstract void addPlayer(Player player);
+	public abstract void addPlayer(Player player) throws Throwable;
 	
 	public boolean existsPlayer(Player player){
 		return players.contains(player);

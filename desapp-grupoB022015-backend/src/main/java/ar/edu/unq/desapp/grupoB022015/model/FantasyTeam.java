@@ -1,6 +1,6 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
-import antlr.collections.List;
+import ar.edu.unq.desapp.grupoB022015.model.exceptions.MaximumNumberOfPlayersInTeamException;
 
 public class FantasyTeam extends Team{
 	
@@ -21,10 +21,13 @@ public class FantasyTeam extends Team{
 		this.dt = dt;
 	}
 
-	//WARNING: Need to add logic
 	@Override
-	public void addPlayer(Player player) {
-		getPlayers().add(player);
+	public void addPlayer(Player player) throws Throwable{
+		if(getPlayers().size() < 11){
+			getPlayers().add(player);
+		}else{
+			throw new MaximumNumberOfPlayersInTeamException();
+		}
 	}
 	
 	

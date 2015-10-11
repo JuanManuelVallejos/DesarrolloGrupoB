@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.joda.time.DateTime;
 
+import ar.edu.unq.desapp.grupoB022015.model.exceptions.InvalidDateForThisLeagueException;
+
 public class League {
 
 	private String name;
@@ -32,7 +34,7 @@ public class League {
 		return this.superGol;
 	}
 	
-	public void refreshTablePoints(){
+	public void refreshTablePoints() throws Throwable {
 		getCurrentDate().setPoints(getSystem().getTable());
 	}
 	
@@ -44,13 +46,12 @@ public class League {
 		return this.fixture;
 	}
 	
-	//WARNING: need to add Exception 
-	public Date getCurrentDate(){
+	public Date getCurrentDate() throws Throwable{
 		for ( Date currentDate: fixture)
 			if(currentDate.dateMine(new DateTime()))
 				return currentDate;
 		
-		return null;
+		throw new InvalidDateForThisLeagueException();
 	}
 	
 	
@@ -134,7 +135,7 @@ public class League {
 		Collections.sort(ranking);
 	}
 	
-	public void updateGeneralRAnking(){
+	public void updateGeneralRAnking() throws Throwable{
 		for(User user : rankingForLeague.keySet()){
 			int newPoints = getCurrentDate().getPointsForUser(user);
 			int oldPoints = rankingForLeague.get(user);
