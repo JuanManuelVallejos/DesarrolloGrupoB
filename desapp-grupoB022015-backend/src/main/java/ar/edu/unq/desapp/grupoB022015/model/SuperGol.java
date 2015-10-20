@@ -25,8 +25,8 @@ public class SuperGol{
 		currentIDUser = 0;
 	}
 	
-	public User createNewUserWithTeam(String nameFantasyTeam){
-		User user= new User(currentIDUser(), this);
+	public User createNewUserWithTeam(String userName, String nameFantasyTeam){
+		User user= new User(currentIDUser(), this, userName);
 		addUser(user);
 		user.createFantasyTeam(nameFantasyTeam);
 		return user;
@@ -39,6 +39,10 @@ public class SuperGol{
 		return currentIDUser-1;
 	}
 	
+	public void playerScoredNGoals(int player_ID, int amountGoals) throws PlayerNotFoundException{
+		playerScoredNGoals(findPlayer(player_ID),amountGoals);
+	}
+	
 	public void playerScoredNGoals(Player player,int amountGoals){
 		player.addPointsForNGoals(amountGoals);
 		tableForDate.addTablePointsOfPlayer(player,player.getPointForNGoals(amountGoals));
@@ -46,6 +50,11 @@ public class SuperGol{
 	
 	public void completeDate(){
 		this.tableForDate.addDate();
+	}
+	
+	public void refreshDate(String pathFile) throws Throwable{
+		CVSParser.refresh(this, pathFile);
+		completeDate();
 	}
 	
 	// FINDERS

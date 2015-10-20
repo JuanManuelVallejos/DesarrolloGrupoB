@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
+import ar.edu.unq.desapp.grupoB022015.model.League;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.RealTeam;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
@@ -21,8 +22,8 @@ public class ApplicationTest {
 	private SuperGol superGol = new SuperGol();
 	private ArrayList<Player> playersTeam1 = new ArrayList<Player>();
 	private ArrayList<Player> playersTeam2 = new ArrayList<Player>();
-	private User user1 = superGol.createNewUserWithTeam("aTeam");
-	private User user2 = superGol.createNewUserWithTeam("otherTeam");
+	private User user1 = superGol.createNewUserWithTeam("aName","aTeam");
+	private User user2 = superGol.createNewUserWithTeam("otherName","otherTeam");
 	
 	@Before
     public void init() {
@@ -91,6 +92,12 @@ public class ApplicationTest {
 		user1.addPlayersToMyTeam(20122);
 	}
 	
-	
+	@Test
+	public void testUserCreatesLeague(){
+		League league = user1.createLeague("aLeagueName");
+		
+		assert(league.getRanking().contains(user1));
+		assert(user1.getLeagues().contains(league));
+	}
 	
 }

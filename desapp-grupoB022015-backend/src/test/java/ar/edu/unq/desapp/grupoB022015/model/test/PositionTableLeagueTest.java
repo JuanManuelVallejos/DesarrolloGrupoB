@@ -36,10 +36,10 @@ public class PositionTableLeagueTest {
 	public void testForTableLeague() throws Throwable {
       superGol = new SuperGol();
       
-      user1 = new User(1, superGol);
-      user2 = new User(2, superGol);
-      user3 = new User(3, superGol);
-      user4 = new User(4, superGol);
+      user1 = new User(1, superGol,"u1");
+      user2 = new User(2, superGol,"u2");
+      user3 = new User(3, superGol,"u3");
+      user4 = new User(4, superGol,"u4");
 
       user1.createFantasyTeam("User1 Team");
       user2.createFantasyTeam("User2 Team");

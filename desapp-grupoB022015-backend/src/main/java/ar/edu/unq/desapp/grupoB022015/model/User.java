@@ -9,6 +9,7 @@ import ar.edu.unq.desapp.grupoB022015.model.exceptions.PlayerNotFoundException;
 public class User implements Comparable<User>{
 
 	private int ID;
+	private String userName;
 	private int rankingPoints;
 	private FantasyTeam team;
 	private SuperGol superGol;
@@ -16,11 +17,12 @@ public class User implements Comparable<User>{
 
 	public User(){}
 	
-	public User(int ID_U, SuperGol sP){
+	public User(int ID_U, SuperGol sP, String name){
 		this.ID = ID_U;
 		this.rankingPoints = 0;
 		this.leagues = new ArrayList<League>();
 		this.superGol = sP;
+		this.userName = name;
 	}
 
 	public SuperGol getSystem(){
@@ -86,6 +88,10 @@ public class User implements Comparable<User>{
 	public void setPlayers(Player... players) throws Throwable{
 		for(Player player : players)
 			getTeam().addPlayer(player);
+	}
+	
+	public List<League> getLeagues(){
+		return this.leagues;
 	}
 	
 }

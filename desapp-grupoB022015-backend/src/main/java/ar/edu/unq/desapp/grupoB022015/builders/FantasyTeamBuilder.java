@@ -8,7 +8,7 @@ public class FantasyTeamBuilder extends AbstractBuilder<FantasyTeam> {
 
     @Override
     public FantasyTeam anyObject() {
-        return new FantasyTeam(new User(0,new SuperGol()),"");
+        return new FantasyTeam(new User(0,new SuperGol(),""),"");
     }
 
 }
