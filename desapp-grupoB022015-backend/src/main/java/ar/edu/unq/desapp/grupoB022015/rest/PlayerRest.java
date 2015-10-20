@@ -42,7 +42,7 @@ public class PlayerRest {
 			 @FormParam("ID") int id, @FormParam("position") Position position){
 		
 		
-		Player player = getPlayerService().findByName(name);
+		Player player = getPlayerService().findById(id);
 		
 		if(player == null){
 			//pasar supergol q corresponde
