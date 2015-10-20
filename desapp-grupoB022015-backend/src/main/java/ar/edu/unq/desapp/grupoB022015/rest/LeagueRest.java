@@ -10,6 +10,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import ar.edu.unq.desapp.grupoB022015.model.League;
+import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
 import ar.edu.unq.desapp.grupoB022015.services.LeagueService;
 
@@ -29,11 +30,21 @@ public class LeagueRest {
 	@POST
 	@Path("/create")
 	@Produces("application/json")
-	public Response createLeague(@FormParam("name") String leaguename){
+	public Response createLeague(@FormParam("name") String leaguename,  @FormParam("ID") int id){
 		
-		League league = new League(leaguename, new SuperGol());
+		
+		League league = getLeagueService().findById(id);
+		
+		if(league == null){
+			//pasar supergol q corresponde
+			League l = new League(leaguename, new SuperGol());
+			getLeagueService().save(l);
+		}else{
+			return Response.ok(-1).build();
+		}
 		return Response.ok(league).build();
 	}
+
 	
 	@GET
     @Path("/list")

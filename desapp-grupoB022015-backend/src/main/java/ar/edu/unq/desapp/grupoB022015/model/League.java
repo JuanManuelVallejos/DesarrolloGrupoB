@@ -26,6 +26,14 @@ public class League extends Entity{
 		this.rankingForLeague = new HashMap<User,Integer>();
 	}
 	
+	public HashMap<User,Integer> getRankingForLeague(){
+		return this.rankingForLeague;
+	}
+	
+	public void setRankingForLeague(HashMap<User,Integer> rankingForLeague){
+		this.rankingForLeague = rankingForLeague;
+	}
+	
 	public int getTablePointsForUser(User user){
 		return this.rankingForLeague.get(user);
 	}

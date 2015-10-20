@@ -13,18 +13,25 @@
 		<list name="ranking" inverse="false" cascade="all" lazy="false">
 			<key column="userID" />
 			<list-index column="id" />
-			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.League" unique="true"/>
+			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.User" unique="true"/>
 		</list>
+		
 		
 		<map name="rankingForLeague">
         	<key column="userID"
             	 not-null="true"/>
         	<map-key column="points" 
             	type="string"/>
-        	<one-to-many class="League"/>
+        	<one-to-many class="ar.edu.unq.desapp.grupoB022015.model.League"/>
     	</map>
-		
-		<!--	
+    	
+    	<!--
+		<map name="rankingForLeague">
+    		<key column="userID" not-null="true"/>
+    		<map-key-many-to-many column="employee_id" class="Employee"/>
+    		<one-to-many class="Contract"/>
+		</map>
+
 		<one-to-one name="superGol" class="ar.edu.unq.desapp.grupoB022015.model.SuperGol"
 			cascade="save-update" lazy="false"></one-to-one>
 			

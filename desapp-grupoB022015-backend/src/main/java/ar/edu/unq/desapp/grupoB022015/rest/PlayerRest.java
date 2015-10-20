@@ -11,7 +11,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import ar.edu.unq.desapp.grupoB022015.model.Defender;
-import ar.edu.unq.desapp.grupoB022015.model.FantasyTeam;
 import ar.edu.unq.desapp.grupoB022015.model.Forward;
 import ar.edu.unq.desapp.grupoB022015.model.Goalkeeper;
 import ar.edu.unq.desapp.grupoB022015.model.Midfielder;
