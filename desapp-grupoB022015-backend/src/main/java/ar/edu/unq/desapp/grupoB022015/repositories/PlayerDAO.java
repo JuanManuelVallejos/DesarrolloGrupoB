@@ -3,10 +3,9 @@ package ar.edu.unq.desapp.grupoB022015.repositories;
 import java.util.List;
 
 import org.hibernate.Session;
-
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 
-public class PlayerDAO extends HibernateGenericDAO<Player> {
+public class PlayerDAO extends HibernateGenericDAO<Player> implements GenericRepository<Player> {
 
 	/**
 	 * 

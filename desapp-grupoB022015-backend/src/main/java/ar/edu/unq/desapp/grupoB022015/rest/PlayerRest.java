@@ -1,5 +1,7 @@
 package ar.edu.unq.desapp.grupoB022015.rest;
 
+import java.util.List;
+
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -9,6 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import ar.edu.unq.desapp.grupoB022015.model.Defender;
+import ar.edu.unq.desapp.grupoB022015.model.FantasyTeam;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.Position;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
@@ -30,8 +33,7 @@ public class PlayerRest {
 	@GET
 	@Path("/{id}")
 	@Produces("application/json")
-	public Response findById(@PathParam("id") final
-			Integer id) {
+	public Response findById(@PathParam("id") Integer id) {
 		Player p = getPlayerService().findById(id);
 		return Response.ok(p).build();
 	}
@@ -55,4 +57,12 @@ public class PlayerRest {
 		return Response.ok(player).build();
 	}
 
+	@GET
+    @Path("/list")
+    @Produces("application/json")
+    public List<Player> getFantasyTeams() {
+        List<Player> players = playerService.retriveAll();
+        return players;
+    }
+	
 }

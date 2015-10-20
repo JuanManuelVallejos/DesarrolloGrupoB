@@ -10,6 +10,7 @@
 	<bean id="services.general" class="ar.edu.unq.desapp.grupoB022015.services.GeneralService">
 		<property name="fantasyTeamService" ref="services.fantasyTeam" />
 		<property name="playerService" ref="services.player" />
+		<property name="positionService" ref="services.position" />
 	</bean>
 
 	<bean id="services.fantasyTeam" class="ar.edu.unq.desapp.grupoB022015.services.FantasyTeamService">
@@ -20,6 +21,8 @@
 		<property name="repository" ref="persistence.playerRepository" />
 	</bean>
 	
-
+	<bean id="services.position" class="ar.edu.unq.desapp.grupoB022015.services.PositionService">
+		<property name="repository" ref="persistence.positionRepository" />
+	</bean>
 
 </beans>

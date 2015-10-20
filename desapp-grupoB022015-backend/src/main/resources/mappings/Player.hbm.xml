@@ -9,10 +9,10 @@
 		</id>
 
 		<property name="name" />
-		<!--
+		
 		<one-to-one name="position" class="ar.edu.unq.desapp.grupoB022015.model.Position"
 			cascade="save-update" lazy="false"></one-to-one>
-			
+		<!--	
 		<one-to-one name="systemUpgrade" class="ar.edu.unq.desapp.grupoB022015.model.SuperGol"
 			cascade="save-update" lazy="false"></one-to-one>
 			
