@@ -9,6 +9,7 @@ import org.hibernate.Session;
 
 import ar.edu.unq.desapp.grupoB022015.model.FantasyTeam;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
+import ar.edu.unq.desapp.grupoB022015.model.User;
 
 public class FantasyTeamDAO extends HibernateGenericDAO<FantasyTeam> implements GenericRepository<FantasyTeam> {
 
@@ -46,6 +47,26 @@ public class FantasyTeamDAO extends HibernateGenericDAO<FantasyTeam> implements 
     } finally {
         session.close();
     }
+	}
+	
+	
+	public FantasyTeam findByTeamName(String teamName) {
+		//funciona si los nombres de equipos son unicos
+		Session session = this.getHibernateTemplate().getSessionFactory().openSession();
+	    try {
+	    	String queryStr = " SELECT e FROM " + this.persistentClass.getName() + " AS e WHERE e.name like :teamName";
+	        
+	    	@SuppressWarnings("unchecked")
+			List<FantasyTeam> team = session.createQuery(queryStr).setParameter("name", teamName).list();
+	             
+	        if(team.size() == 0){
+	        	return null;
+	        }else{
+	        	return team.get(0);
+	        }
+	        } finally {
+	            session.close();
+	        }
 	}
 	
 }

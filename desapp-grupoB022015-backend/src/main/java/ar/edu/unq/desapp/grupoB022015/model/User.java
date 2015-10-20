@@ -33,6 +33,10 @@ public class User implements Comparable<User>{
 		return this.ID;
 	}
 	
+	public String getUserName(){
+		return this.userName;
+	}
+	
 	public void setRankingPoints(int _points){
 		this.rankingPoints = _points;
 	}

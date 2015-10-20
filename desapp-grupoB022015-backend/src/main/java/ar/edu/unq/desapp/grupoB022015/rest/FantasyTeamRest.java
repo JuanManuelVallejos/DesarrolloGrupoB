@@ -8,7 +8,9 @@ import java.util.List;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 import ar.edu.unq.desapp.grupoB022015.model.FantasyTeam;
@@ -47,6 +49,18 @@ public class FantasyTeamRest {
 			return Response.ok(fantasyTeam).build();
 	 }
 	 
+		
+	@PUT
+	@Path("/edit/{teamname}")
+	@Produces("application/json")
+	public void editFantasyTeam(@PathParam("teamname") String teamname){
+			
+		FantasyTeam team = this.getFantasyTeamService().findByTeamName(teamname);
+		team.setName(teamname);
+				
+		this.getFantasyTeamService().update(team);
+			
+	}
 	 
 
 }

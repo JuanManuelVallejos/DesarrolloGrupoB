@@ -58,4 +58,8 @@ public abstract class Team extends Entity{
 				return player;
 		throw new PlayerNotFoundException();
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 }
