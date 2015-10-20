@@ -41,10 +41,12 @@ public class FantasyTeamRest {
 	 @POST
 	 @Path("/create")
 	 @Produces("application/json")
-	 public Response createDiagnostic(@FormParam("name") String name) {
+	 public Response createFantasyTeam(@FormParam("name") String name) {
 		 	FantasyTeam fantasyTeam = new FantasyTeam(new User(1,new SuperGol(),""),name);
 		 	getFantasyTeamService().save(fantasyTeam);
 			return Response.ok(fantasyTeam).build();
 	 }
+	 
+	 
 
 }
