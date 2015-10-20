@@ -32,6 +32,7 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 			<ref bean="playerRest" />
 			<ref bean="positionRest" />
 			<ref bean="userRest" />
+			<ref bean="leagueRest" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
 			<entry key="json" value="application/json" />
@@ -63,5 +64,10 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 	<bean id="userRest" class="ar.edu.unq.desapp.grupoB022015.rest.UserRest">
 		<property name="userService" ref="services.user" />
 	</bean>
+
+	<bean id="leagueRest" class="ar.edu.unq.desapp.grupoB022015.rest.LeagueRest">
+		<property name="leagueService" ref="services.league" />
+	</bean>
+	
 
 </beans>

@@ -30,7 +30,7 @@ public class UserRest {
 	@Path("/create")
 	@Produces("application/json")
 	public Response createUser(@FormParam("name") String name,
-			 @FormParam("ID") int id, @FormParam("supergol") SuperGol supergol){
+			 @FormParam("ID") int id){//, @FormParam("supergol") SuperGol supergol){
 		
 		
 		User user = getUserService().findById(id);

@@ -29,5 +29,9 @@
 	<bean id="services.user" class="ar.edu.unq.desapp.grupoB022015.services.UserService">
 		<property name="repository" ref="persistence.userRepository" />
 	</bean>
+	
+	<bean id="services.league" class="ar.edu.unq.desapp.grupoB022015.services.LeagueService">
+		<property name="repository" ref="persistence.leagueRepository" />
+	</bean>
 
 </beans>
