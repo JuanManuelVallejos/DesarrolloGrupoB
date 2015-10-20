@@ -112,5 +112,8 @@ http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
 		<property name="sessionFactory" ref="persistence.sessionFactory" />
 	</bean>
 
+	<bean id="persistence.userRepository" class="ar.edu.unq.desapp.grupoB022015.repositories.UserDAO">
+		<property name="sessionFactory" ref="persistence.sessionFactory" />
+	</bean>
 
 </beans>

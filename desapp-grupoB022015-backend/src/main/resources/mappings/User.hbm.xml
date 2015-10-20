@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field"
+	default-cascade="save-update">
+	<class name="ar.edu.unq.desapp.grupoB022015.model.User">
+		<id column="ID" name="ID">
+			<generator class="native" />
+		</id>
+
+		<property name="userName" />
+		<property name="rankingPoints" />
+		
+		<one-to-one name="team" class="ar.edu.unq.desapp.grupoB022015.model.FantasyTeam"
+			cascade="save-update" lazy="false"></one-to-one>
+			
+		<!--	
+		<one-to-one name="superGol" class="ar.edu.unq.desapp.grupoB022015.model.SuperGol"
+			cascade="save-update" lazy="false"></one-to-one>
+		
+		
+		<list name="leagues" inverse="false" cascade="all" lazy="false">
+			<key column="leagueID" />
+			<list-index column="id" />
+			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.League" unique="true"/>
+		</list>
+		-->
+		
+	</class>
+</hibernate-mapping>
