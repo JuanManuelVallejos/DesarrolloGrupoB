@@ -19,6 +19,19 @@ public class Player extends Observable{
 		this.setSystemUpgrade(superGol);
 	}
 
+	public static Player PlayerGoalkeeper(SuperGol superGol,int id, String aName){
+		return new Player(superGol,id,aName,new Goalkeeper());
+	}
+	public static Player PlayerDefender(SuperGol superGol,int id, String aName){
+		return new Player(superGol,id,aName,new Defender());
+	}
+	public static Player PlayerMidfielder(SuperGol superGol,int id, String aName){
+		return new Player(superGol,id,aName,new Midfielder());
+	}
+	public static Player PlayerForward(SuperGol superGol,int id, String aName){
+		return new Player(superGol,id,aName,new Forward());
+	}
+	
 	public String getName() {
 		return name;
 	}

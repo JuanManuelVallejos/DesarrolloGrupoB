@@ -22,7 +22,7 @@ public class FantasyTeam extends Team{
 	}
 
 	@Override
-	public void addPlayer(Player player) throws Throwable{
+	public void addPlayer(Player player) throws MaximumNumberOfPlayersInTeamException{
 		if(getPlayers().size() < 11){
 			getPlayers().add(player);
 		}else{

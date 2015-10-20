@@ -12,5 +12,5 @@ public class RealTeam extends Team {
 	public void addPlayer(Player player) {
 		getPlayers().add(player);
 	}
-
+	
 }

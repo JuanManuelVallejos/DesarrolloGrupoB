@@ -41,10 +41,10 @@ public class PositionTableLeagueTest {
       user3 = new User(3, superGol);
       user4 = new User(4, superGol);
 
-      user1.createTeam("User1 Team");
-      user2.createTeam("User2 Team");
-      user3.createTeam("User3 Team");
-      user4.createTeam("User4 Team");
+      user1.createFantasyTeam("User1 Team");
+      user2.createFantasyTeam("User2 Team");
+      user3.createFantasyTeam("User3 Team");
+      user4.createFantasyTeam("User4 Team");
       
       league = user1.createLeague("The League");
       
@@ -61,10 +61,10 @@ public class PositionTableLeagueTest {
       player5 = new Player(superGol, 5, "Louis", new Forward());
       player6 = new Player(superGol, 6, "Jimbo", new Forward());
       
-      user1.addPlayersToMyTeam(player1,player2);
-      user2.addPlayersToMyTeam(player5,player6);
-      user3.addPlayersToMyTeam(player5,player6);
-      user4.addPlayersToMyTeam(player3,player4);
+      user1.setPlayers(player1,player2);
+      user2.setPlayers(player5,player6);
+      user3.setPlayers(player5,player6);
+      user4.setPlayers(player3,player4);
       
       
 		superGol.playerScoredNGoals(player1,1);

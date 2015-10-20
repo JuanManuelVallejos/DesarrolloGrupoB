@@ -3,6 +3,9 @@ package ar.edu.unq.desapp.grupoB022015.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import ar.edu.unq.desapp.grupoB022015.model.exceptions.MaximumNumberOfPlayersInTeamException;
+import ar.edu.unq.desapp.grupoB022015.model.exceptions.PlayerNotFoundException;
+
 public class User implements Comparable<User>{
 
 	private int ID;
@@ -19,7 +22,7 @@ public class User implements Comparable<User>{
 		this.leagues = new ArrayList<League>();
 		this.superGol = sP;
 	}
-	
+
 	public SuperGol getSystem(){
 		return this.superGol;
 	}
@@ -54,7 +57,7 @@ public class User implements Comparable<User>{
 		return league;
 	}
 	
-	public void createTeam(String teamName){
+	public void createFantasyTeam(String teamName){
 		this.team = new FantasyTeam(this,teamName);
 	}
 	
@@ -67,13 +70,22 @@ public class User implements Comparable<User>{
 		league.addUser(this);
 	}
 	
-	public void addPlayersToMyTeam(Player... players) throws Throwable{
-		for(Player player : players)
-			this.team.addPlayer(player);
+	public void addPlayersToMyTeam(int... IDplayers) throws MaximumNumberOfPlayersInTeamException, PlayerNotFoundException{
+		for(int player_ID : IDplayers)
+			getSystem().addPlayerTo(player_ID,this);
+	}
+	
+	public void addPlayerToMyTeam(Player player) throws MaximumNumberOfPlayersInTeamException{
+		getTeam().addPlayer(player);
 	}
 	
 	public int compareTo(User otherUser) {
 		return otherUser.getRankingPoints() - this.getRankingPoints();
+	}
+	
+	public void setPlayers(Player... players) throws Throwable{
+		for(Player player : players)
+			getTeam().addPlayer(player);
 	}
 	
 }

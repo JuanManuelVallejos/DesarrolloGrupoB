@@ -3,6 +3,8 @@ package ar.edu.unq.desapp.grupoB022015.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import ar.edu.unq.desapp.grupoB022015.model.exceptions.PlayerNotFoundException;
+
 public abstract class Team extends Entity{
 	
 	private String name;
@@ -31,9 +33,29 @@ public abstract class Team extends Entity{
 		return namePlayers;
 	}
 	
+	public void setPlayers(List<Player> players){
+		this.players = players;
+	}
+	
 	public abstract void addPlayer(Player player) throws Throwable;
 	
 	public boolean existsPlayer(Player player){
 		return players.contains(player);
+	}
+	
+	public boolean existsPlayer(int player_ID){
+		try{
+			getPlayer(player_ID);
+			return true;
+		}catch(PlayerNotFoundException e){
+			return false;
+		}
+	}
+	
+	public Player getPlayer(int player_ID) throws PlayerNotFoundException{
+		for(Player player : getPlayers())
+			if(player.getID() == player_ID)
+				return player;
+		throw new PlayerNotFoundException();
 	}
 }
