@@ -29,6 +29,7 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 	<jaxrs:server id="globalService">
 		<jaxrs:serviceBeans>
 			<ref bean="fantasyTeamRest" />
+			<ref bean="playerRest" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
 			<entry key="json" value="application/json" />
@@ -47,6 +48,10 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 
 	<bean id="fantasyTeamRest" class="ar.edu.unq.desapp.grupoB022015.rest.FantasyTeamRest">
 		<property name="fantasyTeamService" ref="services.fantasyTeam" />
+	</bean>
+	
+	<bean id="playerRest" class="ar.edu.unq.desapp.grupoB022015.rest.PlayerRest">
+		<property name="playerService" ref="services.player" />
 	</bean>
 
 

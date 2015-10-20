@@ -103,6 +103,10 @@ http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
 	<bean id="persistence.fantasyTeamRepository" class="ar.edu.unq.desapp.grupoB022015.repositories.FantasyTeamDAO">
 		<property name="sessionFactory" ref="persistence.sessionFactory" />
 	</bean>
+	
+	<bean id="persistence.playerRepository" class="ar.edu.unq.desapp.grupoB022015.repositories.PlayerDAO">
+		<property name="sessionFactory" ref="persistence.sessionFactory" />
+	</bean>
 
 
 </beans>

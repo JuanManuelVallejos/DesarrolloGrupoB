@@ -8,12 +8,13 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import ar.edu.unq.desapp.grupoB022015.model.Defender;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.Position;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
 import ar.edu.unq.desapp.grupoB022015.services.PlayerService;
 
-@Path("/players")
+@Path("/player")
 public class PlayerRest {
 	
 	private PlayerService playerService;
@@ -38,15 +39,15 @@ public class PlayerRest {
 	@POST
 	@Path("/create")
 	@Produces("application/json")
-	public Response createPatient(@FormParam("name") String name,
-			 @FormParam("ID") int id, @FormParam("position") Position position){
+	public Response createPlayer(@FormParam("name") String name,
+			 @FormParam("ID") int id){//, @FormParam("position") Position position){
 		
 		
 		Player player = getPlayerService().findByName(name);
 		
 		if(player == null){
 			//pasar supergol q corresponde
-			Player p = new Player(new SuperGol(), id, name, position);
+			Player p = new Player(new SuperGol(), id, name ,new Defender());//, position);
 			getPlayerService().save(p);
 		}else{
 			return Response.ok(-1).build();
