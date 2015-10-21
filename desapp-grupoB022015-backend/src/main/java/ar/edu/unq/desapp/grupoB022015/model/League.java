@@ -9,7 +9,7 @@ import org.joda.time.DateTime;
 
 import ar.edu.unq.desapp.grupoB022015.model.exceptions.InvalidDateForThisLeagueException;
 
-public class League {
+public class League extends Entity{
 
 	private String name;
 	private SuperGol superGol;

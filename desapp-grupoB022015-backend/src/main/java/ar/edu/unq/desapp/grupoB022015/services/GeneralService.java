@@ -6,6 +6,7 @@ public class GeneralService {
 	private PlayerService playerService;
 	private PositionService positionService;
 	private UserService userService;
+	private LeagueService leagueService;
 	
 	public FantasyTeamService getFantasyTeamService() {
 		return fantasyTeamService;
@@ -37,6 +38,14 @@ public class GeneralService {
 
 	public void setUserService(UserService userService) {
 		this.userService = userService;
+	}
+
+	public LeagueService getLeagueService() {
+		return leagueService;
+	}
+
+	public void setLeagueService(LeagueService leagueService) {
+		this.leagueService = leagueService;
 	}
 	
 }
