@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field"
+	default-cascade="save-update">
+	<class name="ar.edu.unq.desapp.grupoB022015.model.PointsForUser">
+		<id column="ID" name="id">
+			<generator class="native" />
+		</id>
+		
+		<one-to-one name="key" class="ar.edu.unq.desapp.grupoB022015.model.User"
+			cascade="save-update" lazy="false"></one-to-one>
+		
+		<property name="value" />
+		
+	</class>
+</hibernate-mapping>

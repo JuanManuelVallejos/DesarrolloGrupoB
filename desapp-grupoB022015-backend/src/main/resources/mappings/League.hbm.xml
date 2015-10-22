@@ -16,32 +16,23 @@
 			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.User" unique="true"/>
 		</list>
 		
-		
-		<map name="rankingForLeague">
-        	<key column="userID"
-            	 not-null="true"/>
-        	<map-key column="points" 
-            	type="string"/>
-        	<one-to-many class="ar.edu.unq.desapp.grupoB022015.model.League"/>
-    	</map>
+    	
+    	<list name="rankingForLeague" inverse="false" cascade="all" lazy="false">
+			<key column="pointsForUser" />
+			<list-index column="id" />
+			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.PointsForUser" unique="true"/>
+		</list>
     	
     	<!--
-		<map name="rankingForLeague">
-    		<key column="userID" not-null="true"/>
-    		<map-key-many-to-many column="employee_id" class="Employee"/>
-    		<one-to-many class="Contract"/>
-		</map>
-
-		<one-to-one name="superGol" class="ar.edu.unq.desapp.grupoB022015.model.SuperGol"
+    	<one-to-one name="superGol" class="ar.edu.unq.desapp.grupoB022015.model.SuperGol"
 			cascade="save-update" lazy="false"></one-to-one>
+		-->
 			
 		<list name="fixture" inverse="false" cascade="all" lazy="false">
 			<key column="dateID" />
 			<list-index column="id" />
 			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.Date" unique="true"/>
 		</list>
-		
-		-->
 		
 	</class>
 </hibernate-mapping>

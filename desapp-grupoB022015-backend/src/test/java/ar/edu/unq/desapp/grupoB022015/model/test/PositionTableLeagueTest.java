@@ -92,10 +92,10 @@ public class PositionTableLeagueTest {
 		//user1 vs user4
 		//user2 vs user3
 		
-		assertEquals(league.getTablePointsForUser(user1),3);
-		assertEquals(league.getTablePointsForUser(user2),1);
-		assertEquals(league.getTablePointsForUser(user3),1);
-		assertEquals(league.getTablePointsForUser(user4),0);
+		assertEquals(league.getTablePointsForUser(user1),(Integer) 3);
+		assertEquals(league.getTablePointsForUser(user2),(Integer) 1);
+		assertEquals(league.getTablePointsForUser(user3),(Integer) 1);
+		assertEquals(league.getTablePointsForUser(user4),(Integer) 0);
 		
 	}
 

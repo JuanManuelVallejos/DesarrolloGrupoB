@@ -1,5 +1,6 @@
 package ar.edu.unq.desapp.grupoB022015.rest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.FormParam;
@@ -49,8 +50,8 @@ public class LeagueRest {
 	@GET
     @Path("/list")
     @Produces("application/json")
-    public List<League> getLeague() {
-        List<League> league = leagueService.retriveAll();
-        return league;
+    public List<League> getLeagues() {
+        List<League> leagues = leagueService.retriveAll();
+        return leagues;
     }
 }

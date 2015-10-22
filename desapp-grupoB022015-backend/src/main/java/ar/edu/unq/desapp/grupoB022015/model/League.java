@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.joda.time.DateTime;
 
 import ar.edu.unq.desapp.grupoB022015.model.exceptions.InvalidDateForThisLeagueException;
+import ar.edu.unq.desapp.grupoB022015.model.exceptions.UserNotFoundException;
 
 public class League extends Entity{
 
@@ -15,7 +17,7 @@ public class League extends Entity{
 	private SuperGol superGol;
 	private List<Date> fixture;
 	private List<User> ranking;
-	private HashMap<User,Integer> rankingForLeague;
+	private List<PointsForUser> rankingForLeague;
 	
 	public League(){}
 	public League(String leagueName, SuperGol system) {
@@ -23,19 +25,16 @@ public class League extends Entity{
 		this.superGol = system;
 		this.fixture = new ArrayList<Date>();
 		this.ranking = new ArrayList<User>();
-		this.rankingForLeague = new HashMap<User,Integer>();
+		this.rankingForLeague = new ArrayList<PointsForUser>();
 	}
 	
-	public HashMap<User,Integer> getRankingForLeague(){
-		return this.rankingForLeague;
-	}
-	
-	public void setRankingForLeague(HashMap<User,Integer> rankingForLeague){
-		this.rankingForLeague = rankingForLeague;
-	}
-	
-	public int getTablePointsForUser(User user){
-		return this.rankingForLeague.get(user);
+	public Integer getTablePointsForUser(User user) throws UserNotFoundException{
+		for(PointsForUser pfu : this.rankingForLeague){
+			if(pfu.getKey()==user){
+				return pfu.getValue();
+			}
+		}
+		throw new UserNotFoundException();
 	}
 	
 	public SuperGol getSystem(){
@@ -132,7 +131,8 @@ public class League extends Entity{
 	
 	public void addUser(User aUser){
 		ranking.add(aUser);
-		rankingForLeague.put(aUser,0);
+		PointsForUser pfu = new PointsForUser(aUser,0);
+		rankingForLeague.add(pfu);
 	}
 	
 	public List<User> getRanking(){
@@ -144,10 +144,12 @@ public class League extends Entity{
 	}
 	
 	public void updateGeneralRAnking() throws Throwable{
-		for(User user : rankingForLeague.keySet()){
+		for(PointsForUser pfu : this.rankingForLeague){
+			User user = pfu.getKey();
 			int newPoints = getCurrentDate().getPointsForUser(user);
-			int oldPoints = rankingForLeague.get(user);
-			rankingForLeague.replace(user, newPoints+oldPoints);
+			int oldPoints = pfu.getValue();
+			pfu.setValue(newPoints+oldPoints);
 		}
+		
 	}
 }
