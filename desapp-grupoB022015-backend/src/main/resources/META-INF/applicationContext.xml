@@ -35,6 +35,7 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 			<ref bean="leagueRest" />
 			<ref bean="dateRest" />
 			<ref bean="pointsForUserRest" />
+			<ref bean="matchRest" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
 			<entry key="json" value="application/json" />
@@ -77,6 +78,10 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 	
 	<bean id="pointsForUserRest" class="ar.edu.unq.desapp.grupoB022015.rest.PointsForUserRest">
 		<property name="pointsForUserService" ref="services.pointsForUser" />
+	</bean>
+	
+	<bean id="matchRest" class="ar.edu.unq.desapp.grupoB022015.rest.MatchRest">
+		<property name="matchService" ref="services.match" />
 	</bean>
 
 </beans>
