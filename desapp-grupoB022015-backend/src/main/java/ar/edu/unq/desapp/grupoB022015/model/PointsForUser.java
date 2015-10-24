@@ -1,6 +1,6 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
-public class PointsForUser {
+public class PointsForUser extends Entity{
 
 	private User key;
 	private Integer value;

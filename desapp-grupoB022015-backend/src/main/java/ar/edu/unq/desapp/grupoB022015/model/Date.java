@@ -8,7 +8,7 @@ import org.joda.time.Interval;
 
 import ar.edu.unq.desapp.grupoB022015.model.Match;
 
-public class Date {
+public class Date extends Entity{
 
 	private List<Match> matchs;
 	private DateTime startDate;

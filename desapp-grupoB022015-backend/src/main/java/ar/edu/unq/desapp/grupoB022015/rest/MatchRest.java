@@ -10,12 +10,12 @@ public class MatchRest {
 
 	private MatchService matchService;
     
-	public MatchService getDateService() {
+	public MatchService getMatchService() {
 		return matchService;
 	}
 
-	public void setDateService(MatchService dateService) {
-		this.matchService = dateService;
+	public void setMatchService(MatchService matchService) {
+		this.matchService = matchService;
 	}
 	
 }

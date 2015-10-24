@@ -2,7 +2,7 @@ package ar.edu.unq.desapp.grupoB022015.model;
 
 import ar.edu.unq.desapp.grupoB022015.model.exceptions.WrongUserException;
 
-public class Match {
+public class Match extends Entity{
 	
 	private User local;
 	private User visitor;
