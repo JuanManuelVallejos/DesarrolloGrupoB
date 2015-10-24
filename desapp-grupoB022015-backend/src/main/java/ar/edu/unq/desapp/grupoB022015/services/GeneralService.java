@@ -8,6 +8,7 @@ public class GeneralService {
 	private UserService userService;
 	private LeagueService leagueService;
 	private DateService dateService;
+	private PointsForUserService pointsForUserService;
 	
 	public FantasyTeamService getFantasyTeamService() {
 		return fantasyTeamService;
@@ -55,6 +56,14 @@ public class GeneralService {
 
 	public void setDateService(DateService dateService) {
 		this.dateService = dateService;
+	}
+	
+	public PointsForUserService getPointsForUserService() {
+		return pointsForUserService;
+	}
+
+	public void setPointsForUserService(PointsForUserService pointsForUserService) {
+		this.pointsForUserService = pointsForUserService;
 	}
 	
 }
