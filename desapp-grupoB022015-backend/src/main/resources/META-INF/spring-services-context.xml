@@ -12,6 +12,7 @@
 		<property name="playerService" ref="services.player" />
 		<property name="positionService" ref="services.position" />
 		<property name="userService" ref="services.user" />
+		<property name="dateService" ref="services.date" />
 	</bean>
 
 	<bean id="services.fantasyTeam" class="ar.edu.unq.desapp.grupoB022015.services.FantasyTeamService">
@@ -31,6 +32,10 @@
 	</bean>
 	
 	<bean id="services.league" class="ar.edu.unq.desapp.grupoB022015.services.LeagueService">
+		<property name="repository" ref="persistence.leagueRepository" />
+	</bean>
+	
+	<bean id="services.date" class="ar.edu.unq.desapp.grupoB022015.services.DateService">
 		<property name="repository" ref="persistence.leagueRepository" />
 	</bean>
 
