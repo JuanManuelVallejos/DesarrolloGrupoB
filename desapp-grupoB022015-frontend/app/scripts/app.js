@@ -34,6 +34,11 @@ angular
         controller: 'SinginCtrl',
         controllerAs: 'signin'
       })
+      .when('/update_round', {
+        templateUrl: 'views/update_round.html',
+        controller: 'Update_round.Ctrl',
+        controllerAs: 'update_round'
+      })
       .otherwise({
         redirectTo: '/'
       });

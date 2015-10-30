@@ -1,0 +1,63 @@
+<style>
+    .glyphicon.glyphicon-user {
+        font-size: 150px;
+        color: black;
+    }
+    h1{ 
+        color: #FE2E2E;
+        font-family: serif;
+    }
+    div.jumbotron { 
+        opacity: 0.9
+    }
+
+</style>
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<div class="jumbotron">
+    <h2> Actualizar fecha </h2>    
+    <div class="container-fluid">
+        <h3> Actualización automática </h3>
+        <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <div style="position:relative;" align="left">
+            <a class='btn btn-primary' href='javascript:;'>
+            Subir archivo
+            <input type="file"  class="form-control" id="round_file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="30"  onchange='$("#upload-file-info").html($(this).val());'>
+            </a>
+            &nbsp;
+            <span class='label label-info' id="upload-file-info"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10" align="right">
+                <button type="submit" class="btn btn-success">Actualizar fecha</button>
+            </div>
+        </div>
+        </form>
+        <h3> Actualización manual </h3>
+        <form class="form-horizontal" role="form">
+        <div class="form-group">   
+            <label for="id_jugador" class="col-lg-2 control-label">ID jugador</label>
+            <div class="col-lg-10">
+                <input type="number" class="form-control" id="id_jugador" 
+                    placeholder="ID jugador">
+            </div>
+        </div>
+        <div class="form-group">   
+            <label for="goles" class="col-lg-2 control-label">Goles en la fecha</label>
+            <div class="col-lg-10">
+                <input type="number" class="form-control" id="id_jugador" 
+                    placeholder="goles en la fecha">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10" align="right">
+                <button type="submit" class="btn btn-success">Actualizar jugador</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+ 
+
