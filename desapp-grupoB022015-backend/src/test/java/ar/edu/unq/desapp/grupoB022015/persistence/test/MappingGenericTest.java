@@ -1,5 +1,5 @@
 package ar.edu.unq.desapp.grupoB022015.persistence.test;
-/*
+
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -7,15 +7,15 @@ import java.lang.reflect.Method;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.hibernate.Session;
-*/import org.hibernate.SessionFactory;
+import org.hibernate.SessionFactory;
 import org.hibernate.metadata.ClassMetadata;
 import org.junit.Before;
 import org.junit.Test;
-//import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
+import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
-//import ar.edu.unq.desapp.grupoB022015.builders.AbstractBuilder;
+import ar.edu.unq.desapp.grupoB022015.builders.AbstractBuilder;
 
 public class MappingGenericTest {
 
@@ -28,18 +28,18 @@ public class MappingGenericTest {
     @Before
     public void setUp() {
         ClassPathResource resource = new ClassPathResource("/META-INF/spring-persistence-context.xml");
-        /*this.factory = new XmlBeanFactory(resource);
+        this.factory = new XmlBeanFactory(resource);
         PropertyPlaceholderConfigurer ppc = (PropertyPlaceholderConfigurer) this.factory
                 .getBean("persistence.propertyConfigurer");
         ppc.postProcessBeanFactory(this.factory);
         
         this.sessionFactory = (SessionFactory) this.factory.getBean("persistence.sessionFactory");
-*/
+
     }
 
     @Test
     public void mappingTest() {
-/*
+
         for (String key : this.sessionFactory.getAllClassMetadata().keySet()) {
 
             try {
@@ -73,7 +73,7 @@ public class MappingGenericTest {
                 fail("Fallo para la clase " + key + " : " + e.getMessage());
 
             }
-        }*/
+        }
     }
 
     public XmlBeanFactory getFactory() {

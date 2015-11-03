@@ -6020,3 +6020,1026 @@ Caused by: org.springframework.beans.NotWritablePropertyException: Invalid prope
 [23:57:40] INFO [org.apache.cxf.bus.spring.BusApplicationContext] - Refreshing org.apache.cxf.bus.spring.BusApplicationContext@4aa3d36: startup date [Fri Oct 23 23:57:40 ART 2015]; parent: Root WebApplicationContext
 [23:57:40] INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1fd386c3: defining beans []; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@3c130745
 [23:57:40] INFO [org.apache.cxf.transport.servlet.AbstractCXFServlet] - Servlet transport factory already registered 
+[15:17:51] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:18:25] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:18:26] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:18:26] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:18:26] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:18:26] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:18:26] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:18:26] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:18:26] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:18:26] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:18:26] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:18:26] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:18:26] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:18:26] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:18:26] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:18:26] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:18:26] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:18:26] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Match.local -> Match_local
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Match.visitor -> Match_visitor
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:18:27] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:18:27] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:18:27] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:18:27] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:18:27] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:18:27] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:18:27] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:18:27] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:18:27] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:18:27] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:18:27] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:18:27] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:18:28] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:18:28] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:18:28] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:18:28] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:18:28] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete
+[15:21:51] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:21:51] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:21:51] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:21:51] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:21:51] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:21:51] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:21:51] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:21:51] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:21:51] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:21:51] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:21:51] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:21:51] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:21:51] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:21:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:21:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:21:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:21:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Match.local -> Match_local
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Match.visitor -> Match_visitor
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:21:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:21:52] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:21:52] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:21:52] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:21:52] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:21:52] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:21:52] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:21:52] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:21:52] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:21:52] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:21:52] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:21:52] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:21:53] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:21:53] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:21:53] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:21:53] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:21:53] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete
+[15:24:32] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:24:33] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:24:33] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:24:33] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:24:33] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:24:33] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:24:33] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:24:33] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:24:33] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:24:33] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:24:33] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:24:33] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:24:33] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:24:33] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:24:33] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:24:33] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:24:33] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Match.local -> Match_local
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Match.visitor -> Match_visitor
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:24:33] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:24:33] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:24:33] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:24:33] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:24:33] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:24:33] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:24:34] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:24:34] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:24:34] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:24:34] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:24:34] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:24:34] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:24:34] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:24:35] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:24:35] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:24:35] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:24:35] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete
+[15:25:43] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:25:44] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:25:44] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:25:44] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:25:44] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:25:44] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:25:44] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:25:44] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:25:44] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:25:44] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:25:44] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:25:44] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:25:44] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:25:44] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:25:44] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:25:44] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:25:45] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Match.local -> Match_local
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Match.visitor -> Match_visitor
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:25:45] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:25:45] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:25:45] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:25:45] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:25:45] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:25:45] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:25:45] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:25:45] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:25:45] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:25:45] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:25:45] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:25:45] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:25:46] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:25:46] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:25:46] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:25:46] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:25:46] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete
+[15:28:45] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:28:46] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:28:46] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:28:46] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:28:46] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:28:46] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:28:46] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:28:46] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:28:46] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:28:46] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:28:46] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:28:46] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:28:46] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:28:46] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:28:46] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:28:46] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:28:46] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:28:46] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:28:46] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:28:46] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:28:46] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:28:46] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:28:46] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:28:47] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:28:47] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:28:47] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:28:47] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:28:47] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:28:47] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:28:47] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:28:47] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:28:48] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:28:48] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:28:48] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete
+[15:29:49] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:29:49] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:29:49] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:29:49] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:29:50] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:29:50] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:29:50] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:29:50] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:29:50] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:29:50] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:29:50] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:29:50] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:29:50] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:29:50] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:29:50] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:29:50] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:29:50] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:29:50] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:29:50] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:29:50] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:29:50] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:29:50] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:29:50] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:29:51] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:29:51] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:29:51] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:29:51] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:29:51] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:29:51] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:29:51] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:29:51] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:29:52] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:29:52] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:29:52] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete
+[15:31:28] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:31:28] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:31:28] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:31:28] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:31:28] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:31:29] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:31:29] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:31:29] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:31:29] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:31:29] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:31:29] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:31:29] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:31:29] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:31:29] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:31:29] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:31:29] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:31:29] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:31:29] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:31:29] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:31:29] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:31:29] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:31:29] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:31:29] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:31:30] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:31:30] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:31:30] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:31:30] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:31:30] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:31:30] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:31:30] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:31:30] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:31:30] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:31:30] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:31:30] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete
+[15:31:31] WARN [org.hibernate.util.JDBCExceptionReporter] - SQL Error: -5561, SQLState: 42561
+[15:31:31] ERROR [org.hibernate.util.JDBCExceptionReporter] - tipo de datos incompatibles en la conversión
+[15:35:37] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:35:37] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:35:37] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:35:37] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:35:38] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:35:38] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:35:38] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:35:38] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:35:38] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:35:38] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:35:38] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:35:38] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:35:38] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:35:38] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:35:38] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:35:38] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:35:38] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:35:38] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:35:38] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:35:38] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:35:38] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:35:38] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:35:38] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:35:39] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:35:39] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:35:39] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:35:39] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:35:39] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:35:39] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:35:39] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:35:39] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:35:39] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:35:39] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:35:39] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete
+[15:38:09] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:38:09] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:38:09] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:38:09] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:38:09] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:38:09] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:38:09] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:38:09] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:38:09] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:38:09] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:38:09] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:38:09] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:38:09] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:38:10] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:38:10] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:38:10] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:38:10] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:38:10] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:38:10] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:38:10] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:38:10] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:38:10] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:38:10] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:38:10] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:38:10] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:38:10] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:38:10] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:38:10] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:38:10] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:38:11] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:41:51] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:41:51] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:41:51] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:41:51] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:41:52] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:41:52] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:41:52] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:41:52] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:41:52] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:41:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:41:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:41:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:41:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:41:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:41:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:41:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:41:52] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:41:52] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:41:52] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:41:52] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:41:52] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:41:52] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:41:52] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:41:53] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:41:53] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:41:53] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:41:53] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:41:53] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:41:53] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:41:53] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:42:59] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:42:59] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:42:59] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:42:59] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:43:00] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:43:00] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:43:00] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:43:00] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:43:00] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:43:00] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:00] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:00] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:00] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:00] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:00] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:00] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:00] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:43:00] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:43:00] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:43:00] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:43:00] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:43:00] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:43:00] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:43:01] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:43:01] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:43:01] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:43:01] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:43:01] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:43:01] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:43:01] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:43:01] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:43:01] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:43:01] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:43:01] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete
+[15:43:29] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/spring-persistence-context.xml]
+[15:43:30] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/hibernate.properties]
+[15:43:30] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/jdbc.properties]
+[15:43:30] INFO [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from URL [file:/C:/Users/musimundo/Documents/GitHub/Grupo-B-022015/desapp-grupoB022015-backend/target/classes/META-INF/log4j.properties]
+[15:43:30] INFO [org.hibernate.annotations.common.Version] - Hibernate Commons Annotations 3.2.0.Final
+[15:43:30] INFO [org.hibernate.cfg.Environment] - Hibernate 3.6.0.Final
+[15:43:30] INFO [org.hibernate.cfg.Environment] - hibernate.properties not found
+[15:43:30] INFO [org.hibernate.cfg.Environment] - Bytecode provider name : javassist
+[15:43:30] INFO [org.hibernate.cfg.Environment] - using JDK 1.4 java.sql.Timestamp handling
+[15:43:30] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:30] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:30] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:30] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:30] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:30] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:30] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:30] WARN [org.hibernate.util.DTDEntityResolver] - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Date -> Date
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.Date.matchs -> Date_matchs
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam -> FantasyTeam
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.FantasyTeam.players -> FantasyTeam_players
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.League -> League
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.ranking -> League_ranking
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.rankingForLeague -> League_rankingForLeague
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.League.fixture -> League_fixture
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Match -> Match
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Player -> Player
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser -> PointsForUser
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.Position -> Position
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Goalkeeper -> Goalkeeper
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Defender -> Defender
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Midfielder -> Midfielder
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping joined-subclass: ar.edu.unq.desapp.grupoB022015.model.Forward -> Forward
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping class: ar.edu.unq.desapp.grupoB022015.model.User -> User
+[15:43:31] INFO [org.hibernate.cfg.HbmBinder] - Mapping collection: ar.edu.unq.desapp.grupoB022015.model.User.leagues -> User_leagues
+[15:43:31] INFO [org.hibernate.cfg.Configuration] - Hibernate Validator not found: ignoring
+[15:43:31] INFO [org.springframework.orm.hibernate3.LocalSessionFactoryBean] - Building new Hibernate SessionFactory
+[15:43:31] INFO [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+[15:43:31] WARN [org.hibernate.cfg.Environment] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+[15:43:31] INFO [org.hibernate.connection.ConnectionProviderFactory] - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+[15:43:31] INFO [org.hibernate.dialect.Dialect] - Using dialect: org.hibernate.dialect.HSQLDialect
+[15:43:31] INFO [org.hibernate.transaction.TransactionFactoryFactory] - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[15:43:31] INFO [org.hibernate.transaction.TransactionManagerLookupFactory] - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Automatic flush during beforeCompletion(): disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Automatic session close at end of transaction: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch size: 15
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - JDBC batch updates for versioned data: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Scrollable result sets: enabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - JDBC3 getGeneratedKeys(): enabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Connection release mode: auto
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Default batch fetch size: 1
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Generate SQL with comments: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL updates by primary key: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Order SQL inserts for batching: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[15:43:31] INFO [org.hibernate.hql.ast.ASTQueryTranslatorFactory] - Using ASTQueryTranslatorFactory
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Query language substitutions: {}
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - JPA-QL strict compliance: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Second-level cache: enabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Query cache: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Optimize cache for minimal puts: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Structured second-level cache entries: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Echoing all SQL to stdout
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Statistics: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Deleted entity synthetic identifier rollback: disabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Default entity-mode: pojo
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Named query checking : enabled
+[15:43:31] INFO [org.hibernate.cfg.SettingsFactory] - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[15:43:31] INFO [org.hibernate.impl.SessionFactoryImpl] - building session factory
+[15:43:31] INFO [org.hibernate.tuple.PojoInstantiator] - no default (no-argument) constructor for class: ar.edu.unq.desapp.grupoB022015.model.PointsForUser (class must be instantiated by Interceptor)
+[15:43:32] INFO [org.hibernate.impl.SessionFactoryObjectFactory] - Not binding factory to JNDI, no JNDI name configured
+[15:43:32] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - Running hbm2ddl schema export
+[15:43:32] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - exporting generated schema to database
+[15:43:32] INFO [org.hibernate.tool.hbm2ddl.SchemaExport] - schema export complete

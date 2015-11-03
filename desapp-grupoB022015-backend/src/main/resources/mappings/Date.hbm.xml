@@ -14,13 +14,13 @@
 			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.Match" unique="true"/>
 		</list>
 		
-		<property name="startDate" type="org.joda.time.DateTime">
+		<property name="startDate" type="org.joda.time.contrib.hibernate.PersistentDateTime">
       		<column name="dateStart" sql-type="datetime" />
 		</property>
-		
-		<property name="endDate" type="org.joda.time.DateTime">
+
+		<property name="endDate" type="org.joda.time.contrib.hibernate.PersistentDateTime">
       		<column name="dateEnd" sql-type="datetime" />
 		</property>
-		
+
 	</class>
 </hibernate-mapping>

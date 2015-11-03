@@ -8,17 +8,11 @@
 			<generator class="native" />
 		</id>
 		
-		<list name="local" inverse="false" cascade="all" lazy="false">
-			<key column="local" />
-			<list-index column="id" />
-			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.User" unique="true"/>
-		</list>
+		<one-to-one name="local" class="ar.edu.unq.desapp.grupoB022015.model.User"
+			cascade="save-update" lazy="false"></one-to-one>
 		
-		<list name="visitor" inverse="false" cascade="all" lazy="false">
-			<key column="visitor" />
-			<list-index column="id" />
-			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.User" unique="true"/>
-		</list>
+		<one-to-one name="visitor" class="ar.edu.unq.desapp.grupoB022015.model.User"
+			cascade="save-update" lazy="false"></one-to-one>
 			
 		<property name="localPoints" />
 		
