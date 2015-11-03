@@ -5,11 +5,19 @@ import ar.edu.unq.desapp.grupoB022015.model.exceptions.MaximumNumberOfPlayersInT
 public class FantasyTeam extends Team{
 	
 	private User dt;
+	private int minTeams;
+	private int maxTeams;
 	
 	public FantasyTeam(){}
 	
 	public FantasyTeam(User userDt, String teamName){
 		super(teamName);
+		this.setDt(userDt);
+	}
+	public FantasyTeam(User userDt, String teamName, int min, int max){
+		super(teamName);
+		this.minTeams = min;
+		this.maxTeams = max;
 		this.setDt(userDt);
 	}
 
