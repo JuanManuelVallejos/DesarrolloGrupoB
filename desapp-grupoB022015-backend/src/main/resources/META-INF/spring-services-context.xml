@@ -15,6 +15,7 @@
 		<property name="dateService" ref="services.date" />
 		<property name="pointsForUserService" ref="services.pointsForUser" />
 		<property name="matchService" ref="services.match" />
+		<property name="leagueService" ref="services.league" />
 	</bean>
 
 	<bean id="services.fantasyTeam" class="ar.edu.unq.desapp.grupoB022015.services.FantasyTeamService">
