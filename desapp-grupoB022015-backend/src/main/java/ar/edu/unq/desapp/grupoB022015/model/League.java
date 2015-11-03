@@ -40,7 +40,7 @@ public class League extends Entity{
 		this.minTeams = min;
 		this.maxTeams = max;
 	}
-	
+
 	public Integer getTablePointsForUser(User user) throws UserNotFoundException{
 		for(PointsForUser pfu : this.rankingForLeague){
 			if(pfu.getKey()==user){
@@ -55,7 +55,7 @@ public class League extends Entity{
 	}
 	
 	public void refreshTablePoints() throws Throwable {
-		getCurrentDate().setPoints(getSystem().getTable());
+		currentDate().setPoints(getSystem().getTable());
 	}
 	
 	public String getName(){
@@ -66,7 +66,7 @@ public class League extends Entity{
 		return this.fixture;
 	}
 	
-	public Date getCurrentDate() throws Throwable{
+	public Date currentDate() throws Throwable{
 		for ( Date currentDate: fixture)
 			if(currentDate.dateMine(new DateTime()))
 				return currentDate;
@@ -132,7 +132,7 @@ public class League extends Entity{
 			matchsOfDate.add(new Match(usersA.get(indexU),usersB.get(indexU)));
 		return new Date(matchsOfDate, startD, endD);
 	}
-	
+
 	/**
 	 * Search the date
 	 * @param numDate is the number of the  date
@@ -155,11 +155,11 @@ public class League extends Entity{
 	public void updateRanking(){
 		Collections.sort(ranking);
 	}
-	
+
 	public void updateGeneralRAnking() throws Throwable{
 		for(PointsForUser pfu : this.rankingForLeague){
 			User user = pfu.getKey();
-			int newPoints = getCurrentDate().getPointsForUser(user);
+			int newPoints = currentDate().getPointsForUser(user);
 			int oldPoints = pfu.getValue();
 			pfu.setValue(newPoints+oldPoints);
 		}

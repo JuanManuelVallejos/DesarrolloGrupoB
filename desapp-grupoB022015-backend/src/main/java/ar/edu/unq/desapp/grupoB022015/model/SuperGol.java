@@ -7,7 +7,7 @@ import ar.edu.unq.desapp.grupoB022015.model.exceptions.MaximumNumberOfPlayersInT
 import ar.edu.unq.desapp.grupoB022015.model.exceptions.PlayerNotFoundException;
 import ar.edu.unq.desapp.grupoB022015.model.exceptions.TeamNotFoundException;
 
-public class SuperGol{
+public class SuperGol extends Entity{
 
 	private List<RealTeam> realTeams;
 	private List<League> leagues;

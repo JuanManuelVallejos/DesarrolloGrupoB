@@ -8,7 +8,7 @@ leagueApp.controller('LeagueController', function ($scope, $http) {
 		
 		$scope.createLeague = function(){
 		    var league = {
-		    	nombre : $scope.nombre,
+		    	name : $scope.nombre,
 		    	minTeams : $scope.minTeams,
 		    	maxTeams: $scope.maxTeams
 		    }

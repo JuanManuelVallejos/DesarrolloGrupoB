@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class TableForDate {
+public class TableForDate extends Entity{
 
 	private List<HashMap<Player,Integer>> table;
 	private int currentDate;
