@@ -34,14 +34,19 @@ angular
         controller: 'SinginCtrl',
         controllerAs: 'signin'
       })
+      .when('/create_team', {
+        templateUrl: 'views/create_team.html',
+        controller: 'Create_teamCtrl',
+        controllerAs: 'create_team'
+      })
       .when('/update_round', {
         templateUrl: 'views/update_round.html',
-        controller: 'Update_round.Ctrl',
+        controller: 'Update_roundCtrl',
         controllerAs: 'update_round'
       })
       .when('/create_tournament', {
         templateUrl: 'views/create_tournament.html',
-        controller: 'Create_tournament.Ctrl',
+        controller: 'Create_tournamentCtrl',
         controllerAs: 'create_tournament'
       })
       .otherwise({
