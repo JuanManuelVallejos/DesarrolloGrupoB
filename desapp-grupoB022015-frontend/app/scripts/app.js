@@ -39,6 +39,11 @@ angular
         controller: 'Update_round.Ctrl',
         controllerAs: 'update_round'
       })
+      .when('/create_tournament', {
+        templateUrl: 'views/create_tournament.html',
+        controller: 'Create_tournament.Ctrl',
+        controllerAs: 'create_tournament'
+      })
       .otherwise({
         redirectTo: '/'
       });
