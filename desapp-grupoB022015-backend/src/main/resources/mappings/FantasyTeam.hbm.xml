@@ -9,8 +9,6 @@
 		</id>
 
 		<property name="name" />
-		<property name="minTeams" />
-		<property name="maxTeams" />
 		
 		<list name="players" inverse="false" cascade="all" lazy="false">
 			<key column="playerID" />

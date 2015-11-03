@@ -44,10 +44,10 @@ angular
         controller: 'Update_roundCtrl',
         controllerAs: 'update_round'
       })
-      .when('/create_tournament', {
-        templateUrl: 'views/create_tournament.html',
-        controller: 'Create_tournamentCtrl',
-        controllerAs: 'create_tournament'
+      .when('/create_league', {
+        templateUrl: 'views/create_league.html',
+        controller: 'LeagueController',
+        controllerAs: 'create_league'
       })
       .otherwise({
         redirectTo: '/'

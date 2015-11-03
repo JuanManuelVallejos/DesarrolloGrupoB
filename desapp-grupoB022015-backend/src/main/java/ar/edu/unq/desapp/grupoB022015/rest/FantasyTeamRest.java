@@ -43,8 +43,8 @@ public class FantasyTeamRest {
 	 @POST
 	 @Path("/create")
 	 @Produces("application/json")
-	 public Response createFantasyTeam(@FormParam("name") String name, int minTeams,int maxTeams) {
-		 	FantasyTeam fantasyTeam = new FantasyTeam(new User(1,new SuperGol(),""),name,minTeams,maxTeams);
+	 public Response createFantasyTeam(@FormParam("name") String name) {
+		 	FantasyTeam fantasyTeam = new FantasyTeam(new User(1,new SuperGol(),""),name);
 		 	getFantasyTeamService().save(fantasyTeam);
 			return Response.ok(fantasyTeam).build();
 	 }

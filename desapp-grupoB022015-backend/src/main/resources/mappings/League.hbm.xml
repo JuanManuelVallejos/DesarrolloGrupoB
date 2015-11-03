@@ -9,6 +9,8 @@
 		</id>
 	
 		<property name="name" />
+		<property name="minTeams" />
+		<property name="maxTeams" />
 		
 		<list name="ranking" inverse="false" cascade="all" lazy="false">
 			<key column="userID" />

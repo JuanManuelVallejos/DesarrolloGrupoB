@@ -18,6 +18,9 @@ public class League extends Entity{
 	private List<Date> fixture;
 	private List<User> ranking;
 	private List<PointsForUser> rankingForLeague;
+	private int minTeams;
+	private int maxTeams;
+	
 	
 	public League(){}
 	public League(String leagueName, SuperGol system) {
@@ -26,6 +29,16 @@ public class League extends Entity{
 		this.fixture = new ArrayList<Date>();
 		this.ranking = new ArrayList<User>();
 		this.rankingForLeague = new ArrayList<PointsForUser>();
+	}
+	
+	public League(String leagueName, SuperGol system, int min, int max) {
+		this.name = leagueName;
+		this.superGol = system;
+		this.fixture = new ArrayList<Date>();
+		this.ranking = new ArrayList<User>();
+		this.rankingForLeague = new ArrayList<PointsForUser>();
+		this.minTeams = min;
+		this.maxTeams = max;
 	}
 	
 	public Integer getTablePointsForUser(User user) throws UserNotFoundException{
