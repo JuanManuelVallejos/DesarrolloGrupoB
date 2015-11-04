@@ -31,20 +31,14 @@ public class LeagueRest {
 	@POST
 	@Path("/create")
 	@Produces("application/json")
-	public Response createLeague(@FormParam("name") String leaguename,  @FormParam("ID") int id,@FormParam("minTeams") int min,@FormParam("maxTeams") int max){
+	public Response createLeague(@FormParam("name") String leaguename, @FormParam("minTeams") Integer min,@FormParam("maxTeams") Integer max){
 		
-		
-		League league = getLeagueService().findById(id);
-		
-		if(league == null){
-			//pasar supergol q corresponde
-			League l = new League(leaguename, new SuperGol(),min,max);
-			getLeagueService().save(l);
-		}else{
-			return Response.ok(-1).build();
-		}
+		League league = new League(leaguename, new SuperGol(),min,max);
+		getLeagueService().save(league);
+
 		return Response.ok(league).build();
 	}
+	
 
 	
 	@GET

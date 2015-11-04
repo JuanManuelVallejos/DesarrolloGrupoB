@@ -17,29 +17,28 @@
     <h1> Armá tu torneo Supergol </h1>   
     <br><br> 
     <div class="container-fluid">
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" ng-submit="createLeague()">
         <div class="form-group">   
             <label for="nombre_torneo" class="col-lg-2 control-label">Nombre</label>
             <div class="col-lg-10">
-                <input type="text" class="form-control" id="nombre_torneo" placeholder="nombre del torneo" ng-model="nombre" required>
+                <input type="text" class="form-control" placeholder="nombre del torneo" ng-model="nombre" required>
             </div>
         </div>
         <div class="form-group">   
             <label for="equipos_minimo" class="col-lg-2 control-label">Equipos mín.</label>
             <div class="col-lg-10">
-                <input type="number" class="form-control" id="equipos_minimo" placeholder="Cantidad mínima de equipos participantes" ng-model="minTeams">
+                <input type="number" class="form-control" placeholder="Cantidad mínima de equipos participantes" ng-model="minTeams">
             </div>
         </div>
         <div class="form-group">   
             <label for="equipos_maximo" class="col-lg-2 control-label">Equipos máx.</label>
             <div class="col-lg-10">
-                <input type="number" class="form-control" id="equipos_maximo" 
-                    placeholder="Cantidad máxima de equipos participantes" ng-model="maxTeams">
+                <input type="number" class="form-control" placeholder="Cantidad máxima de equipos participantes" ng-model="maxTeams">
             </div>
         </div>
         <div class="form-group">
             <div class="col-lg-offset-2 col-lg-10" align="right">
-                <button type="submit" name="submit" id="submit" data-ng-click="createLeague()" class="btn btn-success">Crear torneo</button>
+                <button type="submit" id="myWish" class="btn btn-success">Crear torneo</button>
             </div>
         </div>
         </form>

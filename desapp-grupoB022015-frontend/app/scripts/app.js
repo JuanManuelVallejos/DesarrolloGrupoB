@@ -44,10 +44,9 @@ angular
         controller: 'Update_roundCtrl',
         controllerAs: 'update_round'
       })
-      .when('/create_league', {
-        templateUrl: 'views/create_league.html',
-        controller: 'LeagueController',
-        controllerAs: 'create_league'
+      .when('/createLeague', {
+        templateUrl: 'views/createLeague.html',
+        controller: 'CreateLeagueCtrl',
       })
       .when('/active_leagues', {
         templateUrl: 'views/active_leagues.html',
