@@ -49,6 +49,11 @@ angular
         controller: 'LeagueController',
         controllerAs: 'create_league'
       })
+      .when('/active_leagues', {
+        templateUrl: 'views/active_leagues.html',
+        controller: 'LeagueController',
+        controllerAs: 'active_leagues'
+      })
       .otherwise({
         redirectTo: '/'
       });
