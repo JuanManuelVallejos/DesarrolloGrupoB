@@ -17,7 +17,7 @@ leagueApp.controller('CreateLeagueCtrl', function ($scope, $http) {
             return str.join("&");
             },
 
-            data: {name: $scope.nombre, minTeams: $scope.minTeams, maxTeams: $scope.maxTeams}
+            data: {name: $scope.leaguename, minTeams: $scope.minTeams, maxTeams: $scope.maxTeams}
 
         }).success(function (data) {
 
@@ -25,3 +25,4 @@ leagueApp.controller('CreateLeagueCtrl', function ($scope, $http) {
     }
     changeClass();
 }
+  });

@@ -72,7 +72,7 @@ public class PlayerRest {
 	@GET
     @Path("/list")
     @Produces("application/json")
-    public List<Player> getFantasyTeams() {
+    public List<Player> getPlayers() {
         List<Player> players = playerService.retriveAll();
         return players;
     }

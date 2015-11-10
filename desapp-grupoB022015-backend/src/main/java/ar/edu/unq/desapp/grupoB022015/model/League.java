@@ -37,8 +37,8 @@ public class League extends Entity{
 		this.fixture = new ArrayList<Date>();
 		this.ranking = new ArrayList<User>();
 		this.rankingForLeague = new ArrayList<PointsForUser>();
-		this.minTeams = min;
-		this.maxTeams = max;
+		this.setMinTeams(min);
+		this.setMaxTeams(max);
 	}
 
 	public Integer getTablePointsForUser(User user) throws UserNotFoundException{
@@ -164,5 +164,17 @@ public class League extends Entity{
 			pfu.setValue(newPoints+oldPoints);
 		}
 		
+	}
+	public int getMinTeams() {
+		return minTeams;
+	}
+	public void setMinTeams(int minTeams) {
+		this.minTeams = minTeams;
+	}
+	public int getMaxTeams() {
+		return maxTeams;
+	}
+	public void setMaxTeams(int maxTeams) {
+		this.maxTeams = maxTeams;
 	}
 }

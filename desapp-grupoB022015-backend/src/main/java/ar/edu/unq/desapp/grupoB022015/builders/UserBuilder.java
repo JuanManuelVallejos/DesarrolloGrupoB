@@ -7,7 +7,7 @@ public class UserBuilder extends AbstractBuilder<User> {
 
 	@Override
 	public User anyObject() {
-		return new User(1,new SuperGol(),"");
+		return new User(new SuperGol(),"");
 	}
 
 }

@@ -53,6 +53,11 @@ angular
         controller: 'LeagueController',
         controllerAs: 'active_leagues'
       })
+      .when('/create_user', {
+        templateUrl: 'views/create_user.html',
+        controller: 'UserController',
+        controllerAs: 'create_user'
+      })
       .otherwise({
         redirectTo: '/'
       });

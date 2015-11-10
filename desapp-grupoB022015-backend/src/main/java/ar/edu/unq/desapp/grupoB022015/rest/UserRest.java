@@ -29,19 +29,9 @@ public class UserRest {
 	@POST
 	@Path("/create")
 	@Produces("application/json")
-	public Response createUser(@FormParam("name") String name,
-			 @FormParam("ID") int id){//, @FormParam("supergol") SuperGol supergol){
-		
-		
-		User user = getUserService().findById(id);
-		
-		if(user == null){
-			//pasar supergol q corresponde
-			User p = new User(id, new SuperGol(), name);
-			getUserService().save(p);
-		}else{
-			return Response.ok(-1).build();
-		}
+	public Response createUser(@FormParam("userName") String userName){//, @FormParam("supergol") SuperGol supergol){
+		User user = new User(new SuperGol(), userName);
+		getUserService().save(user);
 		return Response.ok(user).build();
 	}
 	
@@ -49,7 +39,7 @@ public class UserRest {
     @Path("/list")
     @Produces("application/json")
     public List<User> getUsers() {
-        List<User> users = userService.retriveAll();
+        List<User> users = getUserService().retriveAll();
         return users;
     }
 

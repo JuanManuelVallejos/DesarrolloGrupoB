@@ -13,7 +13,6 @@ public class SuperGol extends Entity{
 	private List<League> leagues;
 	private List<User> users;
 	private TableForDate tableForDate;
-	private int currentIDUser;
 	
 	//CONSTRUCTORS
 	
@@ -22,22 +21,16 @@ public class SuperGol extends Entity{
 		leagues = new ArrayList<League>();
 		users = new ArrayList<User>();
 		tableForDate = new TableForDate();
-		currentIDUser = 0;
 	}
 	
 	public User createNewUserWithTeam(String userName, String nameFantasyTeam){
-		User user= new User(currentIDUser(), this, userName);
+		User user= new User(this, userName);
 		addUser(user);
 		user.createFantasyTeam(nameFantasyTeam);
 		return user;
 	}
 	
 	// MODIFIERS
-	
-	public int currentIDUser(){
-		currentIDUser += 1;
-		return currentIDUser-1;
-	}
 	
 	public void playerScoredNGoals(int player_ID, int amountGoals) throws PlayerNotFoundException{
 		playerScoredNGoals(findPlayer(player_ID),amountGoals);
