@@ -8,7 +8,7 @@
  * Controller of the desappGrupoB022015FrontendApp
  */
 angular.module('desappGrupoB022015FrontendApp')
-  .controller('Update_roundCtrl', function () {
+  .controller('UpdateRoundCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

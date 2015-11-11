@@ -7,8 +7,8 @@
  * # UserCtrl
  * Controller of the desappGrupoB022015FrontendApp
  */
-/*
-  angular.controller('UserCtrl', function ($scope, $http) {
+
+  angular.controller('CreateUserCtrl', function ($scope, $http) {
 
 		$scope.createUser = function() {
         $http({
@@ -32,19 +32,4 @@
     changeClass();
 }
   });
-*/
-angular.controller('UserCtrl', function ($scope, $http) {
 
-		$scope.getUser = function() {
-		$http({
-	  	method: 'GET',
-	  	url: 'http://localhost:8080/desapp-grupoB022015-backend/rest/user/list/'
-		}).then(function successCallback(response) {
-	    // this callback will be called asynchronously
-	    // when the response is available
-	  	}, function errorCallback(response) {
-	    // called asynchronously if an error occurs
-	    // or server returns response with an error status.
-	  	});
-	}
-}

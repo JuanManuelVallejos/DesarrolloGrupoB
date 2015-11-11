@@ -32,31 +32,26 @@ angular
       .when('/signin', {
         templateUrl: 'views/signin.html',
         controller: 'SinginCtrl',
-        controllerAs: 'signin'
       })
-      .when('/create_team', {
-        templateUrl: 'views/create_team.html',
-        controller: 'Create_teamCtrl',
-        controllerAs: 'create_team'
+      .when('/createTeam', {
+        templateUrl: 'views/createTeam.html',
+        controller: 'CreateTeamCtrl',
       })
-      .when('/update_round', {
-        templateUrl: 'views/update_round.html',
-        controller: 'Update_roundCtrl',
-        controllerAs: 'update_round'
+      .when('/updateRound', {
+        templateUrl: 'views/updateRound.html',
+        controller: 'UpdateRoundCtrl',
       })
       .when('/createLeague', {
         templateUrl: 'views/createLeague.html',
         controller: 'CreateLeagueCtrl',
       })
-      .when('/active_leagues', {
-        templateUrl: 'views/active_leagues.html',
-        controller: 'LeagueController',
-        controllerAs: 'active_leagues'
+      .when('/activeLeagues', {
+        templateUrl: 'views/activeLeagues.html',
+        controller: 'LeagueCtrl',
       })
-      .when('/create_user', {
-        templateUrl: 'views/create_user.html',
-        controller: 'UserController',
-        controllerAs: 'create_user'
+      .when('/createUser', {
+        templateUrl: 'views/createUser.html',
+        controller: 'CreateUserCtrl',
       })
       .otherwise({
         redirectTo: '/'
