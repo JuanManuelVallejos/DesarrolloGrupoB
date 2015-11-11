@@ -31,7 +31,7 @@ angular
       })
       .when('/signin', {
         templateUrl: 'views/signin.html',
-        controller: 'SinginCtrl',
+        controller: 'SigninCtrl',
       })
       .when('/createTeam', {
         templateUrl: 'views/createTeam.html',

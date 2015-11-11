@@ -23,6 +23,4 @@ leagueApp.controller('CreateLeagueCtrl', function ($scope, $http) {
 
 		});
     }
-    changeClass();
-}
-  });
+});
