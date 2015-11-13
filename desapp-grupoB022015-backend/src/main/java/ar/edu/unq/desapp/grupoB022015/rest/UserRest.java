@@ -6,6 +6,7 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
@@ -27,10 +28,11 @@ public class UserRest {
 	}
 	
 	@POST
-	@Path("/create")
+	@Path("/create/{userName}")
 	@Produces("application/json")
-	public Response createUser(@FormParam("userName") String userName){//, @FormParam("supergol") SuperGol supergol){
-		User user = new User(new SuperGol(), userName);
+	public Response createUser(@PathParam("userName") String userName){//, @FormParam("supergol") SuperGol supergol){
+		User user = new User();
+		user.assignParameters(userName);
 		getUserService().save(user);
 		return Response.ok(user).build();
 	}

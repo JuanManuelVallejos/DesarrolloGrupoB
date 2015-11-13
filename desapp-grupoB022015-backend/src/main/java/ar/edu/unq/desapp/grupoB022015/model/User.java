@@ -17,14 +17,34 @@ public class User extends Entity implements Comparable<User>{
 	public User(){}
 	
 	public User(SuperGol sP, String name){
-		this.rankingPoints = 0;
-		this.leagues = new ArrayList<League>();
-		this.superGol = sP;
+		this.setRankingPoints(0);
+		this.setLeagues(new ArrayList<League>());
+		this.setSuperGol(sP);
 		this.setUserName(name);
 	}
+	
+	public User(String userName){
+		this.setRankingPoints(0);
+		this.setLeagues(new ArrayList<League>());
+		this.setUserName(userName);
+	}
 
-	private void setUserName(String name) {
-		this.userName = name;
+	public void assignParameters(String userName){
+		setRankingPoints(0);
+		setLeagues(new ArrayList<League>());
+		setUserName(userName);
+	}
+	
+	private void setSuperGol(SuperGol sP) {
+		this.superGol= sP;
+	}
+
+	private void setLeagues(ArrayList<League> arrayList) {
+		this.leagues = arrayList;
+	}
+
+	private void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public SuperGol getSystem(){

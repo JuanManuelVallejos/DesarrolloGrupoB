@@ -31,6 +31,7 @@ public class League extends Entity{
 		this.rankingForLeague = new ArrayList<PointsForUser>();
 	}
 	
+	
 	public League(String leagueName, SuperGol system, int min, int max) {
 		this.name = leagueName;
 		this.superGol = system;
