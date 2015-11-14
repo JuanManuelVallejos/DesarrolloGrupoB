@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name desappGrupoB022015FrontendApp.controller:AboutCtrl
+ * @name desappGrupoB022015FrontendApp.controller:CreateTeamCtrl
  * @description
- * # SinginCtrl
+ * # CreateTeamCtrl
  * Controller of the desappGrupoB022015FrontendApp
  */
 angular.module('desappGrupoB022015FrontendApp')

@@ -9,6 +9,7 @@ import ar.edu.unq.desapp.grupoB022015.model.exceptions.PlayerNotFoundException;
 public class User extends Entity implements Comparable<User>{
 
 	private String userName;
+	private String password;
 	private int rankingPoints;
 	private FantasyTeam team;
 	private SuperGol superGol;
@@ -29,10 +30,11 @@ public class User extends Entity implements Comparable<User>{
 		this.setUserName(userName);
 	}
 
-	public void assignParameters(String userName){
+	public void assignParameters(String userName, String password){
 		setRankingPoints(0);
 		setLeagues(new ArrayList<League>());
 		setUserName(userName);
+		setPassword(password);
 	}
 	
 	private void setSuperGol(SuperGol sP) {
@@ -114,6 +116,14 @@ public class User extends Entity implements Comparable<User>{
 	
 	public List<League> getLeagues(){
 		return this.leagues;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }

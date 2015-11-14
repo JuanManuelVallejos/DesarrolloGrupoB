@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name desappGrupoB022015FrontendApp.controller:AboutCtrl
+ * @name desappGrupoB022015FrontendApp.controller:SigninCtrl
  * @description
  * # SinginCtrl
  * Controller of the desappGrupoB022015FrontendApp

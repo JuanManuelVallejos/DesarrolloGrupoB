@@ -16,11 +16,12 @@ leagueApp.controller('CreateLeagueCtrl', function ($scope, $http) {
                         str.push(encodeURIComponent(l) + "=" + encodeURIComponent(obj[l]));
             return str.join("&");
             },
-
            // data: {name: $scope.leaguename, minTeams: $scope.minTeams, maxTeams: $scope.maxTeams}
-
         }).success(function (data) {
-                alert('Alta liga wacho se creoooo!!')
-		});
+                alert('La liga fue creada satisfactoriamente')
+		}).error(function(data,status) {
+                alert("Error (" + status +"): " + "no se pudo crear la liga.");
+                location = '#/';
+        });
     }
 });

@@ -33,11 +33,6 @@ public class LeagueRest {
 	@Path("/create/{name}/{minTeams}/{maxTeams}")
 	@Produces("application/json")
 	public Response createLeague
-	/*(@FormParam("name") String leaguename, @FormParam("minTeams") Integer min,@FormParam("maxTeams") Integer max){
-		
-		League league = new League(leaguename, new SuperGol(),min,max);
-		getLeagueService().save(league);
-		return Response.ok(league).build();*/
 	(@PathParam("name") String name,  @PathParam("minTeams") Integer minTeams,@PathParam("maxTeams") Integer maxTeams){
 
 		League league = new League(name, new SuperGol(),minTeams,maxTeams);

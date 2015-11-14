@@ -9,6 +9,7 @@
 		</id>
 
 		<property name="userName" />
+		<property name="password" />
 		<property name="rankingPoints" />
 		
 		<one-to-one name="team" class="ar.edu.unq.desapp.grupoB022015.model.FantasyTeam"

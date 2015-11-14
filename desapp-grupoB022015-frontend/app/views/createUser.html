@@ -12,29 +12,30 @@
     }
 
 </style>
-<form class="form-horizontal" role="form" ng-submit="getUser()">
+<form class="form-horizontal" role="form" ng-submit="createUser()">
     <div class="jumbotron">
 
         <div class="omb_login">
             <h1> Registrate </h1>
-            
-            
 
             <div class="row omb_row-sm-offset-3">
-                <div class="col-xs-12 col-sm-6">    
-                    <form class="omb_loginForm" action="" autocomplete="off" method="POST">
-                                            
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                            <input type="text" class="form-control" placeholder="Nombre de usuario" ng-model="userName" required>
-                        </div>
-            
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Crear usuario</button>
-
-                    </form>
-                </div>
+            <div class="col-xs-12 col-sm-6">    
+                <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" name="userName" placeholder="Nombre usuario" ng-model="userName">
+                    </div>
+                    <span class="help-block"></span>
+                                        
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input  type="password" class="form-control" name="password" placeholder="Contraseña" ng-model="password">
+                    </div>
+                    <span class="help-block"></span>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
+                </form>
             </div>
-                  
+            </div>         
         </div>
      </div>
  </form>   

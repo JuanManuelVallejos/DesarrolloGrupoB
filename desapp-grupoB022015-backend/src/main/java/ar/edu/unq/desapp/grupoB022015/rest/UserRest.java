@@ -28,11 +28,11 @@ public class UserRest {
 	}
 	
 	@POST
-	@Path("/create/{userName}")
+	@Path("/create/{userName}/{password}")
 	@Produces("application/json")
-	public Response createUser(@PathParam("userName") String userName){//, @FormParam("supergol") SuperGol supergol){
+	public Response createUser(@PathParam("userName") String userName, @PathParam("password") String password){//, @FormParam("supergol") SuperGol supergol){
 		User user = new User();
-		user.assignParameters(userName);
+		user.assignParameters(userName, password);
 		getUserService().save(user);
 		return Response.ok(user).build();
 	}
