@@ -53,6 +53,10 @@ angular
         templateUrl: 'views/createUser.html',
         controller: 'CreateUserCtrl',
       })
+      .when('/uploadRTeams', {
+        templateUrl: 'views/uploadRTeams.html',
+        controller: 'UploadRTeamsCtrl',
+      })
       .otherwise({
         redirectTo: '/'
       });
