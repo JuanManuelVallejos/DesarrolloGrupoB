@@ -34,6 +34,24 @@ public class PlayerDAO extends HibernateGenericDAO<Player> implements GenericRep
 	            session.close();
 	        }
 	}
+	
+	public Player findById(int id) {
+		Session session = this.getHibernateTemplate().getSessionFactory().openSession();
+	    try {
+	    	String queryStr = " SELECT e FROM " + this.persistentClass.getName() + " AS e WHERE e.name like :name";
+	        
+	    	@SuppressWarnings("unchecked")
+			List<Player> player = session.createQuery(queryStr).setParameter("name", id).list();
+	             
+	        if(player.size() == 0){
+	        	return null;
+	        }else{
+	        	return player.get(0);
+	        }
+	        } finally {
+	            session.close();
+	        }
+	}
 
 	
 }

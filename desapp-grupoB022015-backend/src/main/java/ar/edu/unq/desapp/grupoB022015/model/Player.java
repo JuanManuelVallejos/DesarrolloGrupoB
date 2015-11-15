@@ -1,10 +1,8 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
-import java.util.Observable;
 
-public class Player extends Observable{
+public class Player  extends Entity{
 
-	private int ID;
     private String name;
 	private Position position;
 	private SuperGol systemUpgrade;
@@ -12,13 +10,28 @@ public class Player extends Observable{
     
 	public Player(){}
 	public Player(SuperGol superGol,int id, String aName,Position aPosition){
-		this.ID = id;
+		this.name= aName;
+		this.position = aPosition;
+		this.points = 0;
+		this.setSystemUpgrade(superGol);
+	}
+	public Player(SuperGol superGol, String aName,Position aPosition){
 		this.name= aName;
 		this.position = aPosition;
 		this.points = 0;
 		this.setSystemUpgrade(superGol);
 	}
 
+	public static Position getPosition(String position) {
+		if(position.equals("Goalkeeper"))
+			return new Goalkeeper();
+		if(position.equals("Defender"))
+			return new Defender();
+		if(position.equals("Midfielder"))
+			return new Midfielder();
+		return new Forward();
+	}
+	
 	public static Player PlayerGoalkeeper(SuperGol superGol,int id, String aName){
 		return new Player(superGol,id,aName,new Goalkeeper());
 	}
@@ -47,14 +60,6 @@ public class Player extends Observable{
 	public void setPosition(Position position) {
 		this.position = position;
 	}
-
-	public int getID() {
-		return ID;
-	}
-
-	public void setID(int iD) {
-		ID = iD;
-	}
 	
 	public int getPoints(){
 		return this.points;
@@ -66,8 +71,6 @@ public class Player extends Observable{
 	
 	public void addPointsForNGoals(int amountGoals){
 		this.points += getPointForNGoals(amountGoals);
-		setChanged();
-		notifyObservers(getPointForNGoals(amountGoals));
 	}
 	public SuperGol getSystemUpgrade() {
 		return systemUpgrade;

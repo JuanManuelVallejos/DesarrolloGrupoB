@@ -54,7 +54,7 @@ public abstract class Team extends Entity{
 	
 	public Player getPlayer(int player_ID) throws PlayerNotFoundException{
 		for(Player player : getPlayers())
-			if(player.getID() == player_ID)
+			if(player.getId() == player_ID)
 				return player;
 		throw new PlayerNotFoundException();
 	}

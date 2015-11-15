@@ -44,19 +44,28 @@ public class SuperGol extends Entity{
 	public void completeDate(){
 		this.tableForDate.addDate();
 	}
-	
+	//CVS Reader
 	public void refreshDate(String pathFile) throws Throwable{
 		CVSParser.refresh(this, pathFile);
 		completeDate();
 	}
-	
-	// FINDERS
+	public void setRealTeams(String pathFile) throws Throwable{
+		List<List<String>> dataForPlayers = CVSParser.readCVSForPlayers(pathFile);
+		for(List<String> playerData : dataForPlayers){
+			String team = playerData.get(0);
+			Position position = Player.getPosition(playerData.get(1));
+			String name = playerData.get(2);
+			Player player = new Player(this,name,position);
+			addPlayerTo(player,team);
+		}
+	}	
+		// FINDERS
 	
 	public int getPointsForTeam(FantasyTeam team, int numDate){
 		return getTable().getTablePointOfPlayersOfDate(team.getPlayers(), numDate);
 	}
 	
-	public RealTeam getTeamWithName(String nameRealTeam) throws Throwable{
+	public RealTeam getTeamWithName(String nameRealTeam) throws TeamNotFoundException{
 		for(RealTeam team : getRealTeams())
 			if(team.getName().equals(nameRealTeam))
 				return team;
@@ -90,8 +99,13 @@ public class SuperGol extends Entity{
 		this.realTeams.add(rt);
 	}
 	
-	public void addPlayerTo(Player player,String nameRealTeam) throws Throwable{
-		getTeamWithName(nameRealTeam).addPlayer(player);
+	public void addPlayerTo(Player player,String nameRealTeam) throws TeamNotFoundException{
+		try{
+			getTeamWithName(nameRealTeam).addPlayer(player);
+		}catch(TeamNotFoundException e){
+			createRealTeam(nameRealTeam);
+			getTeamWithName(nameRealTeam).addPlayer(player);
+		}
 	}
 	
 	// GETTERS AND SETTERS
@@ -115,5 +129,17 @@ public class SuperGol extends Entity{
 	public void addPlayerTo(int player_ID, User user) throws MaximumNumberOfPlayersInTeamException,PlayerNotFoundException {
 		user.addPlayerToMyTeam(findPlayer(player_ID));
 	}
-	
+	/*
+	public static void main(String[] args) throws Throwable {
+		SuperGol sup = new SuperGol();
+		sup.setRealTeams("/Users/musimundo/Downloads/players.cvs");
+		System.out.println();
+		for(Player player : sup.getRealTeams().get(0).getPlayers()){
+			String str= player.getName();
+			str += ' ';
+			str += player.getPosition();
+			System.out.println(str);
+		}
+	}
+	*/
 }
