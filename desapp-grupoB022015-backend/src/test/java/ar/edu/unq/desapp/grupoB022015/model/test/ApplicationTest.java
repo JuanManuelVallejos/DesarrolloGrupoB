@@ -25,35 +25,35 @@ public class ApplicationTest {
 	private User user1 = superGol.createNewUserWithTeam("aName","aTeam");
 	private User user2 = superGol.createNewUserWithTeam("otherName","otherTeam");
 	
-	@Before
-    public void init() {
 		
-		Player goalk1 = Player.PlayerGoalkeeper(superGol, 0 , "goalk1");
-		Player goalk2 = Player.PlayerGoalkeeper(superGol, 1 , "goalk2");
-		
-		Player def1 = Player.PlayerGoalkeeper(superGol, 2 , "def1");
-		Player def2 = Player.PlayerGoalkeeper(superGol, 3 , "def2");
-		Player def3 = Player.PlayerGoalkeeper(superGol, 4 , "def3");
-		Player def4 = Player.PlayerGoalkeeper(superGol, 5 , "def4");
-		Player def5 = Player.PlayerGoalkeeper(superGol, 6 , "def5");
-		Player def6 = Player.PlayerGoalkeeper(superGol, 7 , "def6");
-		
-		Player mid1 = Player.PlayerMidfielder(superGol,8, "mid1");
-		Player mid2 = Player.PlayerMidfielder(superGol,9, "mid2");
-		Player mid3 = Player.PlayerMidfielder(superGol,10, "mid3");
-		Player mid4 = Player.PlayerMidfielder(superGol,11, "mid4");
-		Player mid5 = Player.PlayerMidfielder(superGol,12, "mid5");
-		Player mid6 = Player.PlayerMidfielder(superGol,13, "mid6");
-		Player mid7 = Player.PlayerMidfielder(superGol,14, "mid7");
-		Player mid8 = Player.PlayerMidfielder(superGol,15, "mid8");
-		
-		Player for1 = Player.PlayerForward(superGol,16 , "for1");
-		Player for2 = Player.PlayerForward(superGol,17 , "for2");
-		Player for3 = Player.PlayerForward(superGol,18 , "for3");
-		Player for4 = Player.PlayerForward(superGol,19 , "for4");
-		Player for5=  Player.PlayerForward(superGol,20 , "for5");
-		Player for6 = Player.PlayerForward(superGol,21 , "for6");
-		
+	private Player goalk1 = new Player(superGol, "goalk1","Goalkeeper");
+	private Player goalk2 = new Player(superGol, "goalk2","Goalkeeper");
+
+	private Player def1 = new Player(superGol, "def1", "Defender");
+	private Player def2 = new Player(superGol, "def2", "Defender");
+	private Player def3 = new Player(superGol, "def3", "Defender");
+	private Player def4 = new Player(superGol, "def4", "Defender");
+	private Player def5 = new Player(superGol, "def5", "Defender");
+	private Player def6 = new Player(superGol, "def6", "Defender");
+
+	private Player mid1 = new Player(superGol, "mid1","Midfielder");
+	private Player mid2 = new Player(superGol, "mid2","Midfielder");
+	private Player mid3 = new Player(superGol, "mid3","Midfielder");
+	private Player mid4 = new Player(superGol, "mid4","Midfielder");
+	private Player mid5 = new Player(superGol, "mid5","Midfielder");
+	private Player mid6 = new Player(superGol, "mid6","Midfielder");
+	private Player mid7 = new Player(superGol, "mid7","Midfielder");
+	private Player mid8 = new Player(superGol, "mid8","Midfielder");
+
+	private Player for1 = new Player(superGol, "for1","Forward");
+	private Player for2 = new Player(superGol, "for2","Forward");
+	private Player for3 = new Player(superGol, "for3","Forward");
+	private Player for4 = new Player(superGol, "for4","Forward");
+	private Player for5=  new Player(superGol, "for5","Forward");
+	private Player for6 = new Player(superGol, "for6","Forward");
+	
+	@Before	
+	public void init() {	
 		playersTeam1.add(goalk1);playersTeam1.add(def1);playersTeam1.add(def2);
 		playersTeam1.add(def3);playersTeam1.add(mid1);playersTeam1.add(mid2);
 		playersTeam1.add(mid3);playersTeam1.add(mid4);playersTeam1.add(for1);
@@ -74,7 +74,10 @@ public class ApplicationTest {
 	@Test
 	public void testCorrectAddPlayers() throws Throwable{
 		
-		user1.addPlayersToMyTeam(0,  2,3,4,  8,9,10,11,  16,17,18);
+		user1.addPlayersToMyTeam(goalk1.getId(),
+								 def1.getId(),def2.getId(),def3.getId(),
+								 mid1.getId(),mid2.getId(),mid3.getId(),mid4.getId(),
+								 for1.getId(),for2.getId(),for3.getId());
 		
 		assertEquals(11,user1.getTeam().getPlayers().size());
 		assertEquals(0,user2.getTeam().getPlayers().size());
@@ -83,7 +86,10 @@ public class ApplicationTest {
 	@Test(expected = MaximumNumberOfPlayersInTeamException.class)
 	public void testExcessAddPlayers() throws Throwable{
 		
-		user2.addPlayersToMyTeam(1,2,  5,6,7,  12,13,14,15,  19,20,21);
+		user1.addPlayersToMyTeam(goalk2.getId(),
+				 def4.getId(),def5.getId(),def6.getId(),
+				 mid5.getId(),mid6.getId(),mid7.getId(),mid8.getId(),
+				 for3.getId(),for4.getId(),for5.getId(),for6.getId());
 	
 	}
 	

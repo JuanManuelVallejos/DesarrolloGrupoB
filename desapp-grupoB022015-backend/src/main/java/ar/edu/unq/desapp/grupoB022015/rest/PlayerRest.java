@@ -43,28 +43,19 @@ public class PlayerRest {
 	@POST
 	@Path("/create")
 	@Produces("application/json")
-	public Response createPlayer(@FormParam("name") String name,
-			 @FormParam("ID") int id, @FormParam("position") String position){
+	public Response createPlayer(@FormParam("name") String name, @FormParam("position") String position){
 		
-		
-		Player player = getPlayerService().findById(id);
-		
-		if(player == null){
-			//pasar supergol q corresponde
-			Player p = new Player(new SuperGol(), id, name , getPosition(position));
-			getPlayerService().save(p);
-		}else{
-			return Response.ok(-1).build();
-		}
-		return Response.ok(player).build();
+		Player p = new Player(new SuperGol(), name , getPosition(position));
+		getPlayerService().save(p);
+		return Response.ok(p).build();
 	}
 
 	private Position getPosition(String position) {
-		if(position == "Goalkeeper")
+		if(position.equals("Goalkeeper"))
 			return new Goalkeeper();
-		if(position == "Defender")
+		if(position.equals("Defender"))
 			return new Defender();
-		if(position == "Midfielder")
+		if(position.equals("Midfielder"))
 			return new Midfielder();
 		return new Forward();
 	}

@@ -9,15 +9,17 @@ public class Player  extends Entity{
 	private int points;
     
 	public Player(){}
-	public Player(SuperGol superGol,int id, String aName,Position aPosition){
+
+	public Player(SuperGol superGol, String aName,Position aPosition){
 		this.name= aName;
 		this.position = aPosition;
 		this.points = 0;
 		this.setSystemUpgrade(superGol);
 	}
-	public Player(SuperGol superGol, String aName,Position aPosition){
+	
+	public Player(SuperGol superGol, String aName,String aPosition){
 		this.name= aName;
-		this.position = aPosition;
+		this.position = getPosition(aPosition);
 		this.points = 0;
 		this.setSystemUpgrade(superGol);
 	}
@@ -30,19 +32,6 @@ public class Player  extends Entity{
 		if(position.equals("Midfielder"))
 			return new Midfielder();
 		return new Forward();
-	}
-	
-	public static Player PlayerGoalkeeper(SuperGol superGol,int id, String aName){
-		return new Player(superGol,id,aName,new Goalkeeper());
-	}
-	public static Player PlayerDefender(SuperGol superGol,int id, String aName){
-		return new Player(superGol,id,aName,new Defender());
-	}
-	public static Player PlayerMidfielder(SuperGol superGol,int id, String aName){
-		return new Player(superGol,id,aName,new Midfielder());
-	}
-	public static Player PlayerForward(SuperGol superGol,int id, String aName){
-		return new Player(superGol,id,aName,new Forward());
 	}
 	
 	public String getName() {

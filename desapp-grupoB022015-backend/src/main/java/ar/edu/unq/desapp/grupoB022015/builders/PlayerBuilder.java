@@ -9,7 +9,7 @@ public class PlayerBuilder extends AbstractBuilder<Player> {
 
 	@Override
 	public Player anyObject() {
-		  return new Player(new SuperGol(), 10, "player", new Defender());
+		  return new Player(new SuperGol(),"player", new Defender());
 	}
 
 }
