@@ -1,17 +1,19 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name desappGrupoB022015FrontendApp.controller:LeagueCtrl
- * @description
- * # LeagueCtrl
- * Controller of the desappGrupoB022015FrontendApp
- */
 angular.module('desappGrupoB022015FrontendApp')
-  .controller('LeagueCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+.controller('LeagueCtrl', LeagueCtrl);
+
+
+function LeagueCtrl($http) {
+
+	var ls = this;
+
+	$http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/league/list').success(function (data) {
+    	ls.leagues = data;
+    });
+
+    ls.editLeague = function(league) {
+      location = '#/editLeague/' + league.id;
+    };
+
+}

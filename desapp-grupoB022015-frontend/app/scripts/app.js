@@ -57,6 +57,10 @@ angular
         templateUrl: 'views/uploadRTeams.html',
         controller: 'UploadRTeamsCtrl',
       })
+      .when('/editLeague/:idLeague', {
+        templateUrl: 'views/editLeague.html',
+        controller: 'EditLeagueCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
