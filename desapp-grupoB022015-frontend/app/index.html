@@ -58,16 +58,23 @@
             <ul class="nav navbar-nav">
               <li><a ng-href="#/signin">Sign in</a></li>
               <li><a ng-href="#/createTeam">Armar equipo</a></li>
-              <li><a ng-href="#/updateRound">Actualizar fecha</a></li>
               <li><a ng-href="#/createUser">Registrarse</a></li>
-              <li><a ng-href="#/createLeague">Crear torneo</a></li>
-              <li><a ng-href="#/uploadRTeams">Cargar equipos reales</a></li>
+               <li class="dropdown">
+                <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-default" data-target="#" href="/page.html">
+                Administrar <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a ng-href="#/uploadRTeams">Cargar equipos reales</a></li> 
+                  <li><a ng-href="#/updateRound">Actualizar fecha</a></li>
+               </ul>
+              </li>
               <li class="dropdown">
                 <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-default" data-target="#" href="/page.html">
                 Mis torneos <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                  <li><a ng-href="#/activeLeagues">Torneos activos</a></li>    
+                  <li><a ng-href="#/activeLeagues">Torneos activos</a></li> 
+                  <li><a ng-href="#/createLeague">Crear torneo</a></li>   
                </ul>
               </li>
           </div>

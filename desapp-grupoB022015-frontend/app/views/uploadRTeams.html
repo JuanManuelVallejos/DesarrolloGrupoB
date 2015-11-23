@@ -13,19 +13,17 @@
     }
 </style>
 
-<form class="form-horizontal" role="form" ng-submit="uploadRT()">
-    <div class="jumbotron">
-        <div class="omb_login">
-            <h1> Carga de Equipos Reales </h1>
+<div class="jumbotron">
+    <form class="form-horizontal" role="form" ng-submit="uploadRT()">
+        <h1> Carga de Equipos Reales </h1>
+        <div class="form-group">
+            <div style="position:relative;" align="left">
+                <form method="post" action="loadTeams" enctype="multipart/form-data">
+                    <input type="file" name="archivo" /><br />
+                    <input type="submit" class='btn btn-primary' value="Cargar" />
+                </form>
+            </div>
+        </div>        
+    </form>
+</div>
 
-            <div class="row omb_row-sm-offset-3">
-                <div class="col-xs-12 col-sm-6">
-                             <input type="file" ng-model="file"/>
-                        </div>
-                        <span class="help-block"></span>
-                        <input type="submit" value="Enviar"> 
-                </div>
-            </div>         
-        </div>
-     </div>
- </form> 
