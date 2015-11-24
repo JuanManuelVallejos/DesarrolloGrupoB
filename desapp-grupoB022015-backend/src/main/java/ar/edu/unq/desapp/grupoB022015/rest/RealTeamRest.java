@@ -7,7 +7,7 @@ public class RealTeamRest {
 	  private RealTeamService realTeamService;
 	    
 		public RealTeamService getFantasyTeamService() {
-			return fantasyTeamService;
+			return realTeamService;
 		}
 
 		public void setRealTeamService(RealTeamService realTeamService) {
