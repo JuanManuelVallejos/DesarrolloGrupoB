@@ -41,6 +41,12 @@ public class League extends Entity{
 		this.setMinTeams(min);
 		this.setMaxTeams(max);
 	}
+	
+	public void updateLeague(String name, int minTeams, int maxTeams){
+		this.setName(name);
+		this.setMaxTeams(maxTeams);
+		this.setMinTeams(minTeams);
+	}
 
 	public Integer getTablePointsForUser(User user) throws UserNotFoundException{
 		for(PointsForUser pfu : this.rankingForLeague){
@@ -177,5 +183,9 @@ public class League extends Entity{
 	}
 	public void setMaxTeams(int maxTeams) {
 		this.maxTeams = maxTeams;
+	}
+	
+	private void setName(String name) {
+		this.name = name;
 	}
 }

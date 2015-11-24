@@ -15,5 +15,26 @@
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <div class="jumbotron">
     <h2> Ligas activas </h2>   
-    
+    <div ng-controller="LeagueCtrl as myLeagues">
+        <table datatable="ng">
+      <tr>
+        <th>Nombre</th>
+        <th>Eq. Mín</th>
+        <th>Eq. Máx</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="league in myLeagues.leagues">
+        <td>{{ league.name }}</td>
+        <td>{{ league.minTeams }}</td>
+        <td>{{ league.maxTeams }}</td>
+        <td>
+          <button type="button" ng-click="myLeagues.editLeague(league)" class="btn btn-warning btn-xs">
+            <span class="glyphicon glyphicon-edit"></span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <div>
