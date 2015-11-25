@@ -13,4 +13,11 @@ public class PlayerService extends GenericService<Player> {
 	public Player findByName(String name) {
 		return ((PlayerDAO) this.getRepository()).findByName(name);
 	}
+	
+	public Player createPlayer(String name,String position){
+		Player player = new Player(name,position);
+		save(player);
+		return player;
+	}
+	
 }

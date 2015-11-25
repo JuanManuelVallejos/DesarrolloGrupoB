@@ -17,11 +17,10 @@ public class Player  extends Entity{
 		this.setSystemUpgrade(superGol);
 	}
 	
-	public Player(SuperGol superGol, String aName,String aPosition){
+	public Player(String aName,String aPosition){
 		this.name= aName;
 		this.position = getPosition(aPosition);
 		this.points = 0;
-		this.setSystemUpgrade(superGol);
 	}
 
 	public static Position getPosition(String position) {

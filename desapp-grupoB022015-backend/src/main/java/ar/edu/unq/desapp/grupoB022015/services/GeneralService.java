@@ -3,6 +3,7 @@ package ar.edu.unq.desapp.grupoB022015.services;
 public class GeneralService {
 
 	private FantasyTeamService fantasyTeamService;
+	private RealTeamService realTeamService;
 	private PlayerService playerService;
 	private PositionService positionService;
 	private UserService userService;
@@ -17,6 +18,14 @@ public class GeneralService {
 
 	public void setFantasyTeamService(FantasyTeamService fantasyTeamService) {
 		this.fantasyTeamService = fantasyTeamService;
+	}
+	
+	public RealTeamService getRealTeamService() {
+		return realTeamService;
+	}
+
+	public void setRealTeamService(RealTeamService realTeamService) {
+		this.realTeamService = realTeamService;
 	}
 
 	public PlayerService getPlayerService() {

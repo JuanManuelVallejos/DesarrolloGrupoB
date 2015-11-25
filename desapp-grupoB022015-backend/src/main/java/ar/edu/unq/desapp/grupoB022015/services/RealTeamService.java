@@ -16,4 +16,14 @@ public class RealTeamService  extends GenericService<RealTeam> {
 	public RealTeam findByTeamName(String teamname) {
 		return  ((RealTeamDAO) this.getRepository()).findByTeamName(teamname);
 	}
+	
+	public RealTeam createPlayerIn(Player player, String team){
+		RealTeam rt = findByTeamName(team);
+		if(rt == null){
+			rt = new RealTeam(team);
+		}
+		rt.addPlayer(player);
+		save(rt);
+		return rt;
+	}
 }
