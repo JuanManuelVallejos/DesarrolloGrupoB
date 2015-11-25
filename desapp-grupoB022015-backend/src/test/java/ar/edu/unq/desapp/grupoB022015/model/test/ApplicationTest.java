@@ -26,31 +26,31 @@ public class ApplicationTest {
 	private User user2 = superGol.createNewUserWithTeam("otherName","otherTeam");
 	
 		
-	private Player goalk1 = new Player(superGol, "goalk1","Goalkeeper");
-	private Player goalk2 = new Player(superGol, "goalk2","Goalkeeper");
+	private Player goalk1 = new Player("goalk1","Goalkeeper");
+	private Player goalk2 = new Player("goalk2","Goalkeeper");
 
-	private Player def1 = new Player(superGol, "def1", "Defender");
-	private Player def2 = new Player(superGol, "def2", "Defender");
-	private Player def3 = new Player(superGol, "def3", "Defender");
-	private Player def4 = new Player(superGol, "def4", "Defender");
-	private Player def5 = new Player(superGol, "def5", "Defender");
-	private Player def6 = new Player(superGol, "def6", "Defender");
+	private Player def1 = new Player("def1", "Defender");
+	private Player def2 = new Player("def2", "Defender");
+	private Player def3 = new Player("def3", "Defender");
+	private Player def4 = new Player("def4", "Defender");
+	private Player def5 = new Player("def5", "Defender");
+	private Player def6 = new Player("def6", "Defender");
 
-	private Player mid1 = new Player(superGol, "mid1","Midfielder");
-	private Player mid2 = new Player(superGol, "mid2","Midfielder");
-	private Player mid3 = new Player(superGol, "mid3","Midfielder");
-	private Player mid4 = new Player(superGol, "mid4","Midfielder");
-	private Player mid5 = new Player(superGol, "mid5","Midfielder");
-	private Player mid6 = new Player(superGol, "mid6","Midfielder");
-	private Player mid7 = new Player(superGol, "mid7","Midfielder");
-	private Player mid8 = new Player(superGol, "mid8","Midfielder");
+	private Player mid1 = new Player( "mid1","Midfielder");
+	private Player mid2 = new Player("mid2","Midfielder");
+	private Player mid3 = new Player("mid3","Midfielder");
+	private Player mid4 = new Player("mid4","Midfielder");
+	private Player mid5 = new Player("mid5","Midfielder");
+	private Player mid6 = new Player("mid6","Midfielder");
+	private Player mid7 = new Player("mid7","Midfielder");
+	private Player mid8 = new Player("mid8","Midfielder");
 
-	private Player for1 = new Player(superGol, "for1","Forward");
-	private Player for2 = new Player(superGol, "for2","Forward");
-	private Player for3 = new Player(superGol, "for3","Forward");
-	private Player for4 = new Player(superGol, "for4","Forward");
-	private Player for5=  new Player(superGol, "for5","Forward");
-	private Player for6 = new Player(superGol, "for6","Forward");
+	private Player for1 = new Player("for1","Forward");
+	private Player for2 = new Player("for2","Forward");
+	private Player for3 = new Player("for3","Forward");
+	private Player for4 = new Player("for4","Forward");
+	private Player for5=  new Player("for5","Forward");
+	private Player for6 = new Player("for6","Forward");
 	
 	@Before	
 	public void init() {	

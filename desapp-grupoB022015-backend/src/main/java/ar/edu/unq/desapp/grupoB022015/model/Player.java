@@ -9,13 +9,6 @@ public class Player  extends Entity{
 	private int points;
     
 	public Player(){}
-
-	public Player(SuperGol superGol, String aName,Position aPosition){
-		this.name= aName;
-		this.position = aPosition;
-		this.points = 0;
-		this.setSystemUpgrade(superGol);
-	}
 	
 	public Player(String aName,String aPosition){
 		this.name= aName;
