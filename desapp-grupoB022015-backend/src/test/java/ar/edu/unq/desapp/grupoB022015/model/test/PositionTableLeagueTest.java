@@ -54,12 +54,12 @@ public class PositionTableLeagueTest {
       
       league.createFixtureRoundTrip(new DateTime(), 7);
       
-      player1 = new Player(superGol,"Jon", new Defender());
-      player2 = new Player(superGol,"Smith", new Defender());
-      player3 = new Player(superGol,"Steve", new Defender());
-      player4 = new Player(superGol,"Peter", new Midfielder());
-      player5 = new Player(superGol,"Louis", new Forward());
-      player6 = new Player(superGol,"Jimbo", new Forward());
+      player1 = new Player("Jon", "Defender");
+      player2 = new Player("Smith", "Defender");
+      player3 = new Player("Steve", "Defender");
+      player4 = new Player("Peter", "Midfielder");
+      player5 = new Player("Louis", "Forward");
+      player6 = new Player("Jimbo", "Forward");
       
       user1.setPlayers(player1,player2);
       user2.setPlayers(player5,player6);

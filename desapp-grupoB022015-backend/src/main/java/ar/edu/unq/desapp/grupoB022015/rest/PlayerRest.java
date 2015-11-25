@@ -45,7 +45,7 @@ public class PlayerRest {
 	@Produces("application/json")
 	public Response createPlayer(@FormParam("name") String name, @FormParam("position") String position){
 		
-		Player p = new Player(new SuperGol(), name , getPosition(position));
+		Player p = new Player(name, position);
 		getPlayerService().save(p);
 		return Response.ok(p).build();
 	}

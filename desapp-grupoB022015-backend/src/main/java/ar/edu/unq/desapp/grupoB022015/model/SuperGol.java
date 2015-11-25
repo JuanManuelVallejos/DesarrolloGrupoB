@@ -53,9 +53,8 @@ public class SuperGol extends Entity{
 		List<List<String>> dataForPlayers = CVSParser.readCVSForPlayers(pathFile);
 		for(List<String> playerData : dataForPlayers){
 			String team = playerData.get(0);
-			Position position = Player.getPosition(playerData.get(1));
 			String name = playerData.get(2);
-			Player player = new Player(this,name,position);
+			Player player = new Player(name,playerData.get(1));
 			addPlayerTo(player,team);
 		}
 	}	
