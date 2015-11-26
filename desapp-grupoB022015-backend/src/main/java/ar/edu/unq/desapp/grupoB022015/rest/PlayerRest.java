@@ -16,7 +16,6 @@ import ar.edu.unq.desapp.grupoB022015.model.Goalkeeper;
 import ar.edu.unq.desapp.grupoB022015.model.Midfielder;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.Position;
-import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
 import ar.edu.unq.desapp.grupoB022015.services.PlayerService;
 
 @Path("/player")

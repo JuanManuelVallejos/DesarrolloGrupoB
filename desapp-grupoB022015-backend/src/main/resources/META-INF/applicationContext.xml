@@ -29,6 +29,7 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 	<jaxrs:server id="globalService">
 		<jaxrs:serviceBeans>
 			<ref bean="fantasyTeamRest" />
+			<ref bean="realTeamRest" />
 			<ref bean="playerRest" />
 			<ref bean="positionRest" />
 			<ref bean="userRest" />

@@ -12,7 +12,7 @@
         opacity: 0.9
     }
 </style>
-
+<!--
 <div class="jumbotron">
     <form class="form-horizontal" role="form" ng-submit="uploadRT()">
         <h1> Carga de Equipos Reales </h1>
@@ -24,5 +24,15 @@
                 </form>
             </div>
         </div>
+    </form>
+</div>
+-->
+
+<div class="jumbotron">
+    <form class="form-horizontal" role="form" ng-submit="uploadRT()">
+        <h1> Carga de Equipos Reales </h1>
+        <input type="file" ng-model='file' data-file="param.file"/>
+        <div>param.file: {{param.file}}</div>
+        <input type="submit" class='btn btn-primary' value="Cargar" /> 
     </form>
 </div>
