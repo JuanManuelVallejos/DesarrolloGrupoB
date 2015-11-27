@@ -15,6 +15,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import ar.edu.unq.desapp.grupoB022015.model.Player;
+import ar.edu.unq.desapp.grupoB022015.model.RealTeam;
 import ar.edu.unq.desapp.grupoB022015.services.RealTeamService;
 import ar.edu.unq.desapp.grupoB022015.services.PlayerService;
 
@@ -41,11 +42,24 @@ public class RealTeamRest {
 	}
 	
 	@POST
-	@Path("/createPlayer/{team}/{name}/{position}")
+	@Path("/create/{name}/")
 	@Produces("application/json")
-	public void setPlayer(@PathParam("team") String team,@PathParam("name") String name,@PathParam("position") String position){
-			Player player = getPlayerService().createPlayer(name, position);
-			getRealTeamService().createPlayerIn(player, team);
+	public Response create(@PathParam("name") String name){
+			RealTeam t = new RealTeam(name);
+			getRealTeamService().save(t);
+			return Response.ok(t).build();
+	}
+	
+	@POST
+	@Path("/addPlayer/{team}/{name}/{position}")
+	@Produces("application/json")
+	public RealTeam setPlayer(@PathParam("team") String team,@PathParam("name") String name,@PathParam("position") String position){
+			Player p = new Player(name, position);
+			
+			RealTeam t = getRealTeamService().findByTeamName(team);
+			t.addPlayer(p);
+			getRealTeamService().update(t);
+			return t;
 	}
 	
 	@POST

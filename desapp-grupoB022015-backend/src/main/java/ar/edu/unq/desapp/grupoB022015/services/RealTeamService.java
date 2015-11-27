@@ -23,7 +23,7 @@ public class RealTeamService  extends GenericService<RealTeam> {
 			rt = new RealTeam(team);
 		}
 		rt.addPlayer(player);
-		save(rt);
+		this.getRepository().save(rt);
 		return rt;
 	}
 }

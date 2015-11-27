@@ -16,7 +16,7 @@ public class PlayerService extends GenericService<Player> {
 	
 	public Player createPlayer(String name,String position){
 		Player player = new Player(name,position);
-		save(player);
+		this.getRepository().save(player);
 		return player;
 	}
 	

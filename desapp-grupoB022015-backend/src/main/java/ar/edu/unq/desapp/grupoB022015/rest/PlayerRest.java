@@ -40,9 +40,9 @@ public class PlayerRest {
 	}
 	
 	@POST
-	@Path("/create")
+	@Path("/create/{name}/{position}")
 	@Produces("application/json")
-	public Response createPlayer(@FormParam("name") String name, @FormParam("position") String position){
+	public Response createPlayer(@PathParam("name") String name, @PathParam("position") String position){
 		
 		Player p = new Player(name, position);
 		getPlayerService().save(p);

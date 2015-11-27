@@ -51,6 +51,16 @@ public class LeagueRest {
 	}
 	
 	@GET
+	@Path("/name/{name}")
+	@Produces("application/json")
+	public Response findByName(@PathParam("name") String name) {
+		League l = getLeagueService().findByName(name);
+		return Response.ok(l).build();
+	}
+	
+	
+	
+	@GET
     @Path("/list")
     @Produces("application/json")
     public List<League> getLeagues() {

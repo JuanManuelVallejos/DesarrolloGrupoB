@@ -45,14 +45,14 @@ public class RealTeamDAO extends HibernateGenericDAO<RealTeam> implements Generi
 	}
 	
 	
-	public RealTeam findByTeamName(String teamName) {
+	public RealTeam findByTeamName(String name) {
 		//funciona si los nombres de equipos son unicos
 		Session session = this.getHibernateTemplate().getSessionFactory().openSession();
 	    try {
-	    	String queryStr = " SELECT e FROM " + this.persistentClass.getName() + " AS e WHERE e.name like :teamName";
+	    	String queryStr = " SELECT e FROM " + this.persistentClass.getName() + " AS e WHERE e.name like :name";
 	        
 	    	@SuppressWarnings("unchecked")
-			List<RealTeam> team = session.createQuery(queryStr).setParameter("name", teamName).list();
+			List<RealTeam> team = session.createQuery(queryStr).setParameter("name", name).list();
 	             
 	        if(team.size() == 0){
 	        	return null;
