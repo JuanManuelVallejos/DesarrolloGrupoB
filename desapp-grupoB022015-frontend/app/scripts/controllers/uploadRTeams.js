@@ -24,16 +24,6 @@ uploadRTeams.directive('file', function(){
 
 
     $scope.uploadRT = function(){
-/*
-    $http.post('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/createPlayers/' + global.name)
-        .success(function(data) {
-                alert('Equipos subidos correctamente');
-                location = '#/';
-        }).error(function(data,status) {
-            alert('No se pudieron subir los equipos, error (' + status + ')');
-        });
-*/
-
 
     $http({
             method: 'POST',

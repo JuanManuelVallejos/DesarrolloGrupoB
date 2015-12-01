@@ -47,8 +47,11 @@ public class RealTeamRest {
 	@Path("/create/{name}/")
 	@Produces("application/json")
 	public Response create(@PathParam("name") String name){
-			RealTeam t = new RealTeam(name);
-			getRealTeamService().save(t);
+			RealTeam t = getRealTeamService().findByTeamName(name);
+			if(t==null){
+				t = new RealTeam(name);
+				getRealTeamService().save(t);
+			}
 			return Response.ok(t).build();
 	}
 	
