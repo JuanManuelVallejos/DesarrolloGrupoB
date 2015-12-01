@@ -22,6 +22,7 @@ uploadRTeams.directive('file', function(){
     };
 }).controller('UploadRTeamsCtrl', function ($scope, $http) {
 
+
     $scope.uploadRT = function(){
 /*
     $http.post('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/createPlayers/' + global.name)
@@ -85,6 +86,12 @@ uploadRTeams.directive('file', function(){
                 location = '#/';
         });
     }
+
+    var rt = this;
+
+    $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/list').success(function (data) {
+        rt.teams = data;
+    });
 
 
     });
