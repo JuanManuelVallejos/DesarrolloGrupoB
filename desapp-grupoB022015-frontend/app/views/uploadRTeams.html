@@ -35,6 +35,23 @@
         <div>param.file: {{param.file}}</div>
         <input type="submit" class='btn btn-primary' value="Cargar" /> 
     </form>
+     <h3> Agregar equipo </h3>
+    <form class="form-horizontal" role="form" ng-submit="addTeam()">
+        <form class="form-horizontal" role="form">
+        <div class="form-group">   
+            <label for="nombre-equipo" class="col-lg-2 control-label">Nombre</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" placeholder="nombre equipo" ng-model="team" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10" align="right">
+                <button type="submit" class="btn btn-success">Agregar equipo</button>
+            </div>
+        </div>
+        </form>
+    </form>
+    </form>
      <h3> Agregar jugador manualmente </h3>
     <form class="form-horizontal" role="form" ng-submit="addPlayer()">
         <form class="form-horizontal" role="form">

@@ -6,8 +6,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -61,6 +63,14 @@ public class RealTeamRest {
 			getRealTeamService().update(t);
 			return t;
 	}
+	
+	@GET
+    @Path("/list")
+    @Produces("application/json")
+    public List<RealTeam> getTeams() {
+        List<RealTeam> teams = realTeamService.retriveAll();
+        return teams;
+    }
 	
 	@POST
 	@Path("/createPlayers")
