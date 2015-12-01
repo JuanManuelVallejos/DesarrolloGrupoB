@@ -17,18 +17,28 @@ import ar.edu.unq.desapp.grupoB022015.model.Midfielder;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.Position;
 import ar.edu.unq.desapp.grupoB022015.services.PlayerService;
+import ar.edu.unq.desapp.grupoB022015.services.PositionService;
 
 @Path("/player")
 public class PlayerRest {
 	
 	private PlayerService playerService;
-
+	private PositionService positionService;
+	
 	public PlayerService getPlayerService() {
 		return playerService;
 	}
 
 	public void setPlayerService(PlayerService playerService) {
 		this.playerService = playerService;
+	}
+	
+	public PositionService getPositionService() {
+		return positionService;
+	}
+
+	public void setPositionService(PositionService positionService) {
+		this.positionService = positionService;
 	}
 	
 	@GET
@@ -45,18 +55,9 @@ public class PlayerRest {
 	public Response createPlayer(@PathParam("name") String name, @PathParam("position") String position){
 		
 		Player p = new Player(name, position);
+		getPositionService().save(p.getPosition());
 		getPlayerService().save(p);
 		return Response.ok(p).build();
-	}
-
-	private Position getPosition(String position) {
-		if(position.equals("Goalkeeper"))
-			return new Goalkeeper();
-		if(position.equals("Defender"))
-			return new Defender();
-		if(position.equals("Midfielder"))
-			return new Midfielder();
-		return new Forward();
 	}
 
 	@GET
