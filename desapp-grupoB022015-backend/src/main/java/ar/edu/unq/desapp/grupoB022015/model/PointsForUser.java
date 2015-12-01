@@ -5,6 +5,7 @@ public class PointsForUser extends Entity{
 	private User key;
 	private Integer value;
 	
+	public PointsForUser(){};
 	public PointsForUser(User aUser,Integer i) {
 		this.key = aUser;
 		this.value = i;

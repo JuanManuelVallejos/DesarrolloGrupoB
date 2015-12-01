@@ -15,12 +15,15 @@ import javax.ws.rs.core.Response;
 import ar.edu.unq.desapp.grupoB022015.model.League;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
+import ar.edu.unq.desapp.grupoB022015.model.User;
 import ar.edu.unq.desapp.grupoB022015.services.LeagueService;
+import ar.edu.unq.desapp.grupoB022015.services.UserService;
 
 @Path("/league")
 public class LeagueRest {
 	
 	private LeagueService leagueService;
+	private UserService userService;
 
 	public LeagueService getLeagueService() {
 		return leagueService;
@@ -28,6 +31,14 @@ public class LeagueRest {
 
 	public void setLeagueService(LeagueService leagueService) {
 		this.leagueService = leagueService;
+	}
+	
+	public UserService getUserService() {
+		return userService;
+	}
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
 	}
 	
 	@POST
@@ -39,6 +50,17 @@ public class LeagueRest {
 		League league = new League(name, new SuperGol(),minTeams,maxTeams);
 		getLeagueService().save(league);
 		return Response.ok(league).build();
+	}
+	
+	@POST
+	@Path("/addUser/{idUser}/{idLeague}/")
+	@Produces("application/json")
+	public void addUser
+	(@PathParam("idUser") Integer idUser,  @PathParam("idLeague") Integer idLeague){
+		League league = getLeagueService().findById(idLeague);
+		User user = getUserService().findById(idUser);
+		league.addUser(user);
+		getLeagueService().update(league);
 	}
 	
 	@GET
