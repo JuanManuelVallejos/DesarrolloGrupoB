@@ -15,9 +15,12 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'auth0',
+    'angular-storage',
+    'angular-jwt'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider,authProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -64,4 +67,11 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+      authProvider.init({
+      domain: 'supergolgrupob.auth0.com',
+      clientID: 'lZL8EWPowrIK05acdRHN3HiKPi8stO7u'
+      });
+  }).run(function(auth) {
+  // This hooks al auth events to check everything as soon as the app starts
+    auth.hookEvents();
+});
