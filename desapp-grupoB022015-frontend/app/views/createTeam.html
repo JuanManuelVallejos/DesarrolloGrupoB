@@ -18,11 +18,25 @@
 </style>
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-<div class="jumbotron">
+<div class="jumbotron" ng-controller="CreateTeamCtrl as myTeam">
     <h2> Armá tu equipo </h2>  
 
-    <div class="container-fluid" ng-controller="CreateTeamCtrl as myTeam">
-        <form class="form-horizontal" role="form" ng-submit="addPlayer()">
+    <div class="container-fluid">
+        <form class="form-horizontal" role="form" ng-submit="createTeam()">
+        <div class="form-group">   
+            <label for="nombre-equipo" class="col-lg-2 control-label">Nombre</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" placeholder="nombre equipo" ng-model="teamname" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10" align="right">
+                <button type="submit" class="btn btn-warning">Crear equipo</button>
+            </div>
+        </div>
+    </form>
+        <br><br>
+        <form class="form-horizontal" role="form" ng-submit="searchPlayers()">
         <div class="form-group">
             <label for="equipo-jugador" class="col-lg-2 control-label">Equipo</label>
             <div class="col-lg-10"> 
@@ -71,17 +85,24 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group">   
+             <div class="form-group">
+                <div align="right">
+                    <button type="submit" class="btn btn-primary btn-sm">Buscar jugadores</button>
+                </div>
+            </div>      
+        </form>
+        <form class="form-horizontal" role="form" ng-submit="addPlayer()"
+            <div class="form-group">
                 <label for="nombre-jugador" class="col-lg-2 control-label">Nombre</label>
-                <div class="col-lg-10">
-                    <select class="form-control" id="playername">
-                    <option ng-repeat="player in myTeam.players">{{ player.name }}</option>
-                </select>
+                <div class="col-lg-10"> 
+                    <select class="form-control" ng-model="playername" required>
+                        <option ng-repeat="player in myTeam.players">{{ player.name }}</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
                 <div align="right">
-                    <button type="button" class="btn btn-primary btn-sm" ng-click="myTeam.addPlayer()">Agregar jugador</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Agregar jugador</button>
                 </div>
             </div>      
         <div>
@@ -145,19 +166,7 @@
             <td></td>
         </tr>
         </table>
-        </div> 
-        <br><br>
-        <div class="form-group">
-            <label for="equipo-jugador" class="col-lg-2 control-label">Equipo</label>
-            <div class="col-lg-10"> 
-                <input type="text" class="form-control" placeholder="nombre equipo" ng-model="teamname" required>
-            </div>
-        </div>
-        <div class="form-group">
-                <div align="center">
-                    <button type="submit" class="btn btn-danger btn-lg">Crear equipo</button>
-                </div>
-        </div>
-        </form>                 
+        </div>  
+        </form>              
     </div>
 </div>
