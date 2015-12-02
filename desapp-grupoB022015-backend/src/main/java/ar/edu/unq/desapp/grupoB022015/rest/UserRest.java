@@ -5,13 +5,18 @@ import java.util.List;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import ar.edu.unq.desapp.grupoB022015.model.FantasyTeam;
+import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
 import ar.edu.unq.desapp.grupoB022015.model.User;
+import ar.edu.unq.desapp.grupoB022015.model.exceptions.MaximumNumberOfPlayersInTeamException;
+import ar.edu.unq.desapp.grupoB022015.services.PlayerService;
 import ar.edu.unq.desapp.grupoB022015.services.UserService;
 
 @Path("/user")
@@ -27,6 +32,16 @@ public class UserRest {
 		this.userService = userService;
 	}
 	
+	private PlayerService playerService;
+
+	public PlayerService getPlayerService() {
+		return playerService;
+	}
+
+	public void setPlayerService(PlayerService playerService) {
+		this.playerService = playerService;
+	}
+	
 	@POST
 	@Path("/create/{userName}/{password}")
 	@Produces("application/json")
@@ -35,6 +50,31 @@ public class UserRest {
 		user.assignParameters(userName, password);
 		getUserService().save(user);
 		return Response.ok(user).build();
+	}
+	
+	@POST
+	@Path("/createMyTeam/{teamname}/{id}")
+	@Produces("application/json")
+	public User createMyTeam(@PathParam("teamname") String teamname, @PathParam("id") Integer id) {
+		 User theUser = getUserService().findById(id);
+		 FantasyTeam myTeam = new FantasyTeam(teamname);
+		 theUser.setFantasyTeam(myTeam);
+		 
+		 getUserService().update(theUser);
+		 
+		 return theUser;
+	}
+	
+	@POST
+	@Path("/addPlayer/{idPlayer}/{idUser}")
+	@Produces("application/json")
+	public User setPlayer(@PathParam("idPlayer") Integer idPlayer,@PathParam("idUser") Integer idUser, @PathParam("teamname") String teamname) throws MaximumNumberOfPlayersInTeamException{
+		Player player = getPlayerService().findById(idPlayer);
+		User user = getUserService().findById(idUser);
+		user.addPlayerToMyTeam(player);
+		
+		getUserService().update(user);
+		return user;			
 	}
 	
 	@GET

@@ -14,13 +14,33 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 import ar.edu.unq.desapp.grupoB022015.model.FantasyTeam;
+import ar.edu.unq.desapp.grupoB022015.model.League;
+import ar.edu.unq.desapp.grupoB022015.model.Player;
+import ar.edu.unq.desapp.grupoB022015.model.RealTeam;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
 import ar.edu.unq.desapp.grupoB022015.model.User;
+import ar.edu.unq.desapp.grupoB022015.model.exceptions.MaximumNumberOfPlayersInTeamException;
 import ar.edu.unq.desapp.grupoB022015.services.FantasyTeamService;
+import ar.edu.unq.desapp.grupoB022015.services.PlayerService;
+import ar.edu.unq.desapp.grupoB022015.services.UserService;
+
 import javax.ws.rs.core.Response;
+
+import org.hibernate.id.CompositeNestedGeneratedValueGenerator.GenerationPlan;
 
 @Path("/fantasyTeam")
 public class FantasyTeamRest {
+	
+	private UserService userService;
+
+	public UserService getUserService() {
+		return userService;
+	}
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+	
     
     private FantasyTeamService fantasyTeamService;
     
@@ -32,6 +52,16 @@ public class FantasyTeamRest {
 		this.fantasyTeamService = fantasyTeamService;
 	}
 	
+	private PlayerService playerService;
+
+	public PlayerService getPlayerService() {
+		return playerService;
+	}
+
+	public void setPlayerService(PlayerService playerService) {
+		this.playerService = playerService;
+	}
+	
 	@GET
     @Path("/list")
     @Produces("application/json")
@@ -39,17 +69,7 @@ public class FantasyTeamRest {
         List<FantasyTeam> fantasyTeams = fantasyTeamService.retriveAll();
         return fantasyTeams;
     }
-	
-	 @POST
-	 @Path("/create")
-	 @Produces("application/json")
-	 public Response createFantasyTeam(@FormParam("name") String name) {
-		 	FantasyTeam fantasyTeam = new FantasyTeam(new User(new SuperGol(),""),name);
-		 	getFantasyTeamService().save(fantasyTeam);
-			return Response.ok(fantasyTeam).build();
-	 }
-	 
-		
+	  	
 	@PUT
 	@Path("/edit/{teamname}")
 	@Produces("application/json")

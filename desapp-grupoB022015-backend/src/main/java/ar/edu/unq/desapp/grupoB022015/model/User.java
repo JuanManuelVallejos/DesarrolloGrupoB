@@ -87,6 +87,10 @@ public class User extends Entity implements Comparable<User>{
 		this.team = new FantasyTeam(this,teamName);
 	}
 	
+	public void setFantasyTeam(FantasyTeam team){
+		this.team = team;
+	}
+	
 	public FantasyTeam getTeam(){
 		return this.team;
 	}

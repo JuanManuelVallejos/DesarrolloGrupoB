@@ -13,6 +13,10 @@ public class FantasyTeam extends Team{
 		this.setDt(userDt);
 	}
 
+	public FantasyTeam(String teamname) {
+		super(teamname);
+	}
+
 	public User getDt() {
 		return dt;
 	}

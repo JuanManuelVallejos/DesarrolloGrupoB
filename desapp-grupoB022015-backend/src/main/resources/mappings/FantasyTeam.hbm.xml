@@ -16,8 +16,8 @@
 			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.Player" unique="true"/>
 		</list>
 
-		<one-to-one name="dt" class="ar.edu.unq.desapp.grupoB022015.model.User"
-			cascade="save-update" lazy="false"></one-to-one>
+		<!-- <one-to-one name="dt" class="ar.edu.unq.desapp.grupoB022015.model.User"
+			cascade="save-update" lazy="false"></one-to-one>  -->
 
 	</class>
 </hibernate-mapping>

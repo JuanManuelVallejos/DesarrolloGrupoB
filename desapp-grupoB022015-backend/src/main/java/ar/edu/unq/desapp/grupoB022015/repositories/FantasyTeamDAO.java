@@ -50,14 +50,14 @@ public class FantasyTeamDAO extends HibernateGenericDAO<FantasyTeam> implements 
 	}
 	
 	
-	public FantasyTeam findByTeamName(String teamName) {
+	public FantasyTeam findByTeamName(String name) {
 		//funciona si los nombres de equipos son unicos
 		Session session = this.getHibernateTemplate().getSessionFactory().openSession();
 	    try {
-	    	String queryStr = " SELECT e FROM " + this.persistentClass.getName() + " AS e WHERE e.name like :teamName";
+	    	String queryStr = " SELECT e FROM " + this.persistentClass.getName() + " AS e WHERE e.name like :name";
 	        
 	    	@SuppressWarnings("unchecked")
-			List<FantasyTeam> team = session.createQuery(queryStr).setParameter("name", teamName).list();
+			List<FantasyTeam> team = session.createQuery(queryStr).setParameter("name", name).list();
 	             
 	        if(team.size() == 0){
 	        	return null;
