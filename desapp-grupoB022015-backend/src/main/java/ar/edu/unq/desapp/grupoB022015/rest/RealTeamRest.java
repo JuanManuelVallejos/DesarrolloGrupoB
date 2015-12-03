@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
+import java.util.stream.Stream;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -14,7 +15,10 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
+
+import org.apache.cxf.jaxrs.ext.multipart.Multipart;
 
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.RealTeam;
@@ -79,11 +83,10 @@ public class RealTeamRest {
 	@Path("/createPlayers")
 	@Consumes("multipart/form-data")
 	@Produces("application/json")
-	public void setPlayers(@PathParam("is") FileInputStream  is) throws IOException{
-		
+	public void setPlayers(@PathParam("is") InputStream is) throws IOException{
 		InputStreamReader in = new InputStreamReader(is);
 		BufferedReader br = new BufferedReader(in);
-		
+
 		String line = "";
 		String cvsSplitBy = ",";
 		
