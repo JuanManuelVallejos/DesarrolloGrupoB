@@ -10,7 +10,7 @@ function ($scope, $http, auth, store, $location) {
       store.set('token', token);
       var idUs = profile.user_id.split("google-oauth2|")[1];
       var path = "#/home/".concat(idUs);
-      location = path;
+      location = '#/home'
     });
   }
 }]);

@@ -10,12 +10,16 @@
 
 angular.module('desappGrupoB022015FrontendApp').controller('HomeCtrl', function($scope, $http, auth) {
   // Using a promise
-  auth.profilePromise.then(function(profile) {
-    $scope.profile = profile;
-  });
-  // Or using the object
-  $scope.profile = auth.profile;
-  $scope.id = auth.profile.user_id.split("google-oauth2|")[1];
+
+  $scope.checkProfile = function(profile){
+    if(auth.profile != undefined){
+      $scope.profile = auth.profile;
+      $scope.id = auth.profile.user_id.split("google-oauth2|")[1];
+      return true;
+    }else{
+      return false;
+    }
+  }
   
   $scope.logout = function() {
   	auth.signout();
@@ -23,5 +27,6 @@ angular.module('desappGrupoB022015FrontendApp').controller('HomeCtrl', function(
   	store.remove('token');
   	location = '#/';
   }
+
 
 });

@@ -32,9 +32,12 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/home/:id', {
+      .when('/home', {
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl',
+        data:{
+          requiresLogin: true
+        }
       })
       .when('/createTeam', {
         templateUrl: 'views/createTeam.html',
@@ -69,9 +72,22 @@ angular
       });
       authProvider.init({
       domain: 'supergolgrupob.auth0.com',
-      clientID: 'lZL8EWPowrIK05acdRHN3HiKPi8stO7u'
+      clientID: 'lZL8EWPowrIK05acdRHN3HiKPi8stO7u',
+      loginState: 'login'
       });
   }).run(function(auth) {
   // This hooks al auth events to check everything as soon as the app starts
     auth.hookEvents();
+}).controller('AppCtrl', function($scope, $http, auth) {
+  // Using a promise
+
+  $scope.checkProfile = function(profile){
+    if(auth.profile != undefined){
+      $scope.profile = auth.profile;
+      $scope.id = auth.profile.user_id.split("google-oauth2|")[1];
+      return true;
+    }else{
+      return false;
+    }
+  }
 });
