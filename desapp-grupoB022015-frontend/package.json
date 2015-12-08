@@ -36,5 +36,8 @@
   },
   "scripts": {
     "test": "grunt test"
+  },
+  "dependencies": {
+    "auth0-lock": "https://github.com/auth0/lock/archive/v7.5.4.tar.gz"
   }
 }

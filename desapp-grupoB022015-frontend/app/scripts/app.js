@@ -32,7 +32,7 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/home', {
+      .when('/home/:id', {
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl',
       })

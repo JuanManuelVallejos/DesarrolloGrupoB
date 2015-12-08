@@ -16,4 +16,12 @@ angular.module('desappGrupoB022015FrontendApp').controller('HomeCtrl', function(
   // Or using the object
   $scope.profile = auth.profile;
   $scope.id = auth.profile.user_id.split("google-oauth2|")[1];
+  
+  $scope.logout = function() {
+  	auth.signout();
+  	store.remove('profile');
+  	store.remove('token');
+  	location = '#/';
+  }
+
 });
