@@ -20,6 +20,7 @@
     }
 });
 */
+
 angular.module('desappGrupoB022015FrontendApp').controller('CreateUserCtrl', ['$scope', '$http', 'auth', 'store', '$location',
 function ($scope, $http, auth, store, $location) {
   $scope.login = function () {

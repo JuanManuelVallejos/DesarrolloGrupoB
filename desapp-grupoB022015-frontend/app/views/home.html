@@ -1,0 +1,31 @@
+<style>
+    .glyphicon.glyphicon-user {
+        font-size: 150px;
+        color: black;
+    }
+    h1{ 
+        color: #FE2E2E;
+        font-family: serif;
+    }
+    div.jumbotron { 
+        opacity: 0.9
+    }
+
+</style>
+
+<div class="jumbotron" ng-controller="HomeCtrl as home">
+    <h1> Su informacion personal </h1>
+     
+    </br>
+
+                <label class="col-lg-2 control-label">Mail</label>
+                <p>{{ home.infor }}</p>
+
+
+                <label class="col-lg-2 control-label">Perfil</label>
+                <p>{{ home.perfil }}</p>
+                
+
+ </div>
+ 
+

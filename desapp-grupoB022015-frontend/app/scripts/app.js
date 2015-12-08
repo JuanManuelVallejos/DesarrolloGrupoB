@@ -32,9 +32,9 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/signin', {
-        templateUrl: 'views/signin.html',
-        controller: 'SigninCtrl',
+      .when('/home', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl',
       })
       .when('/createTeam', {
         templateUrl: 'views/createTeam.html',
