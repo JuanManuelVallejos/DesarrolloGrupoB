@@ -7,12 +7,13 @@
  * # HomeCtrl
  * Controller of the desappGrupoB022015FrontendApp
  */
-angular.module('desappGrupoB022015FrontendApp')
-  .controller('HomeCtrl', function ($scope, $http) {
 
-	var hm = this;
-
-    $http.get('https://www.googleapis.com/auth/userinfo.email').success(function (data) {
-        hm.infor = data;
-    });
-	});
+angular.module('desappGrupoB022015FrontendApp').controller('HomeCtrl', function($scope, $http, auth) {
+  // Using a promise
+  auth.profilePromise.then(function(profile) {
+    $scope.profile = profile;
+  });
+  // Or using the object
+  $scope.profile = auth.profile;
+  $scope.id = auth.profile.user_id.split("google-oauth2|")[1];
+});

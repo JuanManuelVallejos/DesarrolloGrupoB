@@ -28,7 +28,7 @@ function ($scope, $http, auth, store, $location) {
       // Success callback
       store.set('profile', profile);
       store.set('token', token);
-      $location.path('/');
+      $location.path('/home');
     }, function () {
       // Error callback
     });
