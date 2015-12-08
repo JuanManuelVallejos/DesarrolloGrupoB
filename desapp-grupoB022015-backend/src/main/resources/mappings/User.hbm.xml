@@ -4,10 +4,8 @@
 <hibernate-mapping default-access="field"
 	default-cascade="save-update">
 	<class name="ar.edu.unq.desapp.grupoB022015.model.User">
-		<id column="ID" name="id">
-			<generator class="native" />
-		</id>
-
+		
+		<id column="ID" name="id"/>
 		<property name="userName" />
 		<property name="password" />
 		<property name="rankingPoints" />

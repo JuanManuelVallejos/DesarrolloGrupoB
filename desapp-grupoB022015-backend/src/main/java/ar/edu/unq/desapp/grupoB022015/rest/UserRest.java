@@ -43,11 +43,11 @@ public class UserRest {
 	}
 	
 	@POST
-	@Path("/create/{userName}/{password}")
-	@Produces("application/json")
-	public Response createUser(@PathParam("userName") String userName, @PathParam("password") String password){//, @FormParam("supergol") SuperGol supergol){
+	@Path("/create")
+	public Response createUser(@PathParam("userName") String userName, @PathParam("id") int id){
 		User user = new User();
-		user.assignParameters(userName, password);
+		System.out.println("aaaaaaaaaaaaaa"+userName);
+		user.assignParameters(userName, id);
 		getUserService().save(user);
 		return Response.ok(user).build();
 	}

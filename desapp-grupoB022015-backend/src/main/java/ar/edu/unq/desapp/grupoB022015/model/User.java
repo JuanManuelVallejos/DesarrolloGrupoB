@@ -6,7 +6,7 @@ import java.util.List;
 import ar.edu.unq.desapp.grupoB022015.model.exceptions.MaximumNumberOfPlayersInTeamException;
 import ar.edu.unq.desapp.grupoB022015.model.exceptions.PlayerNotFoundException;
 
-public class User extends Entity implements Comparable<User>{
+public class User implements Comparable<User>{
 
 	private String userName;
 	private String password;
@@ -14,6 +14,7 @@ public class User extends Entity implements Comparable<User>{
 	private FantasyTeam team;
 	private SuperGol superGol;
 	private List<League> leagues;
+	private int id;
 
 	public User(){}
 	
@@ -30,11 +31,19 @@ public class User extends Entity implements Comparable<User>{
 		this.setUserName(userName);
 	}
 
-	public void assignParameters(String userName, String password){
+	public void assignParameters(String userName, Integer id){
 		setRankingPoints(0);
 		setLeagues(new ArrayList<League>());
 		setUserName(userName);
-		setPassword(password);
+		setId(id);
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId( int id) {
+		this.id = id;
 	}
 	
 	private void setSuperGol(SuperGol sP) {
