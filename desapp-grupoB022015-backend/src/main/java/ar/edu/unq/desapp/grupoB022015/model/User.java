@@ -14,7 +14,6 @@ public class User extends Entity implements Comparable<User>{
 	private FantasyTeam team;
 	private SuperGol superGol;
 	private List<League> leagues;
-	private int id;
 
 	public User(){}
 	

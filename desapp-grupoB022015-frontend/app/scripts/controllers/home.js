@@ -23,8 +23,6 @@ angular.module('desappGrupoB022015FrontendApp').controller('HomeCtrl', function(
   
   $scope.logout = function() {
   	auth.signout();
-  	store.remove('profile');
-  	store.remove('token');
   	location = '#/';
   }
 

@@ -36,7 +36,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header" ng-controller="AppCtrl">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -58,18 +58,19 @@
 
             <ul class="nav navbar-nav">
               <li><a ng-href="#/createUser">Sign in</a></li>
-              <li><a ng-href="#/home">Home</a></li>
-              <li><a ng-href="#/createTeam">Armar equipo</a></li>
-               <li class="dropdown">
+              <li ng-show="checkProfile()"><a ng-href="#/home">Home</a></li>
+                <li ng-show="checkProfile()"><a ng-href="#/createTeam">Armar equipo</a></li>
+              
+               <li class="dropdown" ng-show="checkProfile()">
                 <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-default" data-target="#" href="/page.html">
                 Administrar <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu" ng-show="checkProfile()">
                   <li><a ng-href="#/uploadRTeams">Cargar equipos reales</a></li> 
                   <li><a ng-href="#/updateRound">Actualizar fecha</a></li>
                </ul>
               </li>
-              <li class="dropdown">
+              <li class="dropdown" ng-show="checkProfile()">
                 <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-default" data-target="#" href="/page.html">
                 Mis torneos <span class="caret"></span>
                 </a>
@@ -94,9 +95,6 @@
       </div>
     </div>
 
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
@@ -105,14 +103,18 @@
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
+
     </script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 
 
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
+    
+    
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -151,8 +153,6 @@
         <script src="scripts/controllers/uploadRTeams.js"></script>
         <script src="scripts/controllers/editLeague.js"></script>
         <!-- endbuild -->
-
-        
 
 </body>
 </html>
