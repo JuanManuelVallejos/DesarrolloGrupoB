@@ -35,25 +35,28 @@ angular
       .when('/home', {
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl',
-        data:{
-          requiresLogin: true
-        }
+        requiresLogin: true
+
       })
       .when('/createTeam', {
         templateUrl: 'views/createTeam.html',
         controller: 'CreateTeamCtrl',
+        requiresLogin: true
       })
       .when('/updateRound', {
         templateUrl: 'views/updateRound.html',
         controller: 'UpdateRoundCtrl',
+        requiresLogin: true
       })
       .when('/createLeague', {
         templateUrl: 'views/createLeague.html',
         controller: 'CreateLeagueCtrl',
+        requiresLogin: true
       })
       .when('/activeLeagues', {
         templateUrl: 'views/activeLeagues.html',
         controller: 'LeagueCtrl',
+        requiresLogin: true
       })
       .when('/createUser', {
         templateUrl: 'views/createUser.html',
@@ -62,10 +65,12 @@ angular
       .when('/uploadRTeams', {
         templateUrl: 'views/uploadRTeams.html',
         controller: 'UploadRTeamsCtrl',
+        requiresLogin: true
       })
       .when('/editLeague/:idLeague', {
         templateUrl: 'views/editLeague.html',
-        controller: 'EditLeagueCtrl'
+        controller: 'EditLeagueCtrl',
+        requiresLogin: true
       })
       .otherwise({
         redirectTo: '/'
@@ -73,7 +78,7 @@ angular
       authProvider.init({
       domain: 'supergolgrupob.auth0.com',
       clientID: 'lZL8EWPowrIK05acdRHN3HiKPi8stO7u',
-      loginState: 'login'
+      loginUrl: '/createUser',
       });
   }).run(function(auth) {
   // This hooks al auth events to check everything as soon as the app starts
