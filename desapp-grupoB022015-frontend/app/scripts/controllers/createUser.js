@@ -13,4 +13,5 @@ function ($scope, $http, auth, store, $location) {
       location = '#/home'
     });
   }
+
 }]);

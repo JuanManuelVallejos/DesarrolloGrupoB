@@ -26,5 +26,4 @@ angular.module('desappGrupoB022015FrontendApp').controller('HomeCtrl', function(
   	location = '#/';
   }
 
-
 });

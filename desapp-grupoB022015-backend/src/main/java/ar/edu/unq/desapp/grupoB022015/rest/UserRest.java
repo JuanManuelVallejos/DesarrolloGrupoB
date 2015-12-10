@@ -44,6 +44,7 @@ public class UserRest {
 	
 	@POST
 	@Path("/create")
+	@Produces("application/json")
 	public Response createUser(@FormParam("userName") String userName, @FormParam("idGoogle") String idGoogle){
 		User user = getUserService().findByIdGoogle(idGoogle);
 		if(user == null){
@@ -52,6 +53,13 @@ public class UserRest {
 			getUserService().save(user);
 		}
 		return Response.ok(user).build();
+	}
+	
+	@GET
+	@Path("/getUser/{idGoogle}")
+	@Produces("application/json")
+	public User getUser(@PathParam("idGoogle") String idGoogle){
+		return getUserService().findByIdGoogle(idGoogle);
 	}
 	
 	@POST
