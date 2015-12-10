@@ -82,7 +82,6 @@ angular
   // Using a promise
 
   $scope.checkProfile = function(profile){
-    console.log("eje");
     if(auth.profile != undefined){
       $scope.profile = auth.profile;
       $scope.id = auth.profile.user_id.split("google-oauth2|")[1];

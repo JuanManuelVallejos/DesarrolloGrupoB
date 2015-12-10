@@ -42,10 +42,10 @@ public class UserRest {
 		this.playerService = playerService;
 	}
 	
-	@POST
-	@Path("/create")
+	@PUT
+	@Path("/create/{userName}/{idGoogle}")
 	@Produces("application/json")
-	public Response createUser(@FormParam("userName") String userName, @FormParam("idGoogle") String idGoogle){
+	public Response createUser(@PathParam("userName") String userName, @PathParam("idGoogle") String idGoogle){
 		User user = getUserService().findByIdGoogle(idGoogle);
 		if(user == null){
 			user = new User();
@@ -59,7 +59,8 @@ public class UserRest {
 	@Path("/getUser/{idGoogle}")
 	@Produces("application/json")
 	public User getUser(@PathParam("idGoogle") String idGoogle){
-		return getUserService().findByIdGoogle(idGoogle);
+		User user =  getUserService().findByIdGoogle(idGoogle);
+		return user;
 	}
 	
 	@POST
