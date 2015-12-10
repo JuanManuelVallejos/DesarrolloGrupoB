@@ -44,11 +44,13 @@ public class UserRest {
 	
 	@POST
 	@Path("/create")
-	public Response createUser(@FormParam("userName") String userName, @FormParam("id") float id){
-		User user = new User();
-		System.out.println("aaaaaaaaaaaaaa"+userName);
-		//user.assignParameters(userName, id);
-		//getUserService().save(user);
+	public Response createUser(@FormParam("userName") String userName, @FormParam("idGoogle") String idGoogle){
+		User user = getUserService().findByIdGoogle(idGoogle);
+		if(user == null){
+			user = new User();
+			user.assignParameters(userName, idGoogle);
+			getUserService().save(user);
+		}
 		return Response.ok(user).build();
 	}
 	
