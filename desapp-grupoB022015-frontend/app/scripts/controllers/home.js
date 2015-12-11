@@ -12,10 +12,7 @@ angular.module('desappGrupoB022015FrontendApp').controller('HomeCtrl', function(
 
   var home = this;
 
-
-  $scope.checkProfile = function(profile){
-    return (auth.profile != undefined);
-  }
+  $scope.profile = auth.profile;
 
   $scope.logout = function() {
   	auth.signout();
@@ -23,6 +20,11 @@ angular.module('desappGrupoB022015FrontendApp').controller('HomeCtrl', function(
   	location = '#/';
   }
 
-  $scope.profile = auth.profile;
+  home.getRankingPoints = function(){
+    $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/user/getUser/' + auth.profile.user_id).success(function(data) {
+      $scope.rankingPoints = data.rankingPoints;
+    });
+  }
+  home.getRankingPoints();
 
 });

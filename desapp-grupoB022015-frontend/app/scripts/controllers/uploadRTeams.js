@@ -39,25 +39,6 @@ uploadRTeams.directive('file', function(){
 
     }
 
-    $scope.addTeam = function() {
-        $http({
-            method: 'POST',
-            url: 'http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/create/' + $scope.team,
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            transformRequest: function(obj) {
-                var str = [];
-                    for(var l in obj)
-                        str.push(encodeURIComponent(l) + "=" + encodeURIComponent(obj[l]));
-            return str.join("&");
-            },
-        }).success(function (data) {
-                alert('El equipo fue agregado satisfactoriamente')
-        }).error(function(data,status) {
-                alert("Error (" + status +"): " + "no se pudo agregar el equipo.");
-                location = '#/';
-        });
-    }
-
     $scope.addPlayer = function() {
         $http({
             method: 'POST',
@@ -79,9 +60,34 @@ uploadRTeams.directive('file', function(){
 
     var rt = this;
 
+    rt.refreshTeams = function(){
+        console.log("ejec");
         $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/list').success(function (data) {
             rt.teams = data;
         });
+    }
+
+    $scope.addTeam = function() {
+        $http({
+            method: 'POST',
+            url: 'http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/create/' + $scope.team,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            transformRequest: function(obj) {
+                var str = [];
+                    for(var l in obj)
+                        str.push(encodeURIComponent(l) + "=" + encodeURIComponent(obj[l]));
+            return str.join("&");
+            },
+        }).success(function (data) {
+                alert('El equipo fue agregado satisfactoriamente')
+        }).error(function(data,status) {
+                alert("Error (" + status +"): " + "no se pudo agregar el equipo.");
+                location = '#/';
+        });
+        rt.refreshTeams();
+    }
+
+    rt.refreshTeams();
 
 });
 function UploadRTeamsCtrl($scope){

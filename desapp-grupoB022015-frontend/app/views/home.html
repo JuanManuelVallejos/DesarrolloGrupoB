@@ -13,8 +13,7 @@
 
 </style>
 
-<div class="jumbotron" ng-controller="HomeCtrl as home">
-    <div ng-show="checkProfile()">
+    <div class="jumbotron">
         <h1> Su informacion personal </h1>
          
         </br>
@@ -26,7 +25,7 @@
                     <p>Tu nombre es:               {{profile.given_name }} </p>
                     <p>Tu apellido es:             {{profile.family_name  }} </p>
                     <p>Tu foto de perfil es:       <img src="{{profile.picture}}"></p>
-                    <p>El puntaje de su equipo es: {{user.rankingPoints}}
+                    <p>El puntaje de su equipo es: {{rankingPoints}}
                     <p>Tiene permisos de:          {{profile.roles}}
 
         </br>
@@ -34,12 +33,6 @@
             <input type="submit" ng-click="logout()" value="Log out" />
     </div>
     
-    <div ng-hide="checkProfile()">
-        <h1> Usted no ingreso su usuario </h1>
-         
-        </br>
-        <p> Por favor inicie sesion para empezar a jugar </p>
-    </div>
 </div>
  
 

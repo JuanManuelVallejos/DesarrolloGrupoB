@@ -90,21 +90,21 @@ angular
 
   app.setProfile = function(profile){
     $scope.profile = auth.profile;
-        $scope.profile.roles = auth.profile.roles;
-        $scope.profile.id = auth.profile.user_id.split("google-oauth2|")[1];
 
-        $http.put('http://localhost:8080/desapp-grupoB022015-backend/rest/user/create/' + auth.profile.nickname + '/' + $scope.id)
-        .success(function(data) {
-                alert('Bienvenido! ' + auth.profile.given_name);
+    $http.put('http://localhost:8080/desapp-grupoB022015-backend/rest/user/create/' + auth.profile.nickname + '/' + auth.profile.user_id)
+    .success(function(data) {
+            alert('Bienvenido! ' + auth.profile.given_name);
 
-        location = '#/home';
-        }).error(function(data,status) {
-            alert('No se pudo registrar correctamente, error (' + status + ')');
-        });
+    location = '#/home';
+    }).error(function(data,status) {
+        alert('No se pudo registrar correctamente, error (' + status + ')');
+    });
+  }
 
-        $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/user/getUser/' + $scope.id).success(function(data) {
-          $scope.user = data;
-        });
+  app.getRankingPoints = function(){
+    $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/user/getUser/' + auth.profile.user_id).success(function(data) {
+      return data;
+    });
   }
 
   $scope.checkProfile = function(profile){
@@ -119,17 +119,12 @@ angular
   }
 
   $scope.checkAdmin = function(profile){
-    if($scope.profile != undefined){
-      if($scope.profile == undefined){
-        app.setProfile(profile);
-      }
-      if(auth.profile.roles != undefined){
-        if(!(auth.profile.roles.indexOf('admin') === -1)){
-          return true;
-        }
-      }
+    var profile = $scope.checkProfile(profile);
+    if(profile && (auth.profile.roles != undefined)){
+      return (!(auth.profile.roles.indexOf('admin') === -1)) 
+    }else{
+      return false;
     }
-    return false;
   }
 
   
