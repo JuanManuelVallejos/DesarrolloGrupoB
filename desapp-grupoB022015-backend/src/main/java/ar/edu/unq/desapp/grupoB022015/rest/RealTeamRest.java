@@ -1,6 +1,7 @@
 package ar.edu.unq.desapp.grupoB022015.rest;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -53,10 +55,15 @@ public class RealTeamRest {
 	public Response create(@PathParam("name") String name){
 			RealTeam t = getRealTeamService().findByTeamName(name);
 			if(t==null){
-				t = new RealTeam(name);
-				getRealTeamService().save(t);
+				t = createRT(name);
 			}
 			return Response.ok(t).build();
+	}
+	
+	public RealTeam createRT(String name){
+		RealTeam team = new RealTeam(name);
+		getRealTeamService().save(team);
+		return team;
 	}
 	
 	@POST
@@ -66,6 +73,10 @@ public class RealTeamRest {
 			Player p = new Player(name, position);
 			
 			RealTeam t = getRealTeamService().findByTeamName(team);
+			if(t == null){
+				t = createRT(team);
+			}
+			getPlayerService().save(p);
 			t.addPlayer(p);
 			getRealTeamService().update(t);
 			return t;
@@ -83,9 +94,10 @@ public class RealTeamRest {
 	@Path("/createPlayers")
 	@Consumes("multipart/form-data")
 	@Produces("application/json")
-	public void setPlayers(@PathParam("is") InputStream is) throws IOException{
-		InputStreamReader in = new InputStreamReader(is);
-		BufferedReader br = new BufferedReader(in);
+	public void setPlayers(@FormParam("is") String cvsText) throws IOException{
+		
+		InputStream is = new ByteArrayInputStream(cvsText.getBytes());
+		BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
 		String line = "";
 		String cvsSplitBy = ",";

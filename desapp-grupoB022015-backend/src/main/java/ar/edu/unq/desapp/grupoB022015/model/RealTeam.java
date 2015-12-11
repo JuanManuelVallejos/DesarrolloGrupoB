@@ -1,5 +1,7 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
+import java.util.List;
+
 public class RealTeam extends Team {
 
 	
