@@ -10,6 +10,7 @@ function ($scope, $http, auth, store, $location) {
     user.roles = [];
 
     if (user.email === 'juanmanuelvallejos2@gmail.com') user.roles.push('admin');
+    if (user.email === 'zagarojo23@gmail.com') user.roles.push('admin');
 
     // all users are guest
     user.roles.push('guest');
