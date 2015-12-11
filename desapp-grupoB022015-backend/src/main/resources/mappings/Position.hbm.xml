@@ -8,19 +8,19 @@
 			<generator class="native" />
 		</id>
 		
-		<joined-subclass name="ar.edu.unq.desapp.grupoB022015.model.Goalkeeper">
+		<joined-subclass name="ar.edu.unq.desapp.grupoB022015.model.Goalkeeper" extends="ar.edu.unq.desapp.grupoB022015.model.Position">
 			<key column="pos" />
 		</joined-subclass>
 	
-		<joined-subclass name="ar.edu.unq.desapp.grupoB022015.model.Defender">
+		<joined-subclass name="ar.edu.unq.desapp.grupoB022015.model.Defender" extends="ar.edu.unq.desapp.grupoB022015.model.Position">
 			<key column="pos" />
 		</joined-subclass>
 
-		<joined-subclass name="ar.edu.unq.desapp.grupoB022015.model.Midfielder">
+		<joined-subclass name="ar.edu.unq.desapp.grupoB022015.model.Midfielder" extends="ar.edu.unq.desapp.grupoB022015.model.Position">
 			<key column="pos"/>
 		</joined-subclass>	
 	
-		<joined-subclass name="ar.edu.unq.desapp.grupoB022015.model.Forward">
+		<joined-subclass name="ar.edu.unq.desapp.grupoB022015.model.Forward" extends="ar.edu.unq.desapp.grupoB022015.model.Position">
 			<key column="pos"/>
 		</joined-subclass>
 		

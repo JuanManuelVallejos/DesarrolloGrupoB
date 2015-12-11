@@ -41,36 +41,7 @@
             <label for="equipo-jugador" class="col-lg-2 control-label">Equipo</label>
             <div class="col-lg-10"> 
                 <select class="form-control" ng-model="playerteam" required>
-                        <option>Aldosivi</option>
-                        <option>Argentinos Juniors</option>
-                        <option>Arsenal</option>
-                        <option>Atlético Rafaela</option>
-                        <option>Banfield</option>
-                        <option>Belgrano</option>
-                        <option>Boca</option>
-                        <option>Colón</option>
-                        <option>Crucero del Norte</option>
-                        <option>Defensa y Justicia</option>
-                        <option>Estudiantes</option>
-                        <option>Gimnasia</option>
-                        <option>Godoy Cruz</option>
-                        <option>Huracán</option>
-                        <option>Independiente</option>
-                        <option>Lanús</option>
-                        <option>Newells</option>
-                        <option>Chicago</option>
-                        <option>Olimpo</option>
-                        <option>Quilmes</option>
-                        <option>Racing</option>
-                        <option>River</option>
-                        <option>Rosario Central</option>
-                        <option>San Lorenzo</option>
-                        <option>San Martin de San Juan</option>
-                        <option>Sarmiento</option>
-                        <option>Temperley</option>
-                        <option>Tigre</option>
-                        <option>Unión</option>
-                        <option>Velez</option>
+                   <option ng-repeat="team in myTeam.teams">{{ team.name }}</option>
                 </select>
             </div>
         </div>
@@ -169,4 +140,5 @@
         </div>  
         </form>              
     </div>
+
 </div>

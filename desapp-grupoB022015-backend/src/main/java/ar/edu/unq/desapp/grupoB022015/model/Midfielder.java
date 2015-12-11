@@ -7,5 +7,9 @@ public class Midfielder extends Position {
 	public int pointsForGoal(int amountGoals) {
 		return amountGoals;
 	}
+	@Override
+	public Boolean isMine(String position) {
+		return position.equals("Midfielder");
+	}
 
 }

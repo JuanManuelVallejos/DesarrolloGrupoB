@@ -9,4 +9,9 @@ public class Forward extends Position {
 		return amountGoals;
 	}
 
+	@Override
+	public Boolean isMine(String position) {
+		return position.equals("Forward");
+	}
+
 }

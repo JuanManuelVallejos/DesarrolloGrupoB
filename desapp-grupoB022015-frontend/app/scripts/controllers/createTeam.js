@@ -28,11 +28,13 @@ leagueApp.controller('CreateTeamCtrl', function ($scope, $http) {
      var pl = this;
 
         $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/player/list').success(function (data) {
-        pl.players = data;
+            pl.players = data;
         });
 
     $scope.searchPlayers = function() {
-       
+       $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/getPlayers/'+ $scope.playerteam +'/' + $scope.playerposition).success(function (data) {
+            pl.players = data;
+        });
     }
 
     $scope.addPlayer = function() {
@@ -55,6 +57,14 @@ leagueApp.controller('CreateTeamCtrl', function ($scope, $http) {
         });
     }
 
+    var ct = this;
 
+    ct.refreshTeams = function(){
+        $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/list').success(function (data) {
+            ct.teams = data;
+        });
+    }
+
+    ct.refreshTeams();
 
 });

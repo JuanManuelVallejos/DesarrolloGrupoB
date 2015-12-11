@@ -8,5 +8,9 @@ public class Defender extends Position {
 	public int pointsForGoal(int amountGoals) {
 		return amountGoals * 3;
 	}
+	@Override
+	public Boolean isMine(String position) {
+		return position.equals("Defender");
+	}
 
 }

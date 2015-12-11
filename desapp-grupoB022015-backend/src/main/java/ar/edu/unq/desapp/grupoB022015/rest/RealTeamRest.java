@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -24,6 +25,7 @@ import javax.ws.rs.core.Response;
 import org.apache.cxf.jaxrs.ext.multipart.Multipart;
 
 import ar.edu.unq.desapp.grupoB022015.model.Player;
+import ar.edu.unq.desapp.grupoB022015.model.Position;
 import ar.edu.unq.desapp.grupoB022015.model.RealTeam;
 import ar.edu.unq.desapp.grupoB022015.services.RealTeamService;
 import ar.edu.unq.desapp.grupoB022015.services.PlayerService;
@@ -59,6 +61,21 @@ public class RealTeamRest {
 				t = createRT(name);
 			}
 			return Response.ok(t).build();
+	}
+	
+	@GET
+	@Path("/getPlayers/{teamName}/{position}")
+	@Produces("application/json")
+	public List<Player> searchPlayers(@PathParam("teamName") String teamName, @PathParam("position") String position){
+			RealTeam realTeam = getRealTeamService().findByTeamName(teamName);
+			List<Player> playerList = new ArrayList<Player>();
+			for(Player player : realTeam.getPlayers()){
+				Position p = player.getPosition();
+				Boolean b = p.isMine(position);
+				if(p.isMine(position))
+					playerList.add(player);
+			}
+			return playerList;
 	}
 	
 	public RealTeam createRT(String name){
@@ -128,6 +145,7 @@ public class RealTeamRest {
 			setPlayer(team,name,position);
 		}
 	}
+
 }
 
 

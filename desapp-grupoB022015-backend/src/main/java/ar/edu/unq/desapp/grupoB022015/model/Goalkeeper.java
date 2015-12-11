@@ -9,4 +9,9 @@ public class Goalkeeper extends Position {
 		return amountGoals == 0? 2 : 0;
 	}
 
+	@Override
+	public Boolean isMine(String position) {
+		return position.equals("Goalkeeper");
+	}
+
 }
