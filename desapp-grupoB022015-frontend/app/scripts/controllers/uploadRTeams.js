@@ -15,8 +15,7 @@ uploadRTeams.directive('file', function(){
                 var file = files[0];
                 scope.file = file ? file.name : undefined;
                 scope.$apply();
-                global = file;
-                console.log(file);
+                global = attrs.$attr;
             });
         }
     };
@@ -29,7 +28,7 @@ uploadRTeams.directive('file', function(){
             method: 'POST',
             url: 'http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/createPlayers',
             headers: {'Content-Type': 'multipart/form-data'},
-            data: {is: global.name}
+            data: {is: global}
         }).success(function(data) {
                 alert('Equipos subidos correctamente');
                 location = '#/';
@@ -57,6 +56,8 @@ uploadRTeams.directive('file', function(){
                 location = '#/';
         });
     }
+
+    
 
     var rt = this;
 

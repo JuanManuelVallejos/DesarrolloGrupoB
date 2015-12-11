@@ -14,6 +14,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -94,9 +95,20 @@ public class RealTeamRest {
 	@Path("/createPlayers")
 	@Consumes("multipart/form-data")
 	@Produces("application/json")
-	public void setPlayers(@FormParam("is") String cvsText) throws IOException{
-		
-		InputStream is = new ByteArrayInputStream(cvsText.getBytes());
+	public void setPlayers(@FormParam("csvText") String csvText) throws IOException{
+		processCsv(csvText);
+	}
+	
+	@POST
+	@Path("/createPlayers2/{csvText}")
+	@Consumes("multipart/form-data")
+	@Produces("application/json")
+	public void setPlayers2(@PathParam("csvText") String csvText) throws IOException{
+		processCsv(csvText);
+	}
+	
+	public void processCsv(String csv) throws IOException{
+		InputStream is = new ByteArrayInputStream(csv.getBytes());
 		BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
 		String line = "";
@@ -114,7 +126,6 @@ public class RealTeamRest {
 			String position = row[1];
 			String name = row[2];
 			setPlayer(team,name,position);
-		
 		}
 	}
 }
