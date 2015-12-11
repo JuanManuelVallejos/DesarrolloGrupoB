@@ -61,7 +61,6 @@ uploadRTeams.directive('file', function(){
     var rt = this;
 
     rt.refreshTeams = function(){
-        console.log("ejec");
         $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/list').success(function (data) {
             rt.teams = data;
         });
