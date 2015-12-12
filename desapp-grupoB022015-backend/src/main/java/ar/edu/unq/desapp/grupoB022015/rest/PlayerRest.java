@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -67,5 +68,18 @@ public class PlayerRest {
         List<Player> players = playerService.retriveAll();
         return players;
     }
+	
+	@PUT
+	@Path("/updatePoints/{playerId}/{goals}")
+	@Produces("application/json")
+	public Response updatePoints(@PathParam("playerId") Integer playerId, @PathParam("goals") Integer goals){
+		
+		Player player = getPlayerService().findById(playerId);
+		player.addPointsForNGoals(goals);
+		getPlayerService().update(player);
+		return Response.ok(player).build();
+	}
+	
+	
 	
 }

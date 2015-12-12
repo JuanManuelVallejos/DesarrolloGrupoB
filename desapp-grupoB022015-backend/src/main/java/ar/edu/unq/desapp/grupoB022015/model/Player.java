@@ -46,12 +46,18 @@ public class Player  extends Entity{
 		return this.points;
 	}
 	
+	public void setPoints(int points){
+		this.points = points;
+	}
+	
 	public int getPointForNGoals(int amountGoals){
 		return getPosition().pointsForGoal(amountGoals);
 	}
 	
 	public void addPointsForNGoals(int amountGoals){
-		this.points += getPointForNGoals(amountGoals);
+		int pointsBefore = getPoints();
+		int pointsForGoals = getPointForNGoals(amountGoals);
+		setPoints(pointsBefore + pointsForGoals);
 	}
 	public SuperGol getSystemUpgrade() {
 		return systemUpgrade;
