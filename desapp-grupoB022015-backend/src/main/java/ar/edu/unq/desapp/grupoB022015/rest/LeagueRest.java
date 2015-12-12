@@ -55,14 +55,17 @@ public class LeagueRest {
 	}
 	
 	@POST
-	@Path("/create/{name}/{minTeams}/{maxTeams}/")
+	@Path("/create/{name}/{minTeams}/{maxTeams}/{idGoogle}")
 	@Produces("application/json")
 	public Response createLeague
-	(@PathParam("name") String name,  @PathParam("minTeams") Integer minTeams,@PathParam("maxTeams") Integer maxTeams){
-
+	(@PathParam("name") String name,  @PathParam("minTeams") Integer minTeams,@PathParam("maxTeams") Integer maxTeams, @PathParam("idGoogle") String idGoogle){
+		
+		User user = getUserService().findByIdGoogle(idGoogle);
 		League league = new League();
 		league.assignParameters(name,minTeams,maxTeams);
 		getLeagueService().save(league);
+		league.addUser(user);
+		getLeagueService().update(league);
 		return Response.ok(league).build();
 	}
 	
