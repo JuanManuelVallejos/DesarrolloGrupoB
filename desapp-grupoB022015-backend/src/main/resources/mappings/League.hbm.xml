@@ -16,7 +16,7 @@
 		<list name="ranking" inverse="false" cascade="all" lazy="false">
 			<key column="userID" />
 			<list-index column="id" />
-			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.User" unique="true"/>
+			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.User"/>
 		</list>
 		
     	

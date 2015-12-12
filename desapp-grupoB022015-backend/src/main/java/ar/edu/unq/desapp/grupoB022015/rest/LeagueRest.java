@@ -55,12 +55,12 @@ public class LeagueRest {
 	}
 	
 	@POST
-	@Path("/addUser/{idUser}/{idLeague}/")
+	@Path("/addUser/{idGoogle}/{idLeague}/")
 	@Produces("application/json")
 	public void addUser
-	(@PathParam("idUser") Integer idUser,  @PathParam("idLeague") Integer idLeague){
+	(@PathParam("idGoogle") String idGoogle,  @PathParam("idLeague") Integer idLeague){
 		League league = getLeagueService().findById(idLeague);
-		User user = getUserService().findById(idUser);
+		User user = this.getUserService().findByIdGoogle(idGoogle);
 		league.addUser(user);
 		getLeagueService().update(league);
 	}
