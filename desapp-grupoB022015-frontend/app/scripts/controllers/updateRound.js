@@ -8,10 +8,15 @@
  * Controller of the desappGrupoB022015FrontendApp
  */
 angular.module('desappGrupoB022015FrontendApp')
-  .controller('UpdateRoundCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('UpdateRoundCtrl', function ($scope,$http) {
+
+  	$scope.increaseDate = function(){
+  		$http.put('http://localhost:8080/desapp-grupoB022015-backend/rest/league/increaseCurrentDate')
+  		.success(function(data) {
+  			alert('Se cambio de fecha exitosamente');
+        }).error(function(data,status) {
+            alert('No se pudo cambiar de fecha, error (' + status + ')');
+        });
+  	}
+
   });

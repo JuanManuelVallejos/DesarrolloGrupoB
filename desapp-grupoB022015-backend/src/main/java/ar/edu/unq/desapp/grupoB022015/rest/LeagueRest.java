@@ -90,6 +90,26 @@ public class LeagueRest {
         return leagues;
     }
 	
+	@GET
+    @Path("/getCurrentDate")
+    @Produces("application/json")
+    public int getCurrentDate() {
+        return getLeagues().get(0).getCurrentDate();
+    }
+	
+	@PUT
+	@Path("/increaseCurrentDate")
+	@Produces("application/json")
+	public int increaseCurrentDate(){
+		List<League> leagues = getLeagueService().retriveAll();
+		int currDate = leagues.get(0).getCurrentDate() + 1 ;
+		for(League league : leagues){
+			league.setCurrentDate(currDate);
+			getLeagueService().update(league);
+		}
+		return currDate;
+	}
+	
 	@PUT
 	@Path("/edit/{id}/{name}/{minTeams}/{maxTeams}")
 	@Produces("application/json")

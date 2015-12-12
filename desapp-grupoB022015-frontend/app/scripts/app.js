@@ -72,6 +72,11 @@ angular
         controller: 'EditLeagueCtrl',
         requiresLogin: true
       })
+      .when('/showFixture/:idLeague', {
+        templateUrl: 'views/showFixture.html',
+        controller: 'FixtureCtrl',
+        requiresLogin: true
+      })
       .otherwise({
         redirectTo: '/'
       });
