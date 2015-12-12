@@ -32,7 +32,6 @@ public class League extends Entity{
 		this.setCurrentDate(0);
 	}
 	
-	
 	public League(String leagueName, SuperGol system, int min, int max) {
 		this.name = leagueName;
 		this.superGol = system;
@@ -165,6 +164,10 @@ public class League extends Entity{
 		rankingForLeague.add(pfu);
 	}
 	
+	public void setRanking(List<User> rank){
+		this.ranking = rank;
+	}
+	
 	public List<User> getRanking(){
 		return ranking;
 	}
@@ -186,6 +189,14 @@ public class League extends Entity{
 	public Boolean satisfiesTeams(){
 		int sizeTeams = getRanking().size(); 
 		return ((sizeTeams >= getMinTeams()) && (sizeTeams <= getMaxTeams()));
+	}
+	
+	public List<PointsForUser> getRankingForLeague() {
+		return rankingForLeague;
+	}
+	
+	public void setRankingForLeague(List<PointsForUser> rankingForL) {
+		this.rankingForLeague= rankingForL;
 	}
 	
 	public int getMinTeams() {
@@ -210,12 +221,18 @@ public class League extends Entity{
 	public void setCurrentDate(int currentDate) {
 		this.currentDate = currentDate;
 	}
+	
+	public void setFixture(List<Date> fixture) {
+		this.fixture = fixture;
+	}
+	
+	
 	public void assignParameters(String name2, Integer minTeams2,Integer maxTeams2) {
-		this.fixture = new ArrayList<Date>();
-		this.ranking = new ArrayList<User>();
-		this.rankingForLeague = new ArrayList<PointsForUser>();
+		setFixture(new ArrayList<Date>());
+		setRanking(new ArrayList<User>());
 		setName(name2);
 		setMinTeams(minTeams2);
 		setMaxTeams(maxTeams2);
+		setRankingForLeague(new ArrayList<PointsForUser>());
 	}
 }
