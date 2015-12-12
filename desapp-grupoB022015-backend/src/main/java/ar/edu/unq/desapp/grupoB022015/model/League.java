@@ -157,6 +157,11 @@ public class League extends Entity{
 		rankingForLeague.add(pfu);
 	}
 	
+	public void addUser(User aUser, PointsForUser pfu){
+		ranking.add(aUser);
+		rankingForLeague.add(pfu);
+	}
+	
 	public List<User> getRanking(){
 		return ranking;
 	}
@@ -201,5 +206,13 @@ public class League extends Entity{
 	}
 	public void setCurrentDate(int currentDate) {
 		this.currentDate = currentDate;
+	}
+	public void assignParameters(String name2, Integer minTeams2,Integer maxTeams2) {
+		this.fixture = new ArrayList<Date>();
+		this.ranking = new ArrayList<User>();
+		this.rankingForLeague = new ArrayList<PointsForUser>();
+		setName(name2);
+		setMinTeams(minTeams2);
+		setMaxTeams(maxTeams2);
 	}
 }

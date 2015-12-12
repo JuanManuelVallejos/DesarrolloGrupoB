@@ -16,9 +16,11 @@ import org.joda.time.DateTime;
 
 import ar.edu.unq.desapp.grupoB022015.model.League;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
+import ar.edu.unq.desapp.grupoB022015.model.PointsForUser;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
 import ar.edu.unq.desapp.grupoB022015.model.User;
 import ar.edu.unq.desapp.grupoB022015.services.LeagueService;
+import ar.edu.unq.desapp.grupoB022015.services.PointsForUserService;
 import ar.edu.unq.desapp.grupoB022015.services.UserService;
 
 @Path("/league")
@@ -26,6 +28,7 @@ public class LeagueRest {
 	
 	private LeagueService leagueService;
 	private UserService userService;
+	private PointsForUserService pointsForUserService;
 
 	public LeagueService getLeagueService() {
 		return leagueService;
@@ -39,17 +42,30 @@ public class LeagueRest {
 		return userService;
 	}
 
+	public void setPointsForUserService(PointsForUserService pointsForUserService) {
+		this.pointsForUserService = pointsForUserService;
+	}
+	
+	public PointsForUserService getPointsForUserService() {
+		return pointsForUserService;
+	}
+
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
 	
 	@POST
-	@Path("/create/{name}/{minTeams}/{maxTeams}")
+	@Path("/create/{name}/{minTeams}/{maxTeams}/{idGoogle}")
 	@Produces("application/json")
 	public Response createLeague
-	(@PathParam("name") String name,  @PathParam("minTeams") Integer minTeams,@PathParam("maxTeams") Integer maxTeams){
+	(@PathParam("name") String name,  @PathParam("minTeams") Integer minTeams,@PathParam("maxTeams") Integer maxTeams, @PathParam("idGoogle") String idGoogle){
 
-		League league = new League(name, new SuperGol(),minTeams,maxTeams);
+		League league = new League();
+		league.assignParameters(name,minTeams,maxTeams);
+		User user = getUserService().findByIdGoogle(idGoogle);
+		PointsForUser pfu = new PointsForUser(user,0);
+		getPointsForUserService().save(pfu);
+		league.addUser(user,pfu);
 		getLeagueService().save(league);
 		return Response.ok(league).build();
 	}
