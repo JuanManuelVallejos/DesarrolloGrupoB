@@ -124,4 +124,20 @@ public class LeagueRest {
 		this.getLeagueService().update(l);
 		
 	}
+	
+	@GET
+	@Path("/findRival/{idGoogle}/{idLeague}/{aDate}")
+	@Produces("application/json")
+	public User findRival(@PathParam("idGoogle") String idGoogle, @PathParam("idLeague") Integer idLeague, @PathParam("aDate") Integer aDate) {
+		
+		User user = this.getUserService().findByIdGoogle(idGoogle);
+		League league = this.getLeagueService().findById(idLeague);
+		
+		User rival = league.getDate(aDate).getMatchForUser(user).getLocal();
+		if(rival.getIdGoogle() == idGoogle){
+			rival = league.getDate(aDate).getMatchForUser(user).getVisitor();
+		}
+	
+		return rival;
+	}
 }
