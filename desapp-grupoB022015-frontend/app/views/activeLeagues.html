@@ -30,12 +30,17 @@
         <td>{{ league.maxTeams }}</td>
         <td>
           <button type="button" ng-click="myLeagues.editLeague(league)" class="btn btn-warning btn-xs">
-            <span class="glyphicon glyphicon-edit"></span>
+            <span class="glyphicon glyphicon-edit">Editar liga</span>
           </button>
         </td>
         <td>
           <button type="button" ng-click="myLeagues.showFixture(league)" class="btn btn-warning btn-xs">
-            <span class="glyphicon glyphicon-eye-open"></span> 
+            <span class="glyphicon glyphicon-eye-open">Ver fixture</span> 
+          </button>
+        </td>
+        <td>
+          <button type="button" ng-click="myLeagues.addme(league)" class="btn btn-warning btn-xs">
+            <span class="glyphicon glyphicon-plus">Agregarme</span> 
           </button>
         </td>
       </tr>

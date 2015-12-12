@@ -63,11 +63,13 @@ public class LeagueRest {
 		League league = new League();
 		league.assignParameters(name,minTeams,maxTeams);
 		User user = getUserService().findByIdGoogle(idGoogle);
-		PointsForUser pfu = new PointsForUser(user,0);
-		getPointsForUserService().save(pfu);
-		league.addUser(user,pfu);
 		getLeagueService().save(league);
+		addUser(user,league);
 		return Response.ok(league).build();
+		//PointsForUser pfu = new PointsForUser(user,0);
+		//getPointsForUserService().save(pfu);
+		//league.addUser(user,pfu);
+		//getLeagueService().save(league);
 	}
 	
 	@POST
@@ -78,6 +80,23 @@ public class LeagueRest {
 		League league = getLeagueService().findById(idLeague);
 		User user = getUserService().findById(idUser);
 		league.addUser(user);
+		getLeagueService().update(league);
+	}
+	
+	@POST
+	@Path("/addUser2/{idGoogle}/{idLeague}")
+	@Produces("application/json")
+	public void addUser
+	(@PathParam("idGoogle") String idGoogle,  @PathParam("idLeague") Integer idLeague){
+		League league = getLeagueService().findById(idLeague);
+		User user = getUserService().findByIdGoogle(idGoogle);
+		league.addUser(user);
+		getLeagueService().update(league);
+	}
+	
+	public void addUser(User user,  League league){
+		league.addUser(user);
+		getUserService().update(user);
 		getLeagueService().update(league);
 	}
 	

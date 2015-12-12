@@ -102,8 +102,11 @@ public class League extends Entity{
 		
 		List<User> firstHalf = new ArrayList<User>();
 		@SuppressWarnings("unchecked")
-		List<User> secondHalf = (List<User>) ((ArrayList<User>)list).clone();
-		
+		List<User> secondHalf = new ArrayList<User>();
+		//List<User> secondHalf = (List<User>) ((ArrayList<User>)list).clone();
+		for(User user : list){
+			secondHalf.add(user);
+		}
 		int sizeList = list.size(); 
 		for(int i = 0; i<sizeList/2;i++){
 			firstHalf.add(secondHalf.get(0));
@@ -116,7 +119,7 @@ public class League extends Entity{
 	
 	public void createFixtureOnlyTrip(DateTime start, int durationOfDateinDays){
 		int totalSize = ranking.size();
-		List<List<User>> halfs = splitListUser(ranking);
+		List<List<User>> halfs = splitListUser(getRanking());
 		List<User> usersLocals = halfs.get(0);
 		List<User> usersVisitors = halfs.get(1);
 		Collections.reverse(usersVisitors);
