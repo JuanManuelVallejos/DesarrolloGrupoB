@@ -174,6 +174,12 @@ public class League extends Entity{
 		}
 		
 	}
+	
+	public Boolean satisfiesTeams(){
+		int sizeTeams = getRanking().size(); 
+		return ((sizeTeams >= getMinTeams()) && (sizeTeams <= getMaxTeams()));
+	}
+	
 	public int getMinTeams() {
 		return minTeams;
 	}

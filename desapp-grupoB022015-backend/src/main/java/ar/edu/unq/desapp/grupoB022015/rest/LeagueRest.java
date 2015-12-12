@@ -12,6 +12,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import org.joda.time.DateTime;
+
 import ar.edu.unq.desapp.grupoB022015.model.League;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
@@ -139,5 +141,45 @@ public class LeagueRest {
 		}
 	
 		return rival;
+	}
+	
+	@PUT
+	@Path("/initializeFixtures")
+	@Produces("application/json")
+	public void initializeFixtures(){
+		List<List<League>> leagues = filterLeagues();
+		List<League> correctLeagues = leagues.get(0);
+		List<League> incorrectLeagues = leagues.get(1);
+		setFixtures(correctLeagues);
+		removeLeagues(incorrectLeagues);
+ 	}
+	
+	public List<List<League>> filterLeagues(){
+		List<League> leagues = getLeagueService().retriveAll();
+		List<League> correctLeagues = new ArrayList<League>();
+		List<League> incorrectLeagues = new ArrayList<League>();
+		for(League league : leagues){
+			if(league.satisfiesTeams()){
+				correctLeagues.add(league);
+			}else{
+				incorrectLeagues.add(league);
+			}
+		}
+		List<List<League>> allLeagues = new ArrayList<List<League>>();
+		allLeagues.add(correctLeagues);
+		allLeagues.add(incorrectLeagues);
+		return allLeagues;
+	}
+	
+	public void removeLeagues(List<League> incorrectLeagues){
+		for(League incLeague : incorrectLeagues)
+			getLeagueService().delete(incLeague);
+	}
+	
+	public void setFixtures(List<League> correctLeagues){
+		for(League corrLeague : correctLeagues){
+			corrLeague.createFixtureRoundTrip(new DateTime(), 7);
+			getLeagueService().update(corrLeague);
+		}
 	}
 }

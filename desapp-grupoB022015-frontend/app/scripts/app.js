@@ -41,7 +41,7 @@ angular
       .when('/createTeam', {
         templateUrl: 'views/createTeam.html',
         controller: 'CreateTeamCtrl',
-        requiresLogin: true
+        //requiresLogin: true
       })
       .when('/updateRound', {
         templateUrl: 'views/updateRound.html',
