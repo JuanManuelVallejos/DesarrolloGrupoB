@@ -61,8 +61,7 @@ public class LeagueRest {
 	(@PathParam("name") String name,  @PathParam("minTeams") Integer minTeams,@PathParam("maxTeams") Integer maxTeams, @PathParam("idGoogle") String idGoogle){
 		
 		User user = getUserService().findByIdGoogle(idGoogle);
-		League league = new League();
-		league.assignParameters(name,minTeams,maxTeams);
+		League league = new League(name, minTeams, maxTeams);
 		getLeagueService().save(league);
 		league.addUser(user);
 		getLeagueService().update(league);

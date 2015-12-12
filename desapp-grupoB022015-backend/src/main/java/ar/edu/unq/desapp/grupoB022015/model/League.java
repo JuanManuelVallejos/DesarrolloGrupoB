@@ -23,6 +23,7 @@ public class League extends Entity{
 	private int currentDate;
 	
 	public League(){}
+	
 	public League(String leagueName, SuperGol system) {
 		this.name = leagueName;
 		this.superGol = system;
@@ -32,9 +33,8 @@ public class League extends Entity{
 		this.setCurrentDate(0);
 	}
 	
-	public League(String leagueName, SuperGol system, int min, int max) {
+	public League(String leagueName, int min, int max) {
 		this.name = leagueName;
-		this.superGol = system;
 		this.fixture = new ArrayList<Date>();
 		this.ranking = new ArrayList<User>();
 		this.rankingForLeague = new ArrayList<PointsForUser>();
