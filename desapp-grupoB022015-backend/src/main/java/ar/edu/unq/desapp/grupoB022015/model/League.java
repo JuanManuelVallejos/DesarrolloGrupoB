@@ -102,8 +102,11 @@ public class League extends Entity{
 		
 		List<User> firstHalf = new ArrayList<User>();
 		@SuppressWarnings("unchecked")
-		List<User> secondHalf = (List<User>) ((ArrayList<User>)list).clone();
-		
+		List<User> secondHalf = new ArrayList<User>();
+		//List<User> secondHalf = (List<User>) ((ArrayList<User>)list).clone();
+		for(User user : list){
+			secondHalf.add(user);
+		}
 		int sizeList = list.size(); 
 		for(int i = 0; i<sizeList/2;i++){
 			firstHalf.add(secondHalf.get(0));
@@ -116,7 +119,7 @@ public class League extends Entity{
 	
 	public void createFixtureOnlyTrip(DateTime start, int durationOfDateinDays){
 		int totalSize = ranking.size();
-		List<List<User>> halfs = splitListUser(ranking);
+		List<List<User>> halfs = splitListUser(getRanking());
 		List<User> usersLocals = halfs.get(0);
 		List<User> usersVisitors = halfs.get(1);
 		Collections.reverse(usersVisitors);
@@ -154,6 +157,11 @@ public class League extends Entity{
 	public void addUser(User aUser){
 		ranking.add(aUser);
 		PointsForUser pfu = new PointsForUser(aUser,0);
+		rankingForLeague.add(pfu);
+	}
+	
+	public void addUser(User aUser, PointsForUser pfu){
+		ranking.add(aUser);
 		rankingForLeague.add(pfu);
 	}
 	
@@ -201,5 +209,13 @@ public class League extends Entity{
 	}
 	public void setCurrentDate(int currentDate) {
 		this.currentDate = currentDate;
+	}
+	public void assignParameters(String name2, Integer minTeams2,Integer maxTeams2) {
+		this.fixture = new ArrayList<Date>();
+		this.ranking = new ArrayList<User>();
+		this.rankingForLeague = new ArrayList<PointsForUser>();
+		setName(name2);
+		setMinTeams(minTeams2);
+		setMaxTeams(maxTeams2);
 	}
 }
