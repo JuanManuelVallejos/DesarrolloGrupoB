@@ -14,4 +14,8 @@ public class LeagueService extends GenericService<League> {
 		return ((LeagueDAO) this.getRepository()).findByName(name);
 	}
 
+	public void merge(League league) {
+		((LeagueDAO) this.getRepository()).merge(league);
+	}
+
 }

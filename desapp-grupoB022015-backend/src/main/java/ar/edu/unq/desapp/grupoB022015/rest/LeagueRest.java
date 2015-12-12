@@ -77,7 +77,7 @@ public class LeagueRest {
 		League league = getLeagueService().findById(idLeague);
 		User user = this.getUserService().findByIdGoogle(idGoogle);
 		league.addUser(user);
-		getLeagueService().update(league);
+		getLeagueService().merge(league);
 	}
 	
 	@GET

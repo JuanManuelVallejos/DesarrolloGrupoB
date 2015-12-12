@@ -2,6 +2,8 @@ package ar.edu.unq.desapp.grupoB022015.repositories;
 
 import java.util.List;
 
+import javax.ws.rs.core.Response;
+
 import org.hibernate.Session;
 
 import ar.edu.unq.desapp.grupoB022015.model.League;
@@ -36,6 +38,11 @@ public class LeagueDAO extends HibernateGenericDAO<League>implements GenericRepo
         } finally {
             session.close();
         }
+	}
+	
+	public void merge(League league){
+		Session session = this.getHibernateTemplate().getSessionFactory().openSession();
+		session.merge(league);
 	}
 
 }
