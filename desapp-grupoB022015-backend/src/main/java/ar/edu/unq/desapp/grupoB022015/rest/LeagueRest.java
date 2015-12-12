@@ -55,21 +55,15 @@ public class LeagueRest {
 	}
 	
 	@POST
-	@Path("/create/{name}/{minTeams}/{maxTeams}/{idGoogle}")
+	@Path("/create/{name}/{minTeams}/{maxTeams}/")
 	@Produces("application/json")
 	public Response createLeague
-	(@PathParam("name") String name,  @PathParam("minTeams") Integer minTeams,@PathParam("maxTeams") Integer maxTeams, @PathParam("idGoogle") String idGoogle){
+	(@PathParam("name") String name,  @PathParam("minTeams") Integer minTeams,@PathParam("maxTeams") Integer maxTeams){
 
 		League league = new League();
 		league.assignParameters(name,minTeams,maxTeams);
-		User user = getUserService().findByIdGoogle(idGoogle);
 		getLeagueService().save(league);
-		addUser(user,league);
 		return Response.ok(league).build();
-		//PointsForUser pfu = new PointsForUser(user,0);
-		//getPointsForUserService().save(pfu);
-		//league.addUser(user,pfu);
-		//getLeagueService().save(league);
 	}
 	
 	@POST
@@ -80,23 +74,6 @@ public class LeagueRest {
 		League league = getLeagueService().findById(idLeague);
 		User user = this.getUserService().findByIdGoogle(idGoogle);
 		league.addUser(user);
-		getLeagueService().update(league);
-	}
-	
-	@POST
-	@Path("/addUser2/{idGoogle}/{idLeague}")
-	@Produces("application/json")
-	public void addUser
-	(@PathParam("idGoogle") String idGoogle,  @PathParam("idLeague") Integer idLeague){
-		League league = getLeagueService().findById(idLeague);
-		User user = getUserService().findByIdGoogle(idGoogle);
-		league.addUser(user);
-		getLeagueService().update(league);
-	}
-	
-	public void addUser(User user,  League league){
-		league.addUser(user);
-		getUserService().update(user);
 		getLeagueService().update(league);
 	}
 	
