@@ -25,4 +25,15 @@ angular.module('desappGrupoB022015FrontendApp').controller('FixtureCtrl', functi
     }
 
     fixture.refreshCurrentDate();
+
+    $scope.runLeagues = function() {
+    
+        $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/league/initializeFixtures/')
+        .success(function(data) {
+            alert('Todas las ligas activas')
+        }).error(function(data,status) {
+            alert('Las ligas no pudieron arrancar');
+        });
+
+    };
 });
