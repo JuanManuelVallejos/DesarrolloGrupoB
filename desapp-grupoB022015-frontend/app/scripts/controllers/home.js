@@ -25,6 +25,28 @@ angular.module('desappGrupoB022015FrontendApp').controller('HomeCtrl', function(
       $scope.rankingPoints = data.rankingPoints;
     });
   }
-  home.getRankingPoints();
+
+  home.refreshCurrentDate = function(){
+      $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/league/getCurrentDate')
+        .success(function(data) {
+        $scope.currDate = data;
+      });
+  }
+
+  home.refreshText = function(){
+    if($scope.currDate == 0){
+            $scope.textDate = "Todavia no arranco el torneo, estas a tiempo de crear y agregarte a nuevas ligas";
+        }else{
+            $scope.textDate = "Estamos en la fecha N°"+ $scope.currDate;
+        }
+  }
+
+  home.refresh = function(){
+    home.getRankingPoints();
+    home.refreshCurrentDate();
+    //home.refreshText();
+  }
+
+  home.refresh();
 
 });

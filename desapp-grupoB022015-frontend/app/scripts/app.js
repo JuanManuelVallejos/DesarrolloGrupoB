@@ -98,9 +98,7 @@ angular
 
     $http.put('http://localhost:8080/desapp-grupoB022015-backend/rest/user/create/' + auth.profile.nickname + '/' + auth.profile.user_id)
     .success(function(data) {
-            alert('Bienvenido! ' + auth.profile.given_name);
-
-    location = '#/home';
+      location = '#/home';
     }).error(function(data,status) {
         alert('No se pudo registrar correctamente, error (' + status + ')');
     });

@@ -115,6 +115,8 @@ public class LeagueRest {
     @Path("/getCurrentDate")
     @Produces("application/json")
     public int getCurrentDate() {
+		if(getLeagues().size() == 0)
+			return 0;
         return getLeagues().get(0).getCurrentDate();
     }
 	
