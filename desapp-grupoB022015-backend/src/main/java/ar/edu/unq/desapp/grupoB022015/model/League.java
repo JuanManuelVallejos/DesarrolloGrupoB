@@ -129,8 +129,15 @@ public class League extends Entity{
 		for(int numDate = 0; numDate < totalSize-1; numDate++){
 			fixture.add(createDateWith(currentDate, finalDate, usersLocals,usersVisitors));
 
-			usersVisitors.add(usersLocals.remove(usersLocals.size()-1));
-			usersLocals.add(1,usersVisitors.remove(0));			
+			int last = usersLocals.size()-1;
+			User newUserVisitor = usersLocals.remove(last);
+			usersVisitors.add(newUserVisitor);
+			User newUserLocal = usersVisitors.remove(0); 
+			if(getRanking().size() == 2){
+				usersLocals.add(newUserLocal);
+			}else{
+				usersLocals.add(1,newUserLocal);
+			}
 			currentDate = finalDate;
 			finalDate = finalDate.plusDays(durationOfDateinDays);
 		}
@@ -139,8 +146,10 @@ public class League extends Entity{
 	
 	public Date createDateWith(DateTime startD, DateTime endD, List<User> usersA,List<User> usersB){
 		List<Match> matchsOfDate = new ArrayList<Match>();
-		for(int indexU = 0; indexU < usersA.size(); indexU ++)
-			matchsOfDate.add(new Match(usersA.get(indexU),usersB.get(indexU)));
+		for(int indexU = 0; indexU < usersA.size(); indexU ++){
+			Match match = new Match(usersA.get(indexU),usersB.get(indexU));
+			matchsOfDate.add(match);
+		}
 		return new Date(matchsOfDate, startD, endD);
 	}
 

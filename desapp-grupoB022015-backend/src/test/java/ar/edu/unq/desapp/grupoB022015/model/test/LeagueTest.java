@@ -198,4 +198,13 @@ public class LeagueTest {
 		assertEquals(lists.get(1),secondHalf);
 	}
 	
+	@Test
+	public void testSplitListUserWithTwoUsers(){
+		List<User> users = new ArrayList<User>();
+		users.add(new User("pancho"));
+		users.add(new User("pepe"));
+		List<List<User>> lists = league.splitListUser(users);
+		assertEquals(lists.size(), 2);
+	}
+	
 }

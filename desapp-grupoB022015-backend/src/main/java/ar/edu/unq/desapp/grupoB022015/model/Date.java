@@ -42,7 +42,9 @@ public class Date extends Entity{
 	public Date myOpposite(DateTime newStart, DateTime newEnd) {
 		List<Match> oppositeMatchs = new ArrayList<Match>();
 		for(Match currentMatch: matchs){
-			oppositeMatchs.add(new Match(currentMatch.getVisitor(),currentMatch.getLocal()));
+			User a = currentMatch.getVisitor();
+			User b = currentMatch.getLocal();
+			oppositeMatchs.add(new Match(a,b));
 		}
 		return new Date(oppositeMatchs,newStart,newEnd);
 	}
