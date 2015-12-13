@@ -41,7 +41,7 @@ angular
       .when('/createTeam', {
         templateUrl: 'views/createTeam.html',
         controller: 'CreateTeamCtrl',
-        //requiresLogin: true
+        requiresLogin: true
       })
       .when('/updateRound', {
         templateUrl: 'views/updateRound.html',
@@ -56,6 +56,11 @@ angular
       .when('/activeLeagues', {
         templateUrl: 'views/activeLeagues.html',
         controller: 'LeagueCtrl',
+        requiresLogin: true
+      })
+      .when('/myLeagues', {
+        templateUrl: 'views/myLeagues.html',
+        controller: 'MyLeaguesCtrl',
         requiresLogin: true
       })
       .when('/createUser', {
