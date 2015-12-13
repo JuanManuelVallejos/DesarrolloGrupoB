@@ -164,6 +164,41 @@ public class LeagueRest {
 		return rival;
 	}
 	
+
+	@GET
+	@Path("/myLeagues/{idGoogle}/")
+	@Produces("application/json")
+	public List<League> myLeagues(@PathParam("idGoogle") String idGoogle) {
+		
+		List<League> allLeagues = this.getLeagueService().retriveAll();
+		List<League> myLeagues = new ArrayList<League>();
+		for(League league: allLeagues){
+			for(User us: league.getRanking()){
+				if(us.getIdGoogle().equals(idGoogle)){
+					myLeagues.add(league);
+				}
+			}
+		}
+		return myLeagues;
+	}
+	
+	@GET
+	@Path("/otherLeagues/{idGoogle}/")
+	@Produces("application/json")
+	public List<League> otherLeagues(@PathParam("idGoogle") String idGoogle) {
+		
+		List<League> allLeagues = this.getLeagueService().retriveAll();
+		List<League> otherLeagues = new ArrayList<League>();
+		for(League league: allLeagues){
+			for(User us: league.getRanking()){
+				if(!us.getIdGoogle().equals(idGoogle)){
+					otherLeagues.add(league);
+				}
+			}
+		}
+		return otherLeagues;
+	}
+	
 	@PUT
 	@Path("/initializeFixtures")
 	@Produces("application/json")
