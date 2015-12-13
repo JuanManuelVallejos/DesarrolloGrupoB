@@ -76,7 +76,11 @@ public class LeagueRest {
 	(@PathParam("idGoogle") String idGoogle,  @PathParam("idLeague") Integer idLeague){
 		League league = getLeagueService().findById(idLeague);
 		User user = getUserService().findByIdGoogle(idGoogle);
-		league.addUser(user);
+		PointsForUser pfu = new PointsForUser();
+		pfu.setKey(user);
+		pfu.setValue(0);
+		getPointsForUserService().save(pfu);
+		league.addUser(user,pfu);
 		getLeagueService().update(league);
 	}
 	
