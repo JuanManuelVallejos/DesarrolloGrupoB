@@ -97,7 +97,7 @@ angular
   // Using a promise
 
   var app = this;
-
+  $scope.tournamentBegan = false;
   app.setProfile = function(profile){
     $scope.profile = auth.profile;
 
@@ -135,9 +135,6 @@ angular
     }
   }
 
-  $scope.beginTournament = function(){
-    $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/league/tournamentBegan').success(function(data) {
-      return data;
-    });
   }
+
 });
