@@ -199,6 +199,13 @@ public class LeagueRest {
 		return otherLeagues;
 	}
 	
+	@GET
+	@Path("/leagueBegan/{idLeague}/")
+	@Produces("application/json")
+	public boolean leagueBegan(@PathParam("idLeague") Integer idLeague) {
+		return getLeagueService().findById(idLeague).getFixture().size()==0;
+	}
+	
 	@PUT
 	@Path("/initializeFixtures")
 	@Produces("application/json")
