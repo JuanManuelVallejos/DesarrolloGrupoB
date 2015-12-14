@@ -135,5 +135,9 @@ angular
     }
   }
 
-  
+  $scope.beginTournament = function(){
+    $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/league/tournamentBegan').success(function(data) {
+      return data;
+    });
+  }
 });

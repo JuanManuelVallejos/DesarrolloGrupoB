@@ -200,10 +200,13 @@ public class LeagueRest {
 	}
 	
 	@GET
-	@Path("/leagueBegan/{idLeague}/")
+	@Path("/tournamentBegan")
 	@Produces("application/json")
-	public boolean leagueBegan(@PathParam("idLeague") Integer idLeague) {
-		return getLeagueService().findById(idLeague).getFixture().size()==0;
+	public boolean tournamentBegan(@PathParam("idLeague") Integer idLeague) {
+		List<League> leagues = getLeagueService().retriveAll();
+		if(leagues.size() != 0)
+			return leagues.get(0).getFixture().size() != 0;
+		return false;
 	}
 	
 	@PUT

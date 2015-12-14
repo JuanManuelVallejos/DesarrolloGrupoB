@@ -75,10 +75,11 @@
                 Mis torneos <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                  <li><a ng-href="#/activeLeagues">Torneos activos</a></li> 
-                  <li><a ng-href="#/createLeague">Crear torneo</a></li>   
+                  <li><a ng-href="#/myLeagues">Torneos</a></li> 
+                  <li ng-show="!beginTournament()"><a ng-href="#/createLeague">Crear torneo</a></li>   
                </ul>
               </li>
+              <li ng-show="checkProfile()"><a ng-href="#/activeLeagues">Torneos activos</a></li>
           </div>
         </div>
       </div>
@@ -151,6 +152,7 @@
         <script src="scripts/controllers/league.js"></script>
         <script src="scripts/controllers/uploadRTeams.js"></script>
         <script src="scripts/controllers/editLeague.js"></script>
+        <script src="scripts/controllers/myLeagues.js"></script>
         <!-- endbuild -->
 
 </body>

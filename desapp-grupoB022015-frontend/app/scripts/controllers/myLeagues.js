@@ -10,7 +10,7 @@ function LeagueCtrl($http,$scope, auth) {
 
   $scope.profile = auth.profile;
 
-  $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/league/list').success(function (data) {
+  $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/league/myLeagues/'+$scope.profile.user_id).success(function (data) {
       mlc.myLeagues = data;
     });
 
@@ -18,7 +18,7 @@ function LeagueCtrl($http,$scope, auth) {
       location = '#/editLeague/' + league.id;
     };
 
-    mlc.showFixture = function(league) {
+    mlc.showFixture = function(league) {s
       location = '#/showFixture/' + league.id;
     };
 

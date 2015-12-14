@@ -10,7 +10,7 @@ function LeagueCtrl($http,$scope, auth) {
 
   $scope.profile = auth.profile;
 
-	$http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/league/list').success(function (data) {
+	$http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/league/otherLeagues/'+$scope.profile.user_id).success(function (data) {
     	lc.leagues = data;
     });
 
@@ -24,7 +24,7 @@ function LeagueCtrl($http,$scope, auth) {
 
     lc.addme = function(league) {
       $http.put('http://localhost:8080/desapp-grupoB022015-backend/rest/league/addUser/'+ $scope.profile.user_id + '/'+ league.id).success(function (data){
-        alert("Usted a sido agregado correctamente a la liga");
+        location = '#/myLeagues';
       });
     };
 
