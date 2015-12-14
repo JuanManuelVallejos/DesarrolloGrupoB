@@ -18,7 +18,7 @@ function LeagueCtrl($http,$scope, auth) {
       location = '#/editLeague/' + league.id;
     };
 
-    mlc.showFixture = function(league) {s
+    mlc.showFixture = function(league) {
       location = '#/showFixture/' + league.id;
     };
 

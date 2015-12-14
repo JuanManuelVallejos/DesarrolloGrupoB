@@ -63,7 +63,11 @@ public class LeagueRest {
 		User user = getUserService().findByIdGoogle(idGoogle);
 		League league = new League(name, minTeams, maxTeams);
 		getLeagueService().save(league);
-		league.addUser(user);
+		PointsForUser pfu = new PointsForUser();
+		pfu.setKey(user);
+		pfu.setValue(0);
+		getPointsForUserService().save(pfu);
+		league.addUser(user,pfu);
 		getLeagueService().update(league);
 		
 		return Response.ok(league).build();

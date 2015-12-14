@@ -76,17 +76,6 @@ public class UserRest {
 		 return theUser;
 	}
 	
-	@POST
-	@Path("/addPlayer/{idPlayer}/{idGoogle}")
-	@Produces("application/json")
-	public User setPlayer(@PathParam("idPlayer") Integer idPlayer,@PathParam("idGoogle") String idGoogle, @PathParam("teamname") String teamname) throws MaximumNumberOfPlayersInTeamException{
-		Player player = getPlayerService().findById(idPlayer);
-		User user = getUser(idGoogle);
-		user.addPlayerToMyTeam(player);
-		
-		getUserService().update(user);
-		return user;			
-	}
 	
 	@GET
     @Path("/list")

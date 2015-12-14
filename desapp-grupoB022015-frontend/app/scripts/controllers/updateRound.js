@@ -20,7 +20,6 @@ angular.module('desappGrupoB022015FrontendApp')
     }
 
     $scope.runLeagues = function(){
-      $scope.tournamentBegan = true;
       $http.put('http://localhost:8080/desapp-grupoB022015-backend/rest/league/initializeFixtures')
       .success(function(data) {
         alert('Empezo el torneo');

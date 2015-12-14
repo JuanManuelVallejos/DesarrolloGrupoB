@@ -55,6 +55,7 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 
 	<bean id="fantasyTeamRest" class="ar.edu.unq.desapp.grupoB022015.rest.FantasyTeamRest">
 		<property name="fantasyTeamService" ref="services.fantasyTeam" />
+		<property name="realTeamService" ref="services.realTeam" />
 		<property name="userService" ref="services.user" />
 		<property name="playerService" ref="services.player" />
 	</bean>

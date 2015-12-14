@@ -16,7 +16,6 @@ public class League extends Entity{
 	private String name;
 	private SuperGol superGol;
 	private List<Date> fixture;
-	private List<User> ranking;
 	private List<PointsForUser> rankingForLeague;
 	private int minTeams;
 	private int maxTeams;
@@ -28,7 +27,6 @@ public class League extends Entity{
 		this.name = leagueName;
 		this.superGol = system;
 		this.fixture = new ArrayList<Date>();
-		this.ranking = new ArrayList<User>();
 		this.rankingForLeague = new ArrayList<PointsForUser>();
 		this.setCurrentDate(0);
 	}
@@ -36,7 +34,6 @@ public class League extends Entity{
 	public League(String leagueName, int min, int max) {
 		this.name = leagueName;
 		this.fixture = new ArrayList<Date>();
-		this.ranking = new ArrayList<User>();
 		this.rankingForLeague = new ArrayList<PointsForUser>();
 		this.setMinTeams(min);
 		this.setMaxTeams(max);
@@ -117,7 +114,7 @@ public class League extends Entity{
 	}
 	
 	public void createFixtureOnlyTrip(DateTime start, int durationOfDateinDays){
-		int totalSize = ranking.size();
+		int totalSize = getRanking().size();
 		List<List<User>> halfs = splitListUser(getRanking());
 		List<User> usersLocals = halfs.get(0);
 		List<User> usersVisitors = halfs.get(1);
@@ -163,26 +160,20 @@ public class League extends Entity{
 	}
 	
 	public void addUser(User aUser){
-		ranking.add(aUser);
 		PointsForUser pfu = new PointsForUser(aUser,0);
 		rankingForLeague.add(pfu);
 	}
 	
 	public void addUser(User aUser, PointsForUser pfu){
-		ranking.add(aUser);
 		rankingForLeague.add(pfu);
 	}
 	
-	public void setRanking(List<User> rank){
-		this.ranking = rank;
-	}
-	
 	public List<User> getRanking(){
-		return ranking;
-	}
-	
-	public void updateRanking(){
-		Collections.sort(ranking);
+		List<User> users = new ArrayList<User>();
+		for(PointsForUser pfu : rankingForLeague ){
+			users.add(pfu.getKey());
+		}
+		return users;
 	}
 
 	public void updateGeneralRAnking() throws Throwable{
@@ -238,7 +229,6 @@ public class League extends Entity{
 	
 	public void assignParameters(String name2, Integer minTeams2,Integer maxTeams2) {
 		setFixture(new ArrayList<Date>());
-		setRanking(new ArrayList<User>());
 		setName(name2);
 		setMinTeams(minTeams2);
 		setMaxTeams(maxTeams2);

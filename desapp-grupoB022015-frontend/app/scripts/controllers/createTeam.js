@@ -10,7 +10,7 @@ leagueApp.controller('CreateTeamCtrl', function ($scope, $http, auth) {
 		$scope.createTeam = function() {
         $http({
             method: 'POST',
-            url: 'http://localhost:8080/desapp-grupoB022015-backend/rest/user/createMyTeam/' + $scope.teamname + '/' + 1,
+            url: 'http://localhost:8080/desapp-grupoB022015-backend/rest/user/createMyTeam/' + $scope.teamname + '/' + $scope.profile.user_id,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             transformRequest: function(obj) {
                 var str = [];
@@ -38,24 +38,32 @@ leagueApp.controller('CreateTeamCtrl', function ($scope, $http, auth) {
             pl.players = data;
         });
     }
+    
+     pl.updateGk = function() {
+        $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/fantasyTeam/getPlayerInATeam/' + $scope.playername +'/'+ $scope.playerposition + '/' + $scope.profile.user_id).success(function (data) {
+            $scope.gk = data;
+            console.log($scope.gk);
+            console.log(data);
+        });
+    }
 
-    $scope.addPlayer = function() {
-        $http.post('http://localhost:8080/desapp-grupoB022015-backend/rest/user/addPlayer/' + $scope.player.id + '/' + $scope.profile.user_id).success(function (data) {
-                alert('El jugador fue agregado satisfactoriamente')
+    $scope.addMyPlayer = function() {
+        $http.post('http://localhost:8080/desapp-grupoB022015-backend/rest/fantasyTeam/addMyPlayer/'+ $scope.playername +'/' + $scope.playerposition + '/'+ $scope.playerteam + '/' + $scope.profile.user_id).success(function (data) {
+                alert('El jugador fue agregado satisfactoriamente');
         }).error(function(data,status) {
                 alert("Error no se pudo agregar al jugador al equipo.");
                 location = '#/';
         });
+        pl.updateGk();
     }
 
-    var ct = this;
-
-    ct.refreshTeams = function(){
+    pl.refreshTeams = function(){
         $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/list').success(function (data) {
-            ct.teams = data;
+            pl.teams = data;
         });
     }
 
-    ct.refreshTeams();
+    pl.refreshTeams();
+     
 
 });

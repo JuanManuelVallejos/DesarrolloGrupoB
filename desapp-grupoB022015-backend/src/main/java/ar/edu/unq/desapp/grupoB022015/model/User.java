@@ -67,13 +67,6 @@ public class User extends Entity implements Comparable<User>{
 	
 	public void addRankingPoints(int quantity){
 		this.rankingPoints += quantity;
-		actualizateLeagues();
-	}
-	
-	private void actualizateLeagues() {
-		for(League league: this.leagues){
-			league.updateRanking();
-		}
 	}
 
 	public League createLeague(String leagueName){

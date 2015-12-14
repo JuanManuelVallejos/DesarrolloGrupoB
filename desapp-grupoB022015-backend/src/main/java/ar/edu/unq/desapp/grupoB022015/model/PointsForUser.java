@@ -1,5 +1,7 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
+import java.util.ArrayList;
+
 public class PointsForUser extends Entity{
 
 	private User key;
@@ -23,7 +25,5 @@ public class PointsForUser extends Entity{
 	public void setValue(Integer value) {
 		this.value = value;
 	}
-	
-	
 	
 }

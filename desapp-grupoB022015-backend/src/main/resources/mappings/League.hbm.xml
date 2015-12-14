@@ -12,24 +12,12 @@
 		<property name="minTeams" />
 		<property name="maxTeams" />
 		<property name="currentDate" />
-		
-		<list name="ranking" inverse="false" cascade="all" lazy="false">
-			<key column="userID" />
-			<list-index column="id" />
-			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.User"/>
-		</list>
-		
     	
     	<list name="rankingForLeague" inverse="false" cascade="all" lazy="false">
 			<key column="pointsForUser" />
 			<list-index column="id" />
 			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.PointsForUser" unique="true"/>
 		</list>
-    	
-    	<!--
-    	<one-to-one name="superGol" class="ar.edu.unq.desapp.grupoB022015.model.SuperGol"
-			cascade="save-update" lazy="false"></one-to-one>
-		-->
 			
 		<list name="fixture" inverse="false" cascade="all" lazy="false">
 			<key column="dateID" />

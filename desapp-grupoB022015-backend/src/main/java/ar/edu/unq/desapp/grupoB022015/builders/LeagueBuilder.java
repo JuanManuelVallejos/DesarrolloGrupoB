@@ -7,7 +7,7 @@ public class LeagueBuilder extends AbstractBuilder<League> {
 
 	@Override
 	public League anyObject() {
-		return new League("",new SuperGol());
+		return new League();
 	}
 
 }

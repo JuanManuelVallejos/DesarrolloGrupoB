@@ -97,7 +97,7 @@ angular
   // Using a promise
 
   var app = this;
-  $scope.tournamentBegan = false;
+
   app.setProfile = function(profile){
     $scope.profile = auth.profile;
 
@@ -133,8 +133,6 @@ angular
     }else{
       return false;
     }
-  }
-
   }
 
 });

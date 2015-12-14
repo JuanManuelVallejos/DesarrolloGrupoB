@@ -25,7 +25,7 @@ public abstract class Team extends Entity{
 		return this.players;
 	}
 
-	public List<String> getNames(){
+	public List<String> searchNames(){
 		List<String> namePlayers = new ArrayList<String>();
 		for(Player p: this.getPlayers()){
 			namePlayers.add(p.getName());

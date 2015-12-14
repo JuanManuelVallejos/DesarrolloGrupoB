@@ -24,6 +24,7 @@ import javax.ws.rs.core.Response;
 
 import org.apache.cxf.jaxrs.ext.multipart.Multipart;
 
+import ar.edu.unq.desapp.grupoB022015.model.FantasyTeam;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.Position;
 import ar.edu.unq.desapp.grupoB022015.model.RealTeam;
@@ -71,7 +72,6 @@ public class RealTeamRest {
 			List<Player> playerList = new ArrayList<Player>();
 			for(Player player : realTeam.getPlayers()){
 				Position p = player.getPosition();
-				Boolean b = p.isMine(position);
 				if(p.isMine(position))
 					playerList.add(player);
 			}
@@ -146,6 +146,33 @@ public class RealTeamRest {
 		}
 	}
 
+	@GET
+	@Path("/getPlayersByPosition/{teamName}/{position}")
+	@Produces("application/json")
+	public List<Player> getPlayersByPosition(@PathParam("teamName") String teamName, @PathParam("position") String position){
+			RealTeam team = getRealTeamService().findByTeamName(teamName);
+			List<Player> playerList = new ArrayList<Player>();
+			for(Player player : team.getPlayers()){
+				Position p = player.getPosition();
+				if(p.isMine(position))
+					playerList.add(player);
+			}
+			return playerList;
+	}
+	
+	@GET
+	@Path("/getPlayerInATeam/{playername}/{position}/{teamName}")
+	@Produces("application/json")
+	public Player getPlayerInATeam(@PathParam("playername") String playername, @PathParam("position") String position, @PathParam("teamName") String teamName){
+			List<Player> players = getPlayersByPosition(teamName, position);
+			for(Player player: players){
+				if(player.getName().equals(playername)){
+					return player;
+				}
+			}
+			return null;
+	}
+	
 }
 
 
