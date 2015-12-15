@@ -224,5 +224,12 @@ public class FantasyTeamRest {
 		}
 		return player;
 	}
-
+	
+	@GET
+	@Path("/haveFantasyTeam/{idgoogle}")
+	@Produces("application/json")
+	public boolean haveFantasyTeam(@PathParam("idgoogle") String idgoogle){
+		return !(getUserService().findByIdGoogle(idgoogle).getTeam()==null);
+	}
+	
 }
