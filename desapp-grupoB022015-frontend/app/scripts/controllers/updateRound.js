@@ -10,6 +10,7 @@
 angular.module('desappGrupoB022015FrontendApp')
   .controller('UpdateRoundCtrl', function ($scope,$http) {
 
+    var up = this;
 
     $http.get('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/list').success(function (data) {
       $scope.teams = data;
@@ -19,13 +20,21 @@ angular.module('desappGrupoB022015FrontendApp')
       $scope.began = data;
     });
 
-  	$scope.increaseDate = function(){
+
+    up.increaseDate = function(){
       $http.put('http://localhost:8080/desapp-grupoB022015-backend/rest/league/increaseCurrentDate')
       .success(function(data) {
         alert('Se cambio de fecha exitosamente');
         }).error(function(data,status) {
             alert('No se pudo cambiar de fecha, error (' + status + ')');
         });
+    }
+    
+    $scope.updateDateForUsers = function(){
+      $http.post('http://localhost:8080/desapp-grupoB022015-backend/rest/user/updateDateForUsers').success(function(data){
+        up.increaseDate();
+        alert();
+      });
     }
 
     $scope.runLeagues = function(){
@@ -45,7 +54,9 @@ angular.module('desappGrupoB022015FrontendApp')
     }
 
     $scope.actualizatePlayer = function(){
-
+        $http.put('http://localhost:8080/desapp-grupoB022015-backend/rest/player/updatePoints/'+ $scope.playerid +'/' + $scope.goals).success(function (data) {
+            alert('Se actualizo correctamente el jugador');
+        });
     }
 
 

@@ -13,7 +13,7 @@
 		<list name="players" inverse="false" cascade="all" lazy="false">
 			<key column="playerID" />
 			<list-index column="id" />
-			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.Player" unique="true"/>
+			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.Player"/>
 		</list>
 
 		<!-- <one-to-one name="dt" class="ar.edu.unq.desapp.grupoB022015.model.User"

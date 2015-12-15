@@ -68,6 +68,7 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 	<bean id="playerRest" class="ar.edu.unq.desapp.grupoB022015.rest.PlayerRest">
 		<property name="playerService" ref="services.player" />
 		<property name="positionService" ref="services.position" />
+		<property name="leagueService" ref="services.league" />
 	</bean>
 	
 	<bean id="positionRest" class="ar.edu.unq.desapp.grupoB022015.rest.PositionRest">
@@ -77,6 +78,7 @@ http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 	<bean id="userRest" class="ar.edu.unq.desapp.grupoB022015.rest.UserRest">
 		<property name="userService" ref="services.user" />
 		<property name="playerService" ref="services.player" />
+		<property name="leagueService" ref="services.league" />
 	</bean>
 
 	<bean id="leagueRest" class="ar.edu.unq.desapp.grupoB022015.rest.LeagueRest">

@@ -102,7 +102,7 @@ public class ApplicationTest {
 	public void testUserCreatesLeague(){
 		League league = user1.createLeague("aLeagueName");
 		
-		assert(league.getRanking().contains(user1));
+		assert(league.searchRanking().contains(user1));
 		//assert(user1.getLeagues().contains(league));
 	}
 	

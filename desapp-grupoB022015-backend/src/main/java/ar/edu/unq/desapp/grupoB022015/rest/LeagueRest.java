@@ -176,10 +176,13 @@ public class LeagueRest {
 		
 		List<League> allLeagues = this.getLeagueService().retriveAll();
 		List<League> myLeagues = new ArrayList<League>();
-		for(League league: allLeagues){
-			for(User us: league.getRanking()){
-				if(us.getIdGoogle().equals(idGoogle)){
-					myLeagues.add(league);
+		if(allLeagues!=null){
+			for(League league: allLeagues){
+				List<User> usrs = league.searchRanking();
+				for(User us: usrs){
+					if(us.getIdGoogle().equals(idGoogle)){
+						myLeagues.add(league);
+					}
 				}
 			}
 		}
@@ -193,10 +196,12 @@ public class LeagueRest {
 		
 		List<League> allLeagues = this.getLeagueService().retriveAll();
 		List<League> otherLeagues = new ArrayList<League>();
-		for(League league: allLeagues){
-			for(User us: league.getRanking()){
-				if(!us.getIdGoogle().equals(idGoogle)){
-					otherLeagues.add(league);
+		if(allLeagues!=null){
+			for(League league: allLeagues){
+				for(User us: league.searchRanking()){
+					if(!us.getIdGoogle().equals(idGoogle)){
+						otherLeagues.add(league);
+					}
 				}
 			}
 		}

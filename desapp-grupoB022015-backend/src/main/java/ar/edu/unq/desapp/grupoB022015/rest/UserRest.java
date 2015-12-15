@@ -16,13 +16,24 @@ import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.SuperGol;
 import ar.edu.unq.desapp.grupoB022015.model.User;
 import ar.edu.unq.desapp.grupoB022015.model.exceptions.MaximumNumberOfPlayersInTeamException;
+import ar.edu.unq.desapp.grupoB022015.services.LeagueService;
 import ar.edu.unq.desapp.grupoB022015.services.PlayerService;
+import ar.edu.unq.desapp.grupoB022015.services.PointsForUserService;
 import ar.edu.unq.desapp.grupoB022015.services.UserService;
 
 @Path("/user")
 public class UserRest {
 	
 	private UserService userService;
+	private LeagueService leagueService;
+
+	public LeagueService getLeagueService() {
+		return leagueService;
+	}
+
+	public void setLeagueService(LeagueService leagueService) {
+		this.leagueService = leagueService;
+	}
 
 	public UserService getUserService() {
 		return userService;
@@ -84,5 +95,27 @@ public class UserRest {
         List<User> users = getUserService().retriveAll();
         return users;
     }
-
+	
+	@POST
+	@Path("/updateDateForUsers/")
+	@Produces("application/json")
+	public void updateDateForUsers() {
+		 List<User> users = getUserService().retriveAll();
+		 int currentDate = getLeagueService().retriveAll().get(0).getCurrentDate();
+		 for(User user: users){
+			 if(user.getTeam()!=null)
+				 updateOneUser(user, currentDate);
+		 }
+	}
+	
+	public void updateOneUser(User user, int currentDate) { 
+		 List<Player> myTeam = user.getTeam().getPlayers();
+		 int points = 0;
+		 for(Player player: myTeam){
+			 points = points + player.getPointsForDate()[currentDate];
+		 }
+		 int oldPoints = user.getRankingPoints();
+		 user.setRankingPoints(oldPoints + points);
+		 getUserService().update(user);
+	}
 }

@@ -19,11 +19,11 @@
 			cascade="save-update" lazy="false"></one-to-one>
 		
 		-->
-		<list name="leagues" inverse="false" cascade="all" lazy="false">
+		<!-- <list name="leagues" inverse="false" cascade="all" lazy="false">
 			<key column="leagueID" />
 			<list-index column="id" />
 			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.League" unique="true"/>
-		</list>
+		</list> -->
 		
 		
 	</class>

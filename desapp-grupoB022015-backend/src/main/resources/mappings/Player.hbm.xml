@@ -18,5 +18,7 @@
 			cascade="save-update" lazy="false"></one-to-one>
 		-->
 		
+		<property name="pointsForDate"/>
+		
 	</class>
 </hibernate-mapping>

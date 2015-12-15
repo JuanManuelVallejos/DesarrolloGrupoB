@@ -191,9 +191,9 @@ public class LeagueTest {
 	
 	@Test
 	public void testSplitListUser(){
-		List<List<User>> lists = league.splitListUser(league.getRanking());
-		List<User> firstHalf = league.getRanking().subList(0, league.getRanking().size()/2);
-		List<User> secondHalf = league.getRanking().subList(league.getRanking().size()/2, league.getRanking().size());
+		List<List<User>> lists = league.splitListUser(league.searchRanking());
+		List<User> firstHalf = league.searchRanking().subList(0, league.searchRanking().size()/2);
+		List<User> secondHalf = league.searchRanking().subList(league.searchRanking().size()/2, league.searchRanking().size());
 		assertEquals(lists.get(0),firstHalf);
 		assertEquals(lists.get(1),secondHalf);
 	}

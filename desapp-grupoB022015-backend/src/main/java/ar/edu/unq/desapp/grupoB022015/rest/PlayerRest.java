@@ -17,14 +17,27 @@ import ar.edu.unq.desapp.grupoB022015.model.Goalkeeper;
 import ar.edu.unq.desapp.grupoB022015.model.Midfielder;
 import ar.edu.unq.desapp.grupoB022015.model.Player;
 import ar.edu.unq.desapp.grupoB022015.model.Position;
+import ar.edu.unq.desapp.grupoB022015.services.LeagueService;
 import ar.edu.unq.desapp.grupoB022015.services.PlayerService;
+import ar.edu.unq.desapp.grupoB022015.services.PointsForUserService;
 import ar.edu.unq.desapp.grupoB022015.services.PositionService;
+import ar.edu.unq.desapp.grupoB022015.services.UserService;
 
 @Path("/player")
 public class PlayerRest {
 	
 	private PlayerService playerService;
 	private PositionService positionService;
+	private LeagueService leagueService;
+
+	public LeagueService getLeagueService() {
+		return leagueService;
+	}
+
+	public void setLeagueService(LeagueService leagueService) {
+		this.leagueService = leagueService;
+	}
+	
 	
 	public PlayerService getPlayerService() {
 		return playerService;
@@ -75,6 +88,8 @@ public class PlayerRest {
 	public Response updatePoints(@PathParam("playerId") Integer playerId, @PathParam("goals") Integer goals){
 		
 		Player player = getPlayerService().findById(playerId);
+		int currentDate = getLeagueService().retriveAll().get(0).getCurrentDate();
+		player.updateGoalsForADate(goals,currentDate);
 		player.addPointsForNGoals(goals);
 		getPlayerService().update(player);
 		return Response.ok(player).build();

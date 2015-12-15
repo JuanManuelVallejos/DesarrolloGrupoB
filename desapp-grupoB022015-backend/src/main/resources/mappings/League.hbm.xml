@@ -16,13 +16,13 @@
     	<list name="rankingForLeague" inverse="false" cascade="all" lazy="false">
 			<key column="pointsForUser" />
 			<list-index column="id" />
-			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.PointsForUser" unique="true"/>
+			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.PointsForUser" />
 		</list>
 			
 		<list name="fixture" inverse="false" cascade="all" lazy="false">
 			<key column="dateID" />
 			<list-index column="id" />
-			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.Date" unique="true"/>
+			<many-to-many class="ar.edu.unq.desapp.grupoB022015.model.Date" />
 		</list>
 		
 	</class>

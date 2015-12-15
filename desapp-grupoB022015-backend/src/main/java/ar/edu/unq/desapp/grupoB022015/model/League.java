@@ -114,8 +114,8 @@ public class League extends Entity{
 	}
 	
 	public void createFixtureOnlyTrip(DateTime start, int durationOfDateinDays){
-		int totalSize = getRanking().size();
-		List<List<User>> halfs = splitListUser(getRanking());
+		int totalSize = searchRanking().size();
+		List<List<User>> halfs = splitListUser(searchRanking());
 		List<User> usersLocals = halfs.get(0);
 		List<User> usersVisitors = halfs.get(1);
 		Collections.reverse(usersVisitors);
@@ -130,7 +130,7 @@ public class League extends Entity{
 			User newUserVisitor = usersLocals.remove(last);
 			usersVisitors.add(newUserVisitor);
 			User newUserLocal = usersVisitors.remove(0); 
-			if(getRanking().size() == 2){
+			if(searchRanking().size() == 2){
 				usersLocals.add(newUserLocal);
 			}else{
 				usersLocals.add(1,newUserLocal);
@@ -168,7 +168,7 @@ public class League extends Entity{
 		rankingForLeague.add(pfu);
 	}
 	
-	public List<User> getRanking(){
+	public List<User> searchRanking(){
 		List<User> users = new ArrayList<User>();
 		for(PointsForUser pfu : rankingForLeague ){
 			users.add(pfu.getKey());
@@ -187,7 +187,7 @@ public class League extends Entity{
 	}
 	
 	public Boolean satisfiesTeams(){
-		int sizeTeams = getRanking().size(); 
+		int sizeTeams = searchRanking().size(); 
 		return ((sizeTeams >= getMinTeams()) && (sizeTeams <= getMaxTeams()));
 	}
 	

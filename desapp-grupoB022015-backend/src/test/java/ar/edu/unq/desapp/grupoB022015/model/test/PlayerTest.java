@@ -23,29 +23,29 @@ public class PlayerTest {
 	@Test
 	public void testPointsForNGoalOfDefender() {
 		player.setPosition(new Defender());
-		assertEquals(player.getPointForNGoals(1), 3);
-		assertEquals(player.getPointForNGoals(10), 30);
+		assertEquals(player.calculatePointForNGoals(1), 3);
+		assertEquals(player.calculatePointForNGoals(10), 30);
 	}
 
 	@Test
 	public void testPointsForNGoalOfGoalKeeper() {
 		player.setPosition(new Goalkeeper());
-		assertEquals(player.getPointForNGoals(0), 2);
-		assertEquals(player.getPointForNGoals(1), 0);
+		assertEquals(player.calculatePointForNGoals(0), 2);
+		assertEquals(player.calculatePointForNGoals(1), 0);
 	}
 	
 	@Test
 	public void testPointsForNGoalOfMidfielder() {
 		player.setPosition(new Midfielder());
-		assertEquals(player.getPointForNGoals(1),  1);
-		assertEquals(player.getPointForNGoals(10), 10);
+		assertEquals(player.calculatePointForNGoals(1),  1);
+		assertEquals(player.calculatePointForNGoals(10), 10);
 	}
 	
 	@Test
 	public void testPointsForNGoalOfForward() {
 		player.setPosition(new Forward());
-		assertEquals(player.getPointForNGoals(1),  1);
-		assertEquals(player.getPointForNGoals(10), 10);
+		assertEquals(player.calculatePointForNGoals(1),  1);
+		assertEquals(player.calculatePointForNGoals(10), 10);
 	}
 	
 	

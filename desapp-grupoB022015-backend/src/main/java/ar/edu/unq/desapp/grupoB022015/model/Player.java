@@ -1,5 +1,8 @@
 package ar.edu.unq.desapp.grupoB022015.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Player  extends Entity{
 
@@ -7,13 +10,16 @@ public class Player  extends Entity{
 	private Position position;
 	private SuperGol systemUpgrade;
 	private int points;
-    
+
+	private int[] pointsForDate;
+	
 	public Player(){}
 	
 	public Player(String aName,String aPosition){
 		this.name= aName;
 		this.position = getPosition(aPosition);
 		this.points = 0;
+		this.setPointsForDate(new int[]{0,0,0,0,0});
 	}
 
 	public static Position getPosition(String position) {
@@ -50,13 +56,13 @@ public class Player  extends Entity{
 		this.points = points;
 	}
 	
-	public int getPointForNGoals(int amountGoals){
+	public int calculatePointForNGoals(int amountGoals){
 		return getPosition().pointsForGoal(amountGoals);
 	}
 	
 	public void addPointsForNGoals(int amountGoals){
 		int pointsBefore = getPoints();
-		int pointsForGoals = getPointForNGoals(amountGoals);
+		int pointsForGoals = calculatePointForNGoals(amountGoals);
 		setPoints(pointsBefore + pointsForGoals);
 	}
 	public SuperGol getSystemUpgrade() {
@@ -65,5 +71,16 @@ public class Player  extends Entity{
 	public void setSystemUpgrade(SuperGol systemUpgrade) {
 		this.systemUpgrade = systemUpgrade;
 	}
-		
+
+	public int[] getPointsForDate() {
+		return pointsForDate;
+	}
+
+	public void setPointsForDate(int[] pointsForDate) {
+		this.pointsForDate = pointsForDate;
+	}
+
+	public void updateGoalsForADate(int goals, int date){
+		this.getPointsForDate()[date]= calculatePointForNGoals(goals);
+	}
 }

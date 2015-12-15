@@ -44,15 +44,15 @@
 	</bean>
 	
 	<bean id="services.date" class="ar.edu.unq.desapp.grupoB022015.services.DateService">
-		<property name="repository" ref="persistence.leagueRepository" />
+		<property name="repository" ref="persistence.dateRepository" />
 	</bean>
 	
 	<bean id="services.pointsForUser" class="ar.edu.unq.desapp.grupoB022015.services.PointsForUserService">
-		<property name="repository" ref="persistence.leagueRepository" />
+		<property name="repository" ref="persistence.pointsForUserRepository" />
 	</bean>
 	
 	<bean id="services.match" class="ar.edu.unq.desapp.grupoB022015.services.MatchService">
-		<property name="repository" ref="persistence.leagueRepository" />
+		<property name="repository" ref="persistence.matchRepository" />
 	</bean>
 
 </beans>

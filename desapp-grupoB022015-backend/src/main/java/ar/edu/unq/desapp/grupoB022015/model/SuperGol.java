@@ -38,7 +38,7 @@ public class SuperGol extends Entity{
 	
 	public void playerScoredNGoals(Player player,int amountGoals){
 		player.addPointsForNGoals(amountGoals);
-		tableForDate.addTablePointsOfPlayer(player,player.getPointForNGoals(amountGoals));
+		tableForDate.addTablePointsOfPlayer(player,player.calculatePointForNGoals(amountGoals));
 	}
 	
 	public void completeDate(){
