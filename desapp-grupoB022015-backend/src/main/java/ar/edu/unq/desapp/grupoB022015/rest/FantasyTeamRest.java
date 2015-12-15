@@ -212,5 +212,19 @@ public class FantasyTeamRest {
 		getUserService().update(user);			
 		return Response.ok(user).build();
 	}
+	
+	@GET
+	@Path("/getGoalkeeper/{idgoogle}")
+	@Produces("application/json")
+	public Player getGoalkeeper(@PathParam("idgoogle") String idgoogle){
+		FantasyTeam team = getUserService().findByIdGoogle(idgoogle).getTeam();
+		Player player = null;
+		for(Player aplayer : team.getPlayers()){
+			Position p = player.getPosition();
+			if(p.isMine("Goalkeeper"))
+				player = aplayer;
+		}
+		return player;
+	}
 
 }
