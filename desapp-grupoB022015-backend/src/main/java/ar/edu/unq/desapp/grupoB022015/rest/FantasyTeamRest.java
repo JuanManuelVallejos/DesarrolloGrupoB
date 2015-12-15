@@ -277,4 +277,11 @@ public class FantasyTeamRest {
 		return getUserService().findByIdGoogle(idgoogle).getTeam();
 	}
 	
+	@GET
+	@Path("/isTeamComplete/{idgoogle}")
+	@Produces("application/json")
+	public Boolean isTeamComplete(@PathParam("idgoogle") String idgoogle){
+		return (getUserService().findByIdGoogle(idgoogle).getTeam().getPlayers().size()) == 11;
+	}
+	
 }
