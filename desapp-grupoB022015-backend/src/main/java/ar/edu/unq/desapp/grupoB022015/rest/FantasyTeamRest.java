@@ -263,4 +263,11 @@ public class FantasyTeamRest {
 		return res;
 	}
 	
+	@GET
+	@Path("/myFantasyTeam/{idgoogle}")
+	@Produces("application/json")
+	public FantasyTeam myFantasyTeam(@PathParam("idgoogle") String idgoogle){
+		return getUserService().findByIdGoogle(idgoogle).getTeam();
+	}
+	
 }
