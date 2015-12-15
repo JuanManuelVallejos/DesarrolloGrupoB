@@ -214,9 +214,9 @@ public class FantasyTeamRest {
 	}
 	
 	@GET
-	@Path("/getGoalkeeper/{idgoogle}")
+	@Path("/searchGoalkeeper/{idgoogle}")
 	@Produces("application/json")
-	public Player getGoalkeeper(@PathParam("idgoogle") String idgoogle){
+	public Player searchGoalkeeper(@PathParam("idgoogle") String idgoogle){
 		FantasyTeam team = getUserService().findByIdGoogle(idgoogle).getTeam();
 		Player player = null;
 		for(Player aplayer : team.getPlayers()){
