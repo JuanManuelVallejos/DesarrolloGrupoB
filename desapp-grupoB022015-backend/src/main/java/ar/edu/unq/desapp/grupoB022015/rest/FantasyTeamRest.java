@@ -238,7 +238,14 @@ public class FantasyTeamRest {
 	@Path("/canAddAPlayer/{playerId}/{idgoogle}")
 	@Produces("application/json")
 	public boolean canAddAPlayer(@PathParam("playerId") Integer playerId, @PathParam("idgoogle") String idgoogle){
-		Position position = getPlayerService().findById(playerId).getPosition();
+		Player myPlayer = getPlayerService().findById(playerId);
+		List<Player> team = getUserService().findByIdGoogle(idgoogle).getTeam().getPlayers();
+		for(Player aPlayer: team){
+			if(aPlayer.getId()==playerId){
+				return false;
+			}
+		}
+		Position position = myPlayer.getPosition();
 		String myPosition = "Goalkeeper";
 		if(position.isMine("Defender")){
 			myPosition = "Defender";
