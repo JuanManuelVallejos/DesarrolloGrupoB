@@ -108,10 +108,12 @@ public class FantasyTeamRest {
 	public List<Player> getPlayersByPosition(@PathParam("idgoogle") String idgoogle, @PathParam("position") String position){
 			FantasyTeam team = getUserService().findByIdGoogle(idgoogle).getTeam();
 			List<Player> playerList = new ArrayList<Player>();
-			for(Player player : team.getPlayers()){
-				Position p = player.getPosition();
-				if(p.isMine(position))
-					playerList.add(player);
+			if(!(team==null)){
+				for(Player player : team.getPlayers()){
+					Position p = player.getPosition();
+					if(p.isMine(position))
+						playerList.add(player);
+				}
 			}
 			return playerList;
 	}
@@ -230,6 +232,35 @@ public class FantasyTeamRest {
 	@Produces("application/json")
 	public boolean haveFantasyTeam(@PathParam("idgoogle") String idgoogle){
 		return !(getUserService().findByIdGoogle(idgoogle).getTeam()==null);
+	}
+	
+	@GET
+	@Path("/canAddAPlayer/{playerId}/{idgoogle}")
+	@Produces("application/json")
+	public boolean canAddAPlayer(@PathParam("playerId") Integer playerId, @PathParam("idgoogle") String idgoogle){
+		Position position = getPlayerService().findById(playerId).getPosition();
+		String myPosition = "Goalkeeper";
+		if(position.isMine("Defender")){
+			myPosition = "Defender";
+		}else{
+			if(position.isMine("Midfielder")){
+				myPosition = "Milfielder";
+			}else{
+				if(position.isMine("Forward")){
+					myPosition = "Forward";
+				}
+			}
+		}
+		List<Player> players = getPlayersByPosition(idgoogle, myPosition);
+		int cant = players.size();
+		boolean res = cant<4;
+		if(myPosition.equals("Defender")|| myPosition.equals("Forward")){
+			res = cant<3;
+		}
+		if(myPosition.equals("Goalkeeper")){
+			res = cant<1;
+		}
+		return res;
 	}
 	
 }
