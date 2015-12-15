@@ -195,7 +195,22 @@ public class FantasyTeamRest {
 		return Response.ok(user).build();
 	}
 	
+	@GET
+	@Path("/getOnePlayer/{playerId}")
+	@Produces("application/json")
+	public Player getOnePlayer(@PathParam("playerId") Integer playerId){
+		return getPlayerService().findById(playerId);
+	}
 	
-	
+	@POST
+	@Path("/addOnePlayer/{playerId}/{idgoogle}")
+	@Produces("application/json")
+	public Response addOnePlayer(@PathParam("playerId") Integer playerId, @PathParam("idgoogle") String idgoogle) throws MaximumNumberOfPlayersInTeamException{
+		Player player = getPlayerService().findById(playerId);
+		User user = getUserService().findByIdGoogle(idgoogle);
+		user.getTeam().addPlayer(player);
+		getUserService().update(user);			
+		return Response.ok(user).build();
+	}
 
 }
