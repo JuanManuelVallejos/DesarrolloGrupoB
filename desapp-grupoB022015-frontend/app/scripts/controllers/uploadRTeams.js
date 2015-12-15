@@ -24,7 +24,7 @@ uploadRTeams.directive('file', function(){
 
     $scope.uploadRT = function(){
 
-    $http({
+    $http.post({
             method: 'POST',
             url: 'http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/createPlayers',
             headers: {'Content-Type': 'multipart/form-data'},
@@ -39,17 +39,7 @@ uploadRTeams.directive('file', function(){
     }
 
     $scope.addPlayer = function() {
-        $http({
-            method: 'POST',
-            url: 'http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/addPlayer/' + $scope.playerteam + '/' + $scope.playername + '/' + $scope.playerposition,
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            transformRequest: function(obj) {
-                var str = [];
-                    for(var l in obj)
-                        str.push(encodeURIComponent(l) + "=" + encodeURIComponent(obj[l]));
-            return str.join("&");
-            },
-        }).success(function (data) {
+        $http.post('http://localhost:8080/desapp-grupoB022015-backend/rest/realTeam/addPlayer/' + $scope.playerteam + '/' + $scope.playername + '/' + $scope.playerposition).success(function (data) {
                 alert('El jugador fue agregado satisfactoriamente')
         }).error(function(data,status) {
                 alert("Error (" + status +"): " + "no se pudo agregar el jugador.");

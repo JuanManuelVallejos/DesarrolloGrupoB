@@ -135,4 +135,10 @@ angular
     }
   }
 
+  $scope.logout = function() {
+    auth.signout();
+    $scope.profile= undefined;
+    location = '#/';
+  }
+
 });
