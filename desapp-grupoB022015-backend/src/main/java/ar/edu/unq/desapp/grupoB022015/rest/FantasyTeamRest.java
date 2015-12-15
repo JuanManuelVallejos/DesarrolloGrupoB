@@ -217,12 +217,10 @@ public class FantasyTeamRest {
 	@Path("/searchGoalkeeper/{idgoogle}")
 	@Produces("application/json")
 	public Player searchGoalkeeper(@PathParam("idgoogle") String idgoogle){
-		FantasyTeam team = getUserService().findByIdGoogle(idgoogle).getTeam();
 		Player player = null;
-		for(Player aplayer : team.getPlayers()){
-			Position p = player.getPosition();
-			if(p.isMine("Goalkeeper"))
-				player = aplayer;
+		List<Player> players = getPlayersByPosition(idgoogle, "Goalkeeper");
+		if(players.size()==1){
+			player = players.get(0);
 		}
 		return player;
 	}
